@@ -1,0 +1,172 @@
+[
+  {
+    "id": "1",
+    "slug": "jeringa-descartable-5ml",
+    "title": "Jeringa Descartable 5ml con Aguja",
+    "description": "Jeringa descartable estéril de 5ml con aguja incorporada. Diseño ergonómico para uso profesional. Graduación clara y precisa. Fabricada con materiales de alta calidad que garantizan la seguridad del paciente. Cumple con todas las normativas internacionales de calidad y esterilización. El émbolo se desliza suavemente para un control preciso de la dosis. Ideal para aplicaciones de medicamentos intramusculares, subcutáneos e intravenosos. La aguja de acero inoxidable garantiza una penetración sin dolor. Empaque individual en blister que mantiene la esterilidad hasta su uso. Producto certificado por ANMAT y aprobado para uso hospitalario y clínico. Diseñado para profesionales de la salud que requieren precisión y confiabilidad en cada aplicación.",
+    "image": "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=800",
+    "category": "Descartables",
+    "subcategory": "Jeringas",
+    "priceDisplay": "Consultar",
+    "badges": ["Estéril", "Uso Único"],
+    "table": {
+      "headers": ["Característica", "Especificación"],
+      "rows": [
+        ["Capacidad", "5ml"],
+        ["Aguja", "21G x 1.5\""],
+        ["Material", "Polipropileno médico"],
+        ["Esterilización", "Óxido de etileno"],
+        ["Embalaje", "Individual blister"]
+      ]
+    }
+  },
+  {
+    "id": "2",
+    "slug": "guantes-latex-talla-m",
+    "title": "Guantes de Látex Talla M",
+    "description": "Guantes de látex natural con recubrimiento interior de almidón modificado. Textura en palma y dedos para mejor agarre.",
+    "image": "https://images.unsplash.com/photo-1585559700398-1385b3a8aeb6?w=800",
+    "category": "Descartables",
+    "subcategory": "Guantes",
+    "priceDisplay": "Consultar",
+    "badges": ["Sin Polvo", "Látex Natural"],
+    "table": {
+      "headers": ["Característica", "Valor"],
+      "rows": [
+        ["Talla", "M (Medium)"],
+        ["Material", "Látex natural"],
+        ["Grosor", "0.12mm"],
+        ["Longitud", "240mm"],
+        ["Presentación", "Caja x 100 unidades"]
+      ]
+    }
+  },
+  {
+    "id": "3",
+    "slug": "bisturi-hoja-22",
+    "title": "Bisturí Hoja N°22 Estéril",
+    "description": "Hoja de bisturí quirúrgica de acero inoxidable, estéril y descartable. Compatible con mango N°4.",
+    "image": "https://images.unsplash.com/photo-1584362917165-526a968579e8?w=800",
+    "category": "Instrumental",
+    "subcategory": "Bisturí y Hojas",
+    "priceDisplay": "Consultar",
+    "badges": ["Estéril", "Acero Inoxidable"]
+  },
+  {
+    "id": "4",
+    "slug": "sutura-vicryl-3-0",
+    "title": "Sutura Vicryl 3-0 Absorvible",
+    "description": "Sutura sintética absorbible de poliglactina 910. Aguja atraumática. Reabsorción completa entre 56-70 días.",
+    "image": "https://images.unsplash.com/photo-1579154204841-c2f1b0b5d7c3?w=800",
+    "category": "Instrumental",
+    "subcategory": "Suturas",
+    "priceDisplay": "Consultar",
+    "badges": ["Absorvible", "Atraumática"],
+    "table": {
+      "headers": ["Detalle", "Valor"],
+      "rows": [
+        ["Calibre", "3-0"],
+        ["Material", "Poliglactina 910"],
+        ["Aguja", "Cilíndrica 26mm"],
+        ["Longitud hilo", "75cm"],
+        ["Absorción", "56-70 días"]
+      ]
+    }
+  },
+  {
+    "id": "5",
+    "slug": "cateter-iv-20g",
+    "title": "Catéter Intravenoso 20G",
+    "description": "Catéter periférico con cámara de retorno visible y sistema de seguridad pasiva. Estéril de un solo uso.",
+    "image": "https://images.unsplash.com/photo-1579165466949-7904bec3a53b?w=800",
+    "category": "Accesos Venosos",
+    "subcategory": "Catéteres",
+    "priceDisplay": "Consultar",
+    "badges": ["Estéril", "Seguridad Pasiva"]
+  },
+  {
+    "id": "6",
+    "slug": "gasa-esteril-10x10",
+    "title": "Gasa Estéril 10x10cm",
+    "description": "Compresa de gasa 100% algodón hidrofílico, 8 capas. Estéril individual. Alta absorción.",
+    "image": "https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=800",
+    "category": "Descartables",
+    "subcategory": "Gasas y Apósitos",
+    "priceDisplay": "Consultar",
+    "badges": ["100% Algodón", "Estéril"],
+    "table": {
+      "headers": ["Característica", "Detalle"],
+      "rows": [
+        ["Dimensiones", "10 x 10 cm"],
+        ["Capas", "8 capas"],
+        ["Material", "Algodón hidrofílico"],
+        ["Presentación", "Individual estéril"],
+        ["Caja", "50 sobres x 5 unidades"]
+      ]
+    }
+  },
+  {
+    "id": "7",
+    "slug": "tubo-endotraqueal-7-5",
+    "title": "Tubo Endotraqueal 7.5mm",
+    "description": "Tubo con balón de alto volumen y baja presión. Material PVC grado médico. Radiopaco. Con marcas de profundidad.",
+    "image": "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=800",
+    "category": "Anestesia",
+    "subcategory": "Intubación",
+    "priceDisplay": "Consultar",
+    "badges": ["Con Balón", "Radiopaco"]
+  },
+  {
+    "id": "8",
+    "slug": "pinza-kelly-recta-14cm",
+    "title": "Pinza Kelly Recta 14cm",
+    "description": "Pinza hemostática de acero inoxidable quirúrgico. Punta recta con estrías transversales. Autoclavable.",
+    "image": "https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=800",
+    "category": "Instrumental",
+    "subcategory": "Pinzas",
+    "priceDisplay": "Consultar",
+    "badges": ["Acero Inoxidable", "Autoclavable"],
+    "table": {
+      "headers": ["Especificación", "Valor"],
+      "rows": [
+        ["Longitud", "14cm"],
+        ["Material", "Acero inoxidable AISI 420"],
+        ["Tipo", "Recta"],
+        ["Acabado", "Satinado"],
+        ["Esterilización", "Autoclave 134°C"]
+      ]
+    }
+  },
+  {
+    "id": "9",
+    "slug": "oximetro-pulso-portatil",
+    "title": "Oxímetro de Pulso Portátil",
+    "description": "Oxímetro digital de dedo. Medición de SpO2 y frecuencia cardíaca. Pantalla LED con múltiples orientaciones. Apagado automático.",
+    "image": "https://images.unsplash.com/photo-1584362917165-526a968579e8?w=800",
+    "category": "Equipamiento",
+    "subcategory": "Diagnóstico",
+    "priceDisplay": "Consultar",
+    "badges": ["Portátil", "Pantalla LED"],
+    "table": {
+      "headers": ["Característica", "Valor"],
+      "rows": [
+        ["Rango SpO2", "0-100%"],
+        ["Precisión SpO2", "±2%"],
+        ["Rango Pulso", "30-250 bpm"],
+        ["Pantalla", "LED dual color"],
+        ["Alimentación", "2 pilas AAA"]
+      ]
+    }
+  },
+  {
+    "id": "10",
+    "slug": "termometro-digital-infrarrojo",
+    "title": "Termómetro Digital Infrarrojo",
+    "description": "Termómetro sin contacto. Medición frontal y ambiental. Pantalla LCD retroiluminada. Alarma de fiebre. Memoria de últimas 32 lecturas.",
+    "image": "https://images.unsplash.com/photo-1584555684040-bad07ab97e47?w=800",
+    "category": "Equipamiento",
+    "subcategory": "Diagnóstico",
+    "priceDisplay": "Consultar",
+    "badges": ["Sin Contacto", "LCD"]
+  }
+]

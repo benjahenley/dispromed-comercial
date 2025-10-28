@@ -1,0 +1,35 @@
+[
+  {
+    "id": "descartables",
+    "name": "Descartables",
+    "subcategories": [
+      { "id": "jeringas", "name": "Jeringas" },
+      { "id": "guantes", "name": "Guantes" },
+      { "id": "gasas-y-apositos", "name": "Gasas y Apósitos" }
+    ]
+  },
+  {
+    "id": "instrumental",
+    "name": "Instrumental",
+    "subcategories": [
+      { "id": "bisturi-y-hojas", "name": "Bisturí y Hojas" },
+      { "id": "suturas", "name": "Suturas" },
+      { "id": "pinzas", "name": "Pinzas" }
+    ]
+  },
+  {
+    "id": "accesos-venosos",
+    "name": "Accesos Venosos",
+    "subcategories": [{ "id": "cateteres", "name": "Catéteres" }]
+  },
+  {
+    "id": "anestesia",
+    "name": "Anestesia",
+    "subcategories": [{ "id": "intubacion", "name": "Intubación" }]
+  },
+  {
+    "id": "equipamiento",
+    "name": "Equipamiento",
+    "subcategories": [{ "id": "diagnostico", "name": "Diagnóstico" }]
+  }
+]
