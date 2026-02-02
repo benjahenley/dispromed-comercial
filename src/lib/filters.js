@@ -5,18 +5,18 @@
  * @param {string} subcategory
  * @returns {import('./types').Product[]}
  */
-export function filterProducts(products, category, subcategory) {
+export function filterProducts(products, category = "", subcategory = "") {
   let filtered = [...products];
 
   if (category) {
     filtered = filtered.filter(
-      (p) => p.category.toLowerCase() === category.toLowerCase()
+      (p) => p.categoryId?.toLowerCase() === category.toLowerCase()
     );
   }
 
-  if (subcategory) {
+  if (subcategory !== "") {
     filtered = filtered.filter(
-      (p) => p.subcategory?.toLowerCase() === subcategory.toLowerCase()
+      (p) => p.subcategoryId?.toLowerCase() === subcategory.toLowerCase()
     );
   }
 
@@ -54,7 +54,7 @@ export function sortProducts(products, sortBy) {
  * @returns {import('./types').Product[]}
  */
 export function paginateProducts(products, limit, offset) {
-  return products.slice(offset, offset + limit);
+  return products?.slice(offset, offset + limit) ?? [];
 }
 
 /**

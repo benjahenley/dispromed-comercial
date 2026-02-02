@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import { useMemo } from "react";
-import products from "../data/products.json";
+import { products } from "../data/products";
 import categories from "../data/categories.json";
 import { CategorySidebar } from "../components/CategorySidebar";
 import { ProductGrid } from "../components/ProductGrid";
@@ -13,15 +13,16 @@ import {
   normalizeString,
 } from "../lib/filters";
 import { getParam } from "../lib/useQueryState";
+import { SecondaryNavbar } from "../components/navbar/SecondaryNavbar";
 
 export function Products() {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const category = getParam(searchParams, "category");
-  const sub = getParam(searchParams, "sub");
+  const category = getParam(searchParams, "category", "");
+  const sub = getParam(searchParams, "sub", "");
   const sort = getParam(searchParams, "sort", "title-asc");
-  const limit = parseInt(getParam(searchParams, "limit", "12"));
-  const offset = parseInt(getParam(searchParams, "offset", "0"));
+  const limit = Number(getParam(searchParams, "limit", "12"));
+  const offset = Number(getParam(searchParams, "offset", "0"));
 
   const filteredAndSorted = useMemo(() => {
     let result = filterProducts(products, category, sub);
@@ -42,11 +43,15 @@ export function Products() {
 
   const handleCategoryChange = (e) => {
     const value = e.target.value;
+
     const newParams = new URLSearchParams();
-    if (value) {
-      newParams.set("category", value);
-    }
+    if (value) newParams.set("category", value);
+
     newParams.set("sort", sort);
+    // reset dependent params
+    newParams.delete("sub");
+    newParams.delete("offset");
+
     setSearchParams(newParams);
   };
 
@@ -78,7 +83,7 @@ export function Products() {
       });
       if (sub) {
         const subcat = cat.subcategories.find(
-          (s) => normalizeString(s.name) === sub
+          (s) => normalizeString(s.name) === sub,
         );
         if (subcat) {
           breadcrumbs.push({ label: subcat.name });
@@ -90,12 +95,13 @@ export function Products() {
   }
 
   const currentCategory = categories.find(
-    (c) => normalizeString(c.name) === category
+    (c) => normalizeString(c.name) === category,
   );
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 py-6">
+      <SecondaryNavbar />
+      <div className="max-w-7xl mx-auto px-4 py-16">
         <Breadcrumbs items={breadcrumbs} />
 
         {/* Mobile Filters */}
@@ -138,13 +144,14 @@ export function Products() {
                   onChange={handleSubChange}
                   className="w-full px-4 py-2 border border-ink/10 focus:outline-none focus:ring-2 focus:ring-brand-300">
                   <option value="">Todas</option>
-                  {currentCategory.subcategories.map((subcat) => (
-                    <option
-                      key={subcat.id}
-                      value={normalizeString(subcat.name)}>
-                      {subcat.name}
-                    </option>
-                  ))}
+                  {currentCategory.subcategories &&
+                    currentCategory.subcategories.map((subcat) => (
+                      <option
+                        key={subcat.id}
+                        value={normalizeString(subcat.name)}>
+                        {subcat.name}
+                      </option>
+                    ))}
                 </select>
               </div>
             )}

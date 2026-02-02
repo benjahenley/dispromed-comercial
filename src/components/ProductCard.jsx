@@ -1,49 +1,65 @@
 import { Link } from "react-router-dom";
 
 export function ProductCard({ product }) {
+  const href = `/productos/${product.id}`;
+
+  const cover = product.images?.find((img) => img?.src)?.src || ""; // put a real fallback image url here if you have one
+
+  const badges = product.badges ?? []; // keep if you later add badges to JS data
+
   return (
     <Link
-      to={`/productos/${product.slug}`}
-      className="bg-white border border-ink/10 overflow-hidden hover:shadow-lg transition-shadow group">
-      <div className="aspect-square overflow-hidden bg-ink/5">
-        <img
-          src={product.image}
-          alt={product.title}
-          loading="lazy"
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-      </div>
+      to={href}
+      className="group block overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-brand-300/25">
+      {/* Image */}
+      <div className="relative aspect-square overflow-hidden bg-ink/5">
+        {cover ? (
+          <img
+            src={cover}
+            alt={product.title}
+            loading="lazy"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center text-xs text-ink/40">
+            Sin imagen
+          </div>
+        )}
 
-      <div className="p-4">
-        {product.badges && product.badges.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-2">
-            {product.badges.map((badge, idx) => (
+        {/* Badges overlay */}
+        {badges.length > 0 && (
+          <div className="absolute left-3 top-3 flex flex-wrap gap-2">
+            {badges.map((badge, idx) => (
               <span
                 key={idx}
-                className="text-xs px-2 py-1 border border-brand-200 text-brand-400 bg-brand-100/10">
+                className="rounded-full border border-ink/10 bg-white/80 px-2.5 py-1 text-[11px] font-medium text-ink/80 backdrop-blur">
                 {badge}
               </span>
             ))}
           </div>
         )}
+      </div>
 
-        <h3 className="font-semibold text-ink group-hover:text-brand-300 transition-colors mb-2 line-clamp-2">
+      {/* Content */}
+      <div className="p-4 sm:p-5">
+        <h3 className="line-clamp-1 text-base font-semibold tracking-tight text-ink transition-colors group-hover:text-brand-300">
           {product.title}
         </h3>
 
         {product.description && (
-          <p className="text-sm text-ink/70 line-clamp-2 mb-3">
+          <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/70">
             {product.description}
           </p>
         )}
 
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-ink/60">{product.category}</span>
-          {product.priceDisplay && (
-            <span className="text-sm font-medium text-brand-300">
-              {product.priceDisplay}
-            </span>
-          )}
+        <div className="mt-4 flex items-center justify-between gap-3"></div>
+
+        {/* CTA */}
+        <div className="mt-4 flex items-center justify-between">
+          <span className="text-xs text-ink/50">Ver detalles</span>
+          <span className="text-ink/40 transition group-hover:translate-x-0.5 group-hover:text-brand-300">
+            →
+          </span>
         </div>
       </div>
     </Link>

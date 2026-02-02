@@ -1,0 +1,29 @@
+[
+  {
+    "id": "nuevas-lineas",
+    "dateLabel": "Octubre 2025",
+    "title": "Nuevas líneas de productos",
+    "excerpt": "Incorporamos nuevas marcas internacionales a nuestro catálogo.",
+    "image": "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1200&h=600&fit=crop",
+    "alt": "Nuevas líneas de productos",
+    "href": "/novedades"
+  },
+  {
+    "id": "capacitacion",
+    "dateLabel": "Septiembre 2025",
+    "title": "Capacitación continua",
+    "excerpt": "Nuestro equipo se mantiene actualizado en las últimas tecnologías.",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=600&fit=crop",
+    "alt": "Capacitación continua",
+    "href": "/novedades"
+  },
+  {
+    "id": "expansion-servicios",
+    "dateLabel": "Agosto 2025",
+    "title": "Expansión de servicios",
+    "excerpt": "Ampliamos nuestra cobertura para mejor atención a nuestros clientes.",
+    "image": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1200&h=600&fit=crop",
+    "alt": "Expansión de servicios",
+    "href": "/novedades"
+  }
+]

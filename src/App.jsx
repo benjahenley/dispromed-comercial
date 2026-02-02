@@ -1,28 +1,28 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/navbar/Navbar";
 import { Footer } from "./components/Footer";
 
 // Lazy load pages for better performance
 const Home = lazy(() =>
-  import("./pages/Home").then((module) => ({ default: module.Home }))
+  import("./pages/Home").then((module) => ({ default: module.Home })),
 );
 const Products = lazy(() =>
-  import("./pages/Products").then((module) => ({ default: module.Products }))
+  import("./pages/Products").then((module) => ({ default: module.Products })),
 );
 const ProductDetail = lazy(() =>
   import("./pages/ProductDetail").then((module) => ({
     default: module.ProductDetail,
-  }))
+  })),
 );
 const Catalogos = lazy(() =>
-  import("./pages/Catalogos").then((module) => ({ default: module.Catalogos }))
+  import("./pages/Catalogos").then((module) => ({ default: module.Catalogos })),
 );
 const Contacto = lazy(() =>
-  import("./pages/Contacto").then((module) => ({ default: module.Contacto }))
+  import("./pages/Contacto").then((module) => ({ default: module.Contacto })),
 );
 const Novedades = lazy(() =>
-  import("./pages/Novedades").then((module) => ({ default: module.Novedades }))
+  import("./pages/Novedades").then((module) => ({ default: module.Novedades })),
 );
 
 function LoadingFallback() {
@@ -40,7 +40,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
-        <Navbar />
         <main className="flex-1">
           <Suspense fallback={<LoadingFallback />}>
             <Routes>

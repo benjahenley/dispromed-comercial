@@ -4,10 +4,12 @@ import categories from "../data/categories.json";
 import { normalizeString } from "../lib/filters";
 
 export function Drawer({ isOpen, onClose }) {
+  const [openItem, setOpenItem] = useState(null);
   const [openCategory, setOpenCategory] = useState(null);
+  const [openSubcategory, setOpenSubcategory] = useState(null);
 
   const toggleCategory = (catId) => {
-    setOpenCategory(openCategory === catId ? null : catId);
+    setOpenItem(openItem === catId ? null : catId);
   };
 
   if (!isOpen) return null;
@@ -52,14 +54,14 @@ export function Drawer({ isOpen, onClose }) {
             Inicio
           </Link>
 
-          <div className="border-t border-ink/10 mt-2 pt-2">
+          <div className="">
             <button
               onClick={() => toggleCategory("productos")}
               className="flex items-center justify-between w-full py-3 font-medium hover:text-brand-300 transition-colors">
               <span>Productos</span>
               <svg
                 className={`w-5 h-5 transition-transform ${
-                  openCategory === "productos" ? "rotate-180" : ""
+                  openItem === "productos" ? "rotate-180" : ""
                 }`}
                 fill="none"
                 stroke="currentColor"
@@ -73,30 +75,32 @@ export function Drawer({ isOpen, onClose }) {
               </svg>
             </button>
 
-            {openCategory === "productos" && (
+            {openItem === "productos" && (
               <div className="pl-4 pb-2">
                 {categories.map((cat) => (
                   <div key={cat.id} className="mb-3">
                     <Link
                       to={`/productos?category=${normalizeString(cat.name)}`}
                       className="block py-2 font-medium text-sm hover:text-brand-300 transition-colors"
-                      onClick={onClose}>
+                      onClick={() => setOpenCategory(cat.name)}>
                       {cat.name}
                     </Link>
-                    <ul className="pl-4 space-y-1">
-                      {cat.subcategories.map((sub) => (
-                        <li key={sub.id}>
-                          <Link
-                            to={`/productos?category=${normalizeString(
-                              cat.name
-                            )}&sub=${normalizeString(sub.name)}`}
-                            className="block py-1.5 text-sm text-ink/70 hover:text-brand-300 transition-colors"
-                            onClick={onClose}>
-                            {sub.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+                    {openCategory === cat.name && (
+                      <ul className="pl-4 space-y-1">
+                        {cat.subcategories.map((sub) => (
+                          <li key={sub.id}>
+                            <Link
+                              to={`/productos?category=${normalizeString(
+                                cat.name
+                              )}&sub=${normalizeString(sub.name)}`}
+                              className="block py-1.5 text-sm text-ink/70 hover:text-brand-300 transition-colors"
+                              onClick={onClose}>
+                              {sub.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 ))}
               </div>
@@ -105,7 +109,7 @@ export function Drawer({ isOpen, onClose }) {
 
           <Link
             to="/catalogos"
-            className="block py-3 font-medium hover:text-brand-300 transition-colors border-t border-ink/10"
+            className="block py-3 font-medium hover:text-brand-300 transition-colors "
             onClick={onClose}>
             Catálogos
           </Link>

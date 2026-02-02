@@ -1,28 +1,30 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import categories from "../data/categories.json";
 import { normalizeString } from "../lib/filters";
 
 export function CategorySidebar() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [openCategory, setOpenCategory] = useState(null);
+  const [openCategory, setOpenCategory] = useState();
 
   const currentCategory = searchParams.get("category") || "";
   const currentSub = searchParams.get("sub") || "";
 
-  useEffect(() => {
-    if (currentCategory) {
-      const cat = categories.find(
-        (c) => normalizeString(c.name) === currentCategory
-      );
-      if (cat) {
-        setOpenCategory(cat.id);
-      }
-    }
+  // (optional) quick lookup for active category id
+  const activeCategoryId = useMemo(() => {
+    if (!currentCategory) return null;
+    const cat = categories.find(
+      (c) => normalizeString(c.name) === currentCategory,
+    );
+    return cat?.id ?? null;
   }, [currentCategory]);
 
+  useEffect(() => {
+    if (activeCategoryId) setOpenCategory(activeCategoryId);
+  }, [activeCategoryId]);
+
   const toggleCategory = (catId) => {
-    setOpenCategory(openCategory === catId ? null : catId);
+    setOpenCategory((prev) => (prev === catId ? null : catId));
   };
 
   const handleCategoryClick = (catName) => {
@@ -41,87 +43,154 @@ export function CategorySidebar() {
     setSearchParams(newParams);
   };
 
-  const handleClearFilters = () => {
-    setSearchParams({});
-  };
+  const handleClearFilters = () => setSearchParams({});
+
+  const hasFilters = Boolean(currentCategory || currentSub);
 
   return (
-    <aside className="w-full lg:w-64 flex-shrink-0">
-      <div className="bg-white border border-ink/10 p-4 sticky top-20">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="font-semibold text-lg">Categorías</h2>
-          {(currentCategory || currentSub) && (
-            <button
-              onClick={handleClearFilters}
-              className="text-xs text-brand-300 hover:text-brand-400 transition-colors">
-              Limpiar
-            </button>
-          )}
-        </div>
+    <aside className="w-full lg:w-72 flex-shrink-0">
+      <div className="lg:sticky lg:top-24">
+        <div className="">
+          {/* Header */}
+          <div className="flex items-center justify-between gap-3 border-b border-ink/10 p-4 sm:p-5">
+            <div>
+              <h2 className="text-base font-semibold tracking-tight">
+                Categorías
+              </h2>
+              <p className="mt-0.5 text-xs text-ink/50">
+                Filtrá por categoría y subcategoría
+              </p>
+            </div>
 
-        <div className="space-y-2">
-          {categories.map((cat) => {
-            const isOpen = openCategory === cat.id;
-            const isActive = normalizeString(cat.name) === currentCategory;
+            {hasFilters && (
+              <button
+                onClick={handleClearFilters}
+                className="inline-flex items-center rounded-full border border-ink/10 bg-white px-3 py-1.5 text-xs font-medium text-ink/70 transition hover:border-brand-300/40 hover:text-brand-300 focus:outline-none focus:ring-4 focus:ring-brand-300/20">
+                Limpiar
+              </button>
+            )}
+          </div>
 
-            return (
-              <div key={cat.id} className="border-b border-ink/5 pb-2">
-                <button
-                  onClick={() => toggleCategory(cat.id)}
-                  className={`flex items-center justify-between w-full py-2 font-medium text-left transition-colors ${
-                    isActive ? "text-brand-300" : "hover:text-brand-300"
-                  }`}>
-                  <span
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleCategoryClick(cat.name);
-                    }}>
-                    {cat.name}
-                  </span>
-                  <svg
-                    className={`w-4 h-4 transition-transform flex-shrink-0 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
+          {/* List */}
+          <div className="p-2 sm:p-3">
+            <div className="space-y-1">
+              {categories.map((cat) => {
+                const isOpen = openCategory === cat.id;
+                const isActive = normalizeString(cat.name) === currentCategory;
 
-                {isOpen && (
-                  <ul className="pl-4 space-y-1 mt-1">
-                    {cat.subcategories.map((sub) => {
-                      const isSubActive =
-                        normalizeString(cat.name) === currentCategory &&
-                        normalizeString(sub.name) === currentSub;
+                return (
+                  <div
+                    key={cat.id}
+                    className={`overflow-hidden rounded-2xl border transition ${
+                      isOpen || isActive
+                        ? "border-brand-300/25 bg-brand-100/10"
+                        : "border-ink/10 bg-white"
+                    }`}>
+                    {/* Category row */}
+                    <button
+                      onClick={
+                        cat.subcategories
+                          ? () => toggleCategory(cat.id)
+                          : () => {}
+                      }
+                      className="flex w-full items-center justify-between gap-3 p-3 text-left focus:outline-none focus:ring-4 focus:ring-brand-300/15"
+                      aria-expanded={isOpen}>
+                      <span className="min-w-0">
+                        <span
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleCategoryClick(cat.name);
+                          }}
+                          className={`block truncate text-sm font-medium transition ${
+                            isActive
+                              ? "text-brand-300"
+                              : "text-ink hover:text-brand-300"
+                          }`}>
+                          {cat.name}
+                        </span>
+                      </span>
+                      {cat.subcategories && (
+                        <span
+                          className={`flex flex-shrink-0  h-9 w-9 items-center justify-center rounded-full border border-ink/10 bg-white text-ink/70 transition ${
+                            isOpen
+                              ? "rotate-180 border-brand-300/30 text-brand-300"
+                              : "group-hover:text-brand-300"
+                          }`}
+                          aria-hidden="true">
+                          <svg
+                            className="h-4 w-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </span>
+                      )}
+                    </button>
 
-                      return (
-                        <li key={sub.id}>
-                          <button
-                            onClick={() =>
-                              handleSubcategoryClick(cat.name, sub.name)
-                            }
-                            className={`block w-full text-left py-1.5 text-sm transition-colors ${
-                              isSubActive
-                                ? "text-brand-300 font-medium"
-                                : "text-ink/70 hover:text-brand-300"
-                            }`}>
-                            {sub.name}
-                          </button>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                )}
-              </div>
-            );
-          })}
+                    {/* Subcategories */}
+                    {cat.subcategories && (
+                      <div
+                        className={`grid transition-[grid-template-rows,opacity] duration-300 ${
+                          isOpen
+                            ? "grid-rows-[1fr] opacity-100"
+                            : "grid-rows-[0fr] opacity-0"
+                        }`}>
+                        <div className="min-h-0 overflow-hidden">
+                          <div className="border-t border-ink/10 px-3 pb-3">
+                            <ul className="mt-2 space-y-1">
+                              {cat.subcategories.map((sub) => {
+                                const isSubActive =
+                                  normalizeString(cat.name) ===
+                                    currentCategory &&
+                                  normalizeString(sub.name) === currentSub;
+
+                                return (
+                                  <li key={sub.id}>
+                                    <button
+                                      onClick={() =>
+                                        handleSubcategoryClick(
+                                          cat.name,
+                                          sub.name,
+                                        )
+                                      }
+                                      className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm transition focus:outline-none focus:ring-4 focus:ring-brand-300/15 ${
+                                        isSubActive
+                                          ? "bg-white text-brand-300 shadow-sm"
+                                          : "text-ink/70 hover:bg-ink/5 hover:text-brand-300"
+                                      }`}>
+                                      <span className="truncate">
+                                        {sub.name}
+                                      </span>
+                                      {isSubActive && (
+                                        <span className="text-xs font-medium text-brand-300">
+                                          Activo
+                                        </span>
+                                      )}
+                                    </button>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Footer hint */}
+          <div className="border-t border-ink/10 p-4 text-center text-xs text-ink/50">
+            Tip: podés combinar categoría + subcategoría
+          </div>
         </div>
       </div>
     </aside>

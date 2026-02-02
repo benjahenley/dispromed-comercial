@@ -11,8 +11,8 @@
  * @property {string} title
  * @property {string} [description]
  * @property {string} image
- * @property {string} category
- * @property {string} [subcategory]
+ * @property {string} categoryId
+ * @property {string} [subcategoryId]
  * @property {string} [priceDisplay]
  * @property {SpecTable} [table]
  * @property {string[]} [badges]
@@ -31,4 +31,4 @@
  * @property {Subcategory[]} subcategories
  */
 
-export {};
+export { };

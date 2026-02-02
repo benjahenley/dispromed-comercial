@@ -1,35 +1,144 @@
 [
   {
-    "id": "descartables",
-    "name": "Descartables",
+    "id": "hilos-de-suturas",
+    "name": "Hilos de Suturas",
     "subcategories": [
+      {
+        "id": "absorbible",
+        "name": "Absorbible",
+        "products": [
+          "acido-poliglicolico-antibacterial",
+          "poliglactina-antibacterial",
+          "polidioxanona-antibacterial",
+          "poliglecaprone-antibacterial",
+          "poliglactina",
+          "polidioxanona",
+          "poliglecaprone",
+          "acido-poliglicolico"
+        ]
+      },
+      {
+        "id": "no-absorbible",
+        "name": "No Absorbible",
+        "products": [
+          "acero",
+          "nylon",
+          "seda",
+          "polipropileno",
+          "lino",
+          "poliester"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mallas-y-fijadores",
+    "name": "Mallas y Fijadores",
+    "products": [
+      { "id": "polipropileno", "name": "Polipropileno" },
+      { "id": "polipropileno-3d", "name": "Polipropileno 3D" },
+      {
+        "id": "polipropileno-baja-densidad",
+        "name": "Polipropileno Baja Densidad"
+      },
+      {
+        "id": "polipropileno-mezclas",
+        "name": "Polipropileno + Acido Poliglicolico + Policaprolactona"
+      },
+      { "id": "polipropileno-silicona", "name": "Polipropileno + Silicona" },
+      { "id": "fijador-absorbible", "name": "Fijador Absorbible" },
+      { "id": "fijador-permanente", "name": "Fijador Permanente" }
+    ]
+  },
+  {
+    "id": "suturas-mecanicas-y-laparoscopia",
+    "name": "Suturas Mecánicas y Laparoscopia",
+    "subcategories": [
+      {
+        "id": "convecional",
+        "name": "Convecional",
+        "products": [
+          "curva-cortante",
+          "circulares",
+          "hemorroidales",
+          "lineal-cortante"
+        ]
+      },
+      {
+        "id": "laparoscopicas",
+        "name": "Laparoscópicas",
+        "products": ["lineal-cortante-endoscopica"]
+      },
+      {
+        "id": "accesorios",
+        "name": "Accesorios",
+        "products": [
+          "trocares",
+          "retractor-de-heridas",
+          "bolsa-de-especimen",
+          "clips-de-polimero"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "selladores-de-vasos",
+    "name": "Selladores de Vasos",
+    "products": [
+      { "id": "ultrasonido", "name": "Ultrasonido" },
+      {
+        "id": "ultrasonido-radiofrecuencia",
+        "name": "Ultrasonido + Radiofrecuencia"
+      }
+    ]
+  },
+  {
+    "id": "hospitalario",
+    "name": "Hospitalario",
+    "products": [
+      { "id": "guias-de-suero", "name": "Guías de Suero" },
+      { "id": "guantes-de-examen", "name": "Guantes de Examen" },
+      {
+        "id": "guantes-esteriles-cirugia",
+        "name": "Guantes Estériles para Cirugía"
+      },
+      { "id": "agujas", "name": "Agujas" },
+      { "id": "llaves-3-vias", "name": "Llaves de 3 Vías" },
       { "id": "jeringas", "name": "Jeringas" },
-      { "id": "guantes", "name": "Guantes" },
-      { "id": "gasas-y-apositos", "name": "Gasas y Apósitos" }
+      { "id": "tubo-endotraqueales", "name": "Tubo Endotraqueales" },
+      { "id": "sondas-folex", "name": "Sondas Folex" },
+      { "id": "cateteres-intravenosos", "name": "Catéteres Intravenosos" },
+      { "id": "equipos-transfusion", "name": "Equipos de Transfusión" },
+      { "id": "antisepticos", "name": "Antisépticos" },
+      { "id": "equipos-infusion", "name": "Equipos de Infusión" },
+      { "id": "cateteres-via-central", "name": "Catéteres Vía Central" },
+      { "id": "algodon", "name": "Algodón" },
+      { "id": "alcohol", "name": "Alcohol" },
+      { "id": "gasas-esteriles", "name": "Gasas Estériles" }
     ]
   },
   {
-    "id": "instrumental",
-    "name": "Instrumental",
-    "subcategories": [
-      { "id": "bisturi-y-hojas", "name": "Bisturí y Hojas" },
-      { "id": "suturas", "name": "Suturas" },
-      { "id": "pinzas", "name": "Pinzas" }
+    "id": "barcat",
+    "name": "Barcat",
+    "products": [
+      { "id": "bolsas-colectoras-orina", "name": "Bolsas Colectoras de Orina" },
+      { "id": "canulas-oxigeno", "name": "Cánulas de Oxígeno" },
+      { "id": "canulas-aspiracion", "name": "Cánulas de Aspiración" },
+      { "id": "conectores", "name": "Conectores" },
+      { "id": "equipos-irrigacion", "name": "Equipos de Irrigación" },
+      { "id": "prolongadores", "name": "Prolongadores" },
+      {
+        "id": "sonda-aspiracion-succion",
+        "name": "Sondas de Aspiración y Succión"
+      },
+      { "id": "sonda-alimentacion", "name": "Sonda de Alimentación" },
+      { "id": "sondas-nelaton", "name": "Sondas Nelaton" },
+      { "id": "sondas-bequille", "name": "Sondas Bequille" },
+      { "id": "tubuladuras", "name": "Tubuladuras" },
+      {
+        "id": "tubos-canalizacion-venosa-anestesica",
+        "name": "Tubos para Canalización Venosa o Anestésica"
+      }
     ]
-  },
-  {
-    "id": "accesos-venosos",
-    "name": "Accesos Venosos",
-    "subcategories": [{ "id": "cateteres", "name": "Catéteres" }]
-  },
-  {
-    "id": "anestesia",
-    "name": "Anestesia",
-    "subcategories": [{ "id": "intubacion", "name": "Intubación" }]
-  },
-  {
-    "id": "equipamiento",
-    "name": "Equipamiento",
-    "subcategories": [{ "id": "diagnostico", "name": "Diagnóstico" }]
   }
 ]
