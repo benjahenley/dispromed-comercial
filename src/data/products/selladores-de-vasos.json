@@ -1,0 +1,44 @@
+{
+  "categoryId": "selladores-de-vasos",
+  "products": [
+    {
+      "id": "ligadura-de-titanio-la-hoja-de-las-tijeras",
+      "navProductId": null,
+      "categoryId": "selladores-de-vasos",
+      "subcategoryId": "ultrasonido",
+      "title": "Ligadura De Titanio La Hoja De las Tijeras",
+      "description": "LIGADURA DE TITANIO LA HOJA DE LAS TIJERAS",
+      "imageCount": 7,
+      "images": [
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        }
+      ]
+    }
+  ]
+}

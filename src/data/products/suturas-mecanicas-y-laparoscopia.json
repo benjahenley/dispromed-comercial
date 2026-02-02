@@ -1,0 +1,402 @@
+{
+  "categoryId": "suturas-mecanicas-y-laparoscopia",
+  "products": [
+    {
+      "id": "clips-de-polimero",
+      "navProductId": "clips-de-polimero",
+      "categoryId": "suturas-mecanicas-y-laparoscopia",
+      "subcategoryId": "accesorios",
+      "title": "Clips de ligadura poliméricos",
+      "description": "Los clips de ligadura son dispositivos implantables, están diseñados para sujetar de forma segura el vaso sanguíneo o tejido para proporcionar una oclusión completa de forma atraumática. Se utilizan en procedimientos cardiotorácicos, vasculares, gastrointestinales, urológicos, ginecológicos y bariátricos.",
+      "characteristics": {
+        "title": "Características",
+        "items": [
+          "Las ranuras laterales y transversales permiten una fijación segura en la estructura y aumenta la resistencia al clip formado.",
+          "La sección transversal triangular maximiza el contacto de superficie a superficie entre la pinza y la mandíbula.",
+          "Cierre preciso de punta a punta con agarre firme a los vasos sanguíneos.",
+          "Tamaño del clip: pequeño, mediano, mediano-grande, grande",
+          "Clip/Cartuchos: 6",
+          "Cartuchos/Caja: 20",
+          "Clips/Caja: 120",
+          "Código del producto : MLT100, MLT200, MLT300, MLT400"
+        ]
+      },
+      "models": [
+        {
+          "title": "LC-4-6",
+          "imgPath": "",
+          "alt": ""
+        },
+        {
+          "title": "LC-1-6",
+          "imgPath": "",
+          "alt": ""
+        },
+        {
+          "title": "LC-2-6",
+          "imgPath": "",
+          "alt": ""
+        },
+        {
+          "title": "LC-3-6",
+          "imgPath": "",
+          "alt": ""
+        }
+      ],
+      "table": {
+        "headers": ["Código", "Largo", "Color", "Medida"],
+        "rows": [
+          ["CA C 27*9 S", "270", "Verde", "ML"],
+          ["CA C 27*9 M", "270", "Violeta", "L"],
+          ["CA C 27*9 L", "270", "Dorado", "XL"],
+          ["CA C 27*70 S", "270", "Verde", "ML"],
+          ["CA C 27*70 M", "270", "Violeta", "L"],
+          ["CA C 27*70 L", "270", "Dorado", "XL"],
+          ["CA B 5-S", "330", "VERDE", "ML"],
+          ["CA B 10-M", "330", "VIOLETA", "L"],
+          ["CA B 10-L", "330", "DORADO", "XL"]
+        ]
+      },
+      "imageCount": 2,
+      "images": [
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/convencional/clips-de-ligadura-polimericos-1.webp",
+          "alt": "Aplicador Abierto"
+        },
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/convencional/clips-de-ligadura-polimericos-2.webp",
+          "alt": "Aplicador Laparoscópico"
+        }
+      ]
+    },
+    {
+      "id": "grapadora-cutanea-desechable-removedor",
+      "navProductId": "grapadora-cutanea-desechable-removedor",
+      "categoryId": "suturas-mecanicas-y-laparoscopia",
+      "subcategoryId": "convecional",
+      "title": "Grapadora cutánea desechable y removedor",
+      "description": "Se utiliza para el cierre de heridas cutáneas y la sutura de la piel\nsuperficial en incisiones quirúrgicas.\nDiseñada ergonómicamente para adaptarse a la mano, lo que facilita su\nuso durante la cirugía.\nIncluye un indicador de cantidad de grapas, que muestra claramente las\ngrapas restantes.\nGrapadora cutánea desechable y removedor:\nLa grapadora de piel desechable con grapas de acero inoxidable 316L tiene\naplicaciones en cirugías abdominales, ginecológicas, ortopédicas y\ntorácicas para el cierre de la piel. Una vez que la piel ha tenido la\noportunidad de curarse, las grapas se retiran con un extractor de grapas.\nLa cabeza de la grapadora tiene un ángulo que proporciona una visión clara\npara asegurar la colocación precisa de la grapa y permite que los pasadores\ngrapen fácilmente el tejido.\nCaracterísticas:\nDiseño ergonómico\nLongitud óptima\nCarcasa transparente con\nindicador\nLongitud adecuada de la corona\nde grapas\nBeneficios:\nFácil manejo para el resultado\ndeseado\nSujeta tejidos más gruesos\nMejor visibilidad del recuento de\ngrapas\nAsegura heridas más amplias",
+      "imageCount": 2,
+      "images": [
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/convencional/grapadora-cutanea-desechable-1.webp",
+          "alt": "Grapadora Cutanea Desechable 1"
+        },
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/convencional/grapadora-cutanea-desechable-2.webp",
+          "alt": "Grapadora Cutanea Desechable 2"
+        }
+      ]
+    },
+    {
+      "id": "lineal-cortante-endoscopica",
+      "navProductId": "lineal-cortante-endoscopica",
+      "categoryId": "suturas-mecanicas-y-laparoscopia",
+      "subcategoryId": "laparoscopicas",
+      "title": "Cortadora lineal endoscópica desechable con grapadora y recarga -B",
+      "description": "El grosor del tejido varia en todo el cuerpo, por lo que el proceso de selección de\ncartuchos con una compresión adecuada ha sido una necesidad crítica para los\ncirujanos que realizan cirugías abdominales y torácicas.\nPresentamos el cortador lineal endoscópico y las recargas MIRUST con una\ntecnología de recarga distintiva que ofrece distintas alturas de grapas para\nadaptarse a diferentes espesores de tejidos con una compresión\nadecuada, una tensión tisular mínima y una perfusión óptima.\nEl cortador lineal endoscópico MIRUSM es una pistola universal con recargas de\n45 mm y 60 mm. Ofrece un diseño ergonóico con precisión en la articulación de\nla mandíbula y formación constante de líneas de grapas para una anastomosis a\nprueba de fugas.",
+      "table": {
+        "headers": [
+          "Código",
+          "Longitud de Recarga (mm)",
+          "Altura de Grapa (mm)",
+          "Color"
+        ],
+        "rows": [
+          ["DER B 45G", "45", "2.5/2.5/2.5", "Gris"],
+          ["DER B 45T", "45", "2.0/2.5/3.0", "Tostado"],
+          ["DER B 45P", "45", "3.0/3.5/4.0", "Púrpura"],
+          ["DER B 45B", "45", "4.0/4.5/5.0", "Negro"],
+          ["DER B 60T", "60", "2.0/2.5/3.0", "Tostado"],
+          ["DER B 60P", "60", "3.0/3.5/4.0", "Púrpura"],
+          ["DER B 60B", "60", "4.0/4.5/5.0", "Negro"],
+          ["DER HB 45T Punta angulada", "45", "2.0/2.5/3.0", "Tostado"],
+          ["DER HB 45P Punta angulada", "45", "3.0/3.5/4.0", "Púrpura"],
+          ["DER HB 45B Punta angulada", "45", "4.0/4.5/5.0", "Negro"],
+          ["DER HB 60L Punta angulada", "60", "2.5/2.5/2.5", "Blanco"],
+          ["DER HB 60T Punta angulada", "60", "2.0/2.5/3.0", "Tostado"],
+          ["DER HB 60P Punta angulada", "60", "3.0/3.5/4.0", "Púrpura"],
+          ["DER HB 60B Punta angulada", "60", "4.0/4.5/5.0", "Negro"]
+        ]
+      },
+      "imageCount": 3,
+      "images": [
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/laparoscopicas/cortadora-lineal-endoscopica-B-1.webp",
+          "alt": "Cortadora lineal endoscópica desechable con grapadora y recarga -B 1"
+        },
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/laparoscopicas/cortadora-lineal-endoscopica-B-2.webp",
+          "alt": "Cortadora lineal endoscópica desechable con grapadora y recarga -B 2"
+        },
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/laparoscopicas/cortadora-lineal-endoscopica-B-3.webp",
+          "alt": "Cortadora lineal endoscópica desechable con grapadora y recarga -B 3"
+        }
+      ],
+      "descriptionPages": {
+        "D": [
+          "Se utiliza en cirugías torácicas, abdominales, pediátricas y en\nendoscopía ginecológica.\nCuenta con un sistema de doble compresión, que permite una mejor\nformación de las grapas.\nDiseñada para operarse con una sola mano y con un mayor ángulo de\nmovimiento.\nPosee un sistema de disparo en 3 pasos y retorno manual en 1 paso, lo\nque la hace más segura durante el procedimiento.\nCortadora lineal endoscópica desechable\ncon grapadora y recarga -D:\nLa compresión óptima del tejido es clave para lograr una formación\nconsistente de una línea de grapas en forma de B que garantice la\nseguridad de la herida y una hemoostasia adecuada.\nPresentamos el cortador lineal endoscópico y recargas MIRUS que ofrece,\nuna articulación de la mandíbula única, controlada proximalmente y sin\nrestricciones, de 0° a 45° en ambos lados. Cada recarga tiene una nueva\ncuchilla para una sección transversal precisa y para evitar la contaminación\ncruzada",
+          "Se utiliza en cirugías torácicas, abdominales, pediátricas y en endoscopía\nginecológica.\nCuenta con un sistema de doble compresión, que permite una mejor\nformación de las grapas.\nDiseñada para operarse con una sola mano y con un mayor ángulo de\nmovimiento.\nPosee un sistema de disparo en 3 pasos y retorno manual en 1 paso, lo que la\nhace más segura durante el procedimiento.\nCortadora lineal endoscópica desechable\ncon grapadora y recarga -D:\nCortadora lineal endoscópica desechable\ncon grapadora y recarga -D"
+        ]
+      },
+      "imageCount_D": 6,
+      "images_D": [
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "id": "curva-cortante",
+      "navProductId": "curva-cortante",
+      "categoryId": "suturas-mecanicas-y-laparoscopia",
+      "subcategoryId": "convecional",
+      "title": "Grapadora cortadora curva desechable",
+      "description": "Se utiliza para la transección, resección y/o creación de anastomosis, con\naplicación en múltiples procedimientos quirúrgicos abiertos o\nmínimamente invasivos: gastrointestinales, de tejido muscular,\nginecológicos, urológicos y torácicos.\nCuenta con un diseño especial de cabeza curva, que permite posicionarla\nfácilmente en zonas bajas y es ideal para cavidades pélvicas estrechas.\nIncluye una junta cortable que emite una señal sonora clara tras cada\ndisparo, confirmando que el corte y la sutura se han completado\ncorrectamente.\nGrapadora cortadora curva desechable:",
+      "table": {
+        "headers": ["Código", "Grapa (QTY)", "Altura de Grapa (mm)"],
+        "rows": [["DCC B-40G", "40", "4.8 ± 0.3"]]
+      },
+      "imageCount": 1,
+      "images": [
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/convencional/grapadora-cortadora-curva-desechable.webp",
+          "alt": "Grapadora cortadora curva desechable"
+        }
+      ]
+    },
+    {
+      "id": "lineal-cortante",
+      "navProductId": "lineal-cortante",
+      "categoryId": "suturas-mecanicas-y-laparoscopia",
+      "subcategoryId": "convecional",
+      "title": "Grapadora cortadora lineal desechable con recarga -B",
+      "description": "La cortadora lineal modo recargable MIRUS medidas 60, 80 y 100, forman\ndos filas de grapas de titanio de doble scalonamiento y, al mismo tiempo,\ncortan y separan el tejido entre las dos filas dobles. El cortador lineal\ncargable MIRUS, tienen recargas que están disponibles en medidas de 60\nmm y 80 mm con dos tamaños ferentes para adaptarse a diversos grosores\nde tejido.\nGrapadora cortadora lineal desechable\ncon recarga -B:\nEl cortador lineal MIRUS es:\nFiable: Mecanismo para la formación de grapas. Bloqueo de seguridad para\nprevenir la descarga de dispositivos.\nFlexible: Contiene dos cargas diferentes para diferentes espesores de\ntejido.\nFácil de usar: se usa con una mano. La posición de bloqueo tiene en cuenta\nel reposicionamiento del tejido.\n60 ml\n80ml\n100ml",
+      "table": {
+        "headers": [
+          "Código - Grapadora",
+          "Código - Recarga",
+          "Longitud de Corte ±3 (mm)",
+          "Tamaño de Grapa A±0.2 mm",
+          "Grapas (CANT.)",
+          "Color",
+          "Recargas"
+        ],
+        "rows": [
+          ["DLC B-60B", "DCR B-60B", "63", "3.8", "64", "Azul", "3.8mm"],
+          ["DLC B-60G", "DCR B-60G", "63", "4.8", "64", "Verde", "4.8mm"],
+          ["DLC B-80B", "DCR B-80B", "83", "3.8", "84", "Azul", "3.8mm"],
+          ["DLC B-80G", "DCR B-80G", "83", "4.8", "84", "Verde", "4.8mm"],
+          ["DLC B-100B", "DCR B-100B", "103", "3.8", "104", "Azul", "3.8mm"],
+          ["DLC B-100G", "DCR B-100G", "103", "4.8", "104", "Verde", "4.8mm"]
+        ]
+      },
+      "imageCount": 1,
+      "images": [
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/convencional/grapadora-cortadora-lineal-B.webp",
+          "alt": "Grapadora cortadora lineal desechable con recarga -B"
+        }
+      ]
+    },
+    {
+      "id": "circulares",
+      "navProductId": "circulares",
+      "categoryId": "suturas-mecanicas-y-laparoscopia",
+      "subcategoryId": "convecional",
+      "title": "Grapadora Circular Desechable",
+      "description": "La grapadora circular de MIRUS, tiene un diseño circular que refleja tres\ndécadas de experiencias extraídas de los principales cirujanos que fueron\nbariátricos, colorrectales y médicos de todo el mundo. Con la tecnología\nde consolidación de grapas de 4.0mm, la grapadora circular MIRUS brinda\nun rendimiento de fácil uso y es muy adaptable.\nNuestra grapadora intraluminal contiene un indicador de compresión de\ntejido y mide el tejido comprimido en posiciones particulares dentro de\nuna escala. Cuando se encuentra con el tejido las grapadoras proporcionan\nuna capa para una conexión perfecta. En el arranque las capas de tejido\nson reguladas y con ello las grapas de altura se ajustan automáticamente y\nofrecen una disposición pareja de grapas.\nClavos de titanio importados de alta resistencia, para garantizar la\nestabilidad de la anastomosis postoperatoria.\nYunque formado de una sola pieza, que asegura una mejor forma en “B”\n.",
+      "table": {
+        "headers": [
+          "Grapadora",
+          "Descripción",
+          "Longitud Abierta",
+          "Longitud cerrada",
+          "Diámetro de corte",
+          "Diámetro del cabezal",
+          "Fila de grapas",
+          "Cantidad de grapas"
+        ],
+        "rows": [
+          [
+            "MCS-21R3",
+            "MIRUS DISP GRAPADORA CIRCULAR 3 FILA 21",
+            "4.5MM",
+            "1.0 - 2.5 MM",
+            "12",
+            "21",
+            "3",
+            "21"
+          ],
+          [
+            "MCS-25R3",
+            "MIRUS DISP GRAPADORA CIRCULAR 3 FILA 25",
+            "4.5MM",
+            "1.0 - 2.5 MM",
+            "16",
+            "16",
+            "3",
+            "33"
+          ],
+          [
+            "MCS-29R3",
+            "MIRUS DISP GRAPADORA CIRCULAR 3 FILA 29",
+            "4.5MM",
+            "1.0 - 2.5 MM",
+            "20",
+            "29",
+            "3",
+            "36"
+          ],
+          [
+            "MCS-32R3",
+            "MIRUS DISP GRAPADORA CIRCULAR 3 FILA 31",
+            "4.5MM",
+            "1.0 - 2.5 MM",
+            "21",
+            "31",
+            "3",
+            "36"
+          ]
+        ]
+      },
+      "imageCount": 1,
+      "images": [
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/convencional/grapadora-circular-desechable.webp",
+          "alt": "Grapadora Circular Desechable"
+        }
+      ]
+    },
+    {
+      "id": "hemorroidales",
+      "navProductId": "hemorroidales",
+      "categoryId": "suturas-mecanicas-y-laparoscopia",
+      "subcategoryId": "convecional",
+      "title": "Grapadora Hemorroidal Desechable-B",
+      "description": "Tiene interés sobre los procedimientos tradicionales, porque su metodología se\nrealiza encima de la línea dentada dentro de la vía rectal, incluyendo en menos\nnervios.\nEl mecanismo de la grapadora PPH proporciona dos filas de grapas de titanio en\ntamaño de 34 mm en diámetro, que están conectadas a la vía rectal para la\ntransección y resección del interior del tejido.\nLos accesorios que contiene son; anoscopio y dilatador. El anoscopio está\ndiseñado para ayudar en la aplicación y en al estructura de cadena del bolso\ncual va por encima de la línea dentada. Esto consiste en ayudarte y lo que hace\nes que toma una sutura de cuerda de bolsa circunferencial que está dentro del\nrecto.\nBase de grapa integrada de\nacero inoxidable.\nGrapas de titanio.\nHebilla fija.\nMayor profundidad y volumen de\ncartucho de grapas.\nDHS",
+      "table": {
+        "headers": [
+          "Código",
+          "D.E. (mm)",
+          "D.I. ±0.5 (mm)",
+          "Altura de Grapa (mm)",
+          "Grapas (CANT.)"
+        ],
+        "rows": [
+          ["DHS B-32", "32", "23", "4,8", "32"],
+          ["DHS B-34", "34", "25", "4,8", "34"]
+        ]
+      },
+      "imageCount": 6,
+      "images": [
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/convencional/grapadora-hemorroidal-desechable.webp",
+          "alt": "Grapadora Hemorroidal Desechable -B"
+        },
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/convencional/grapadora-hemorroidal-desechable-2.webp",
+          "alt": "Grapadora Hemorroidal Desechable -B 2"
+        }
+      ]
+    },
+    {
+      "id": "trocares",
+      "navProductId": "trocares",
+      "categoryId": "suturas-mecanicas-y-laparoscopia",
+      "subcategoryId": "accesorios",
+      "title": "Trocar endoscopio desechable sin cuchilla",
+      "description": "Características:\nEntrada óptica\nPermite la visualización de capas de tejido durante la inserción\nAla de pájaro\nPunta de ala de pájaro única para una inserción fácil y suave Separa el\ntejido en vez de cortarlo\nSello interior y exterior\nMantiene la insuflación y acepta una amplia gama de tamaños de\ninstrumentos\nHilo de estabilidad\nRetención de la pared abdominal para mínimos deslizamientos del trocar\nObturador\nDiseño robusto para inserción en la pared abdominal con menos fuerza\nSerie Kangaroo\nTrócar\nEl trocar endoscópico desechable consiste en un sistema de acceso que\npermite que el procedimeinto aparoscópico no tenga problemas.\nProcedimientos minimamente invasivos, abdominales, torácicos y\nginecológicos.\nCon un simple movimiento de torsión, la punta sin alas de \"Bird Wing\"\nsepara el tejido en lugar de cortarlo. Lo que genera una herida más\npequeña, menos traumatismo y un cierre más fácil.\nTrocar endoscopio desechable sin cuchilla",
+      "table": {
+        "headers": ["Código", "Tamaño (mm)", "Longitud de CANULA (mm)"],
+        "rows": [
+          ["AVTC 5-100", "5", "100"],
+          ["AVTC 10-100", "10", "100"],
+          ["AVTC 12-100", "12", "100"],
+          ["AVTC 15-100", "15", "100"]
+        ]
+      },
+      "imageCount": 1,
+      "images": [
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/accesorios/trocar-endoscopico-desechable.webp",
+          "alt": "Trocar endoscopio desechable sin cuchilla"
+        }
+      ]
+    },
+    {
+      "id": "aguja-de-veress",
+      "navProductId": "aguja-de-veress",
+      "categoryId": "suturas-mecanicas-y-laparoscopia",
+      "subcategoryId": "accesorios",
+      "title": "Aguja de Veress",
+      "description": "Los colores rojo y verde indican una mayor\nretroalimentación visual al ingresar a la cavidad abdominal.",
+      "table": {
+        "headers": ["Código", "Longitud de Trabajo ±5 (mm)"],
+        "rows": [
+          ["VN-120", "120"],
+          ["VN-150", "150"]
+        ]
+      },
+      "imageCount": 1,
+      "images": [
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/accesorios/aguja-de-veress.webp",
+          "alt": "Aguja de Veress"
+        }
+      ]
+    },
+    {
+      "id": "bolsa-de-especimen",
+      "navProductId": "bolsa-de-especimen",
+      "categoryId": "suturas-mecanicas-y-laparoscopia",
+      "subcategoryId": "accesorios",
+      "title": "Bolsa Desechable para Extracción de Muestras",
+      "description": "Diseño con anillo flexible que reduce el riesgo de daño en los tejidos.\nDisponible en varios tamaños, incluido extra grande, ofreciendo más\nopciones para la cirugía.\nSe utiliza en cirugías endoscópicas y de pequeña incisión, así como en\ncirugías laparoscópicas ginecológicas sin suspensión de neumoperitoneo.",
+      "imageCount": 1,
+      "images": [
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/accesorios/bolsa-desechable-para-extraccion.webp",
+          "alt": "Bolsa Desechable para Extracción de Muestras"
+        }
+      ]
+    },
+    {
+      "id": "retractor-de-heridas",
+      "navProductId": "retractor-de-heridas",
+      "categoryId": "suturas-mecanicas-y-laparoscopia",
+      "subcategoryId": "accesorios",
+      "title": "Túnel Desechable de Asistencia Manual",
+      "description": "Se utiliza en cirugías endoscópicas y de pequeña incisión, así como en\ncirugías laparoscópicas ginecológicas sin suspensión de neumoperitoneo.",
+      "imageCount": 1,
+      "images": [
+        {
+          "src": "/products/suturas-mecanicas-y-laparoscopicas/accesorios/tunel-desechable-de-asistencia-manual.webp",
+          "alt": "Túnel Desechable de Asistencia Manual"
+        }
+      ]
+    }
+  ]
+}

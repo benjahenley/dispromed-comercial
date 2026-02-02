@@ -155,7 +155,7 @@ function InfoCard({ title, value, href, icon }) {
         <div className="min-w-0">
           <p className="text-sm font-semibold text-ink">{title}</p>
 
-          <div className="mt-1 text-sm leading-relaxed text-ink/70 break-words">
+          <div className="mt-1 text-sm leading-relaxed text-ink/70 wrap-break-word">
             {href ? (
               <span className="text-brand-300 font-medium group-hover:text-brand-400 transition-colors">
                 {value}
@@ -223,7 +223,7 @@ export function Contacto() {
 
       {/* Hero */}
       <div className="relative overflow-hidden border-b border-ink/10">
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-100/25 via-white to-white" />
+        <div className="absolute inset-0 bg-linear-to-b from-brand-100/25 via-white to-white" />
         <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-brand-100/30 blur-3xl" />
         <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-brand-100/25 blur-3xl" />
 

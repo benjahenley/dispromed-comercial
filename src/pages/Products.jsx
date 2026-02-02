@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import { useMemo } from "react";
-import { products } from "../data/products";
+import { products } from "../data/products/products";
 import categories from "../data/categories.json";
 import { CategorySidebar } from "../components/CategorySidebar";
 import { ProductGrid } from "../components/ProductGrid";

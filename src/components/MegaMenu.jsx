@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import categories from "../data/categories.json";
 import { normalizeString } from "../lib/filters";
-import { products } from "../data/products";
+import { products } from "../data/products/products";
 import { useState } from "react";
 
 export function MegaMenu({ isOpen, onMouseEnter, onMouseLeave }) {
