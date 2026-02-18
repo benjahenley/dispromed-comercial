@@ -6,6 +6,7 @@ import Finder from "../Finder";
 import NavLink from "./NavLink";
 import { navItems } from "../../data/navitems";
 import { BrandHeader } from "../BrandHeader";
+import { useProductSearch } from "../../hooks/useProductSearch";
 
 export function SecondaryNavbar() {
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
@@ -14,6 +15,8 @@ export function SecondaryNavbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const timeoutRef = useRef(null);
   const inputRef = useRef(null);
+
+  const { results, isActive } = useProductSearch(searchQuery);
 
   useEffect(() => {
     if (openFinder) inputRef.current?.focus();
@@ -32,26 +35,28 @@ export function SecondaryNavbar() {
     }, 100);
   };
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    // Handle search logic here
-    console.log("Searching for:", searchQuery);
+  const handleCloseFinder = () => {
+    setOpenFinder(false);
+    setSearchQuery("");
   };
 
   return (
     <>
       <div className="relative top-0 z-100 left-0 right-0">
         {/* Top bar with search, logo, and icons */}
-        <div className="bg-linear-to-br from-brand-400 via-brand-300 to-brand-200 relative overflow-hidden">
+        <div className="bg-linear-to-br from-brand-400 via-brand-300 to-brand-200 relative">
           {/* Subtle Texture */}
           <div
-            className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.3)_1px,transparent_1px)] bg-size-[20px_20px] opacity-60"
-            style={{
-              maskImage:
-                "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%)",
-              WebkitMaskImage:
-                "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%)",
-            }}></div>
+            className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div
+              className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.3)_1px,transparent_1px)] bg-size-[20px_20px] opacity-60"
+              style={{
+                maskImage:
+                  "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%)",
+                WebkitMaskImage:
+                  "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%)",
+              }}></div>
+          </div>
           {/* Header */}
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 w-full flex justify-center">
             <BrandHeader onOpenMenu={() => setDrawerOpen(true)} />
@@ -62,7 +67,7 @@ export function SecondaryNavbar() {
             <div className="relative max-w-8xl mx-auto px-4">
               <div className="flex items-center justify-between gap-6 rounded-full w-full max-w-7xl mx-auto px-8 min-h-[72px]  z-100000">
                 {/* Search Button */}
-                <div className="flex flex-row gap-5 items-center">
+                <div className="flex flex-row gap-5 items-center w-full">
                   <button
                     type="button"
                     onClick={() => setOpenFinder((v) => !v)}
@@ -88,8 +93,9 @@ export function SecondaryNavbar() {
                     inputRef={inputRef}
                     searchQuery={searchQuery}
                     setSearchQuery={setSearchQuery}
-                    handleSearch={handleSearch}
-                    onClose={() => setOpenFinder(false)}
+                    onClose={handleCloseFinder}
+                    searchResults={results}
+                    isSearchActive={isActive}
                   />
                 </div>
 

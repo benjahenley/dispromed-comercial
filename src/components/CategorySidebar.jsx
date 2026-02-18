@@ -14,7 +14,7 @@ export function CategorySidebar() {
   const activeCategoryId = useMemo(() => {
     if (!currentCategory) return null;
     const cat = categories.find(
-      (c) => normalizeString(c.name) === currentCategory,
+      (c) => normalizeString(c.name) === currentCategory
     );
     return cat?.id ?? null;
   }, [currentCategory]);
@@ -111,7 +111,7 @@ export function CategorySidebar() {
                       </span>
                       {cat.subcategories && (
                         <span
-                          className={`flex flex-shrink-0  h-9 w-9 items-center justify-center rounded-full border border-ink/10 bg-white text-ink/70 transition ${
+                          className={`flex flex-shrink-0  items-center justify-center rounded-full text-ink/70 transition ${
                             isOpen
                               ? "rotate-180 border-brand-300/30 text-brand-300"
                               : "group-hover:text-brand-300"
@@ -156,7 +156,7 @@ export function CategorySidebar() {
                                       onClick={() =>
                                         handleSubcategoryClick(
                                           cat.name,
-                                          sub.name,
+                                          sub.name
                                         )
                                       }
                                       className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm transition focus:outline-none focus:ring-4 focus:ring-brand-300/15 ${

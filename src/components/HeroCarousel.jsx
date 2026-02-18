@@ -5,7 +5,7 @@ const slides = [
   {
     id: 1,
     image:
-      "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1600&h=600&fit=crop",
+      "https://unsplash.com/photos/cheerful-surgeon-with-assistants-in-masks-are-crossing-arms-and-looking-at-camera-with-joy-t9KN97BinLY",
     title: "Insumos Médicos de Calidad",
     subtitle: "Distribución especializada para profesionales de la salud",
   },

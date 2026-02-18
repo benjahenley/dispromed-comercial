@@ -10,34 +10,13 @@
       "description": "LIGADURA DE TITANIO LA HOJA DE LAS TIJERAS",
       "imageCount": 7,
       "images": [
-        {
-          "src": "",
-          "alt": ""
-        },
-        {
-          "src": "",
-          "alt": ""
-        },
-        {
-          "src": "",
-          "alt": ""
-        },
-        {
-          "src": "",
-          "alt": ""
-        },
-        {
-          "src": "",
-          "alt": ""
-        },
-        {
-          "src": "",
-          "alt": ""
-        },
-        {
-          "src": "",
-          "alt": ""
-        }
+        { "imgId": "", "alt": "" },
+        { "imgId": "", "alt": "" },
+        { "imgId": "", "alt": "" },
+        { "imgId": "", "alt": "" },
+        { "imgId": "", "alt": "" },
+        { "imgId": "", "alt": "" },
+        { "imgId": "", "alt": "" }
       ]
     }
   ]

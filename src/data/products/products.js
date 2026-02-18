@@ -3,13 +3,16 @@
 
 import suturasMecanicasYLaparoscopia from "./suturas-mecanicas-y-laparoscopia.json";
 import selladoresDeVasos from "./selladores-de-vasos.json";
+import imageRegistry from "../imageRegistry";
+import { resolveModelImages } from "../../lib/resolveModelImages";
 
 export const productGroups = [
   suturasMecanicasYLaparoscopia,
   selladoresDeVasos,
 ];
 
-export const products = productGroups.flatMap(g => g.products);
+const rawProducts = productGroups.flatMap(g => g.products);
+export const products = resolveModelImages(rawProducts, imageRegistry);
 
 export function getProductById(id) {
   return products.find(p => p.id === id) ?? null;

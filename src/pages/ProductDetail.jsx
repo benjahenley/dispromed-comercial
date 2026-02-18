@@ -122,6 +122,76 @@ export function ProductDetail() {
                       {product.description}
                     </p>
                   )}
+
+                  {/* Characteristics */}
+                  {product.characteristics?.items?.length > 0 && (
+                    <div className="mt-6">
+                      <h2 className="text-lg font-semibold tracking-tight">
+                        {product.characteristics.title || "Características"}
+                      </h2>
+                      <ul className="mt-3 space-y-2">
+                        {product.characteristics.items.map((item, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-start gap-2 text-sm leading-relaxed text-ink/70">
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-300" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Benefits */}
+                  {product.benefits?.items?.length > 0 && (
+                    <div className="mt-6">
+                      <h2 className="text-lg font-semibold tracking-tight">
+                        {product.benefits.title || "Beneficios"}
+                      </h2>
+                      <ul className="mt-3 space-y-2">
+                        {product.benefits.items.map((item, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-start gap-2 text-sm leading-relaxed text-ink/70">
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Models */}
+                  {product.models?.length > 0 && (
+                    <div className="mt-6">
+                      <h2 className="text-lg font-semibold tracking-tight">
+                        Modelos
+                      </h2>
+                      <div className="mt-3 flex gap-2">
+                        {product.models.map((model, idx) => (
+                          <div
+                            key={idx}
+                            className="min-w-0 flex-1 overflow-hidden rounded-xl border border-ink/10">
+                            {model.src ? (
+                              <img
+                                src={model.src}
+                                alt={model.alt || model.title}
+                                loading="lazy"
+                                className="aspect-square w-full object-cover bg-ink/5"
+                              />
+                            ) : (
+                              <div className="flex aspect-square w-full items-center justify-center bg-ink/5 text-[10px] text-ink/30">
+                                —
+                              </div>
+                            )}
+                            <p className="px-1 py-1.5 text-center text-[10px] font-medium leading-tight text-ink/70 truncate">
+                              {model.title}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
 

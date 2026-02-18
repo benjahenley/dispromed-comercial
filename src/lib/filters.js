@@ -69,3 +69,32 @@ export function normalizeString(str) {
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/\s+/g, "-");
 }
+
+/**
+ * Normaliza texto para búsqueda (sin acentos, minúsculas)
+ * @param {string} str
+ * @returns {string}
+ */
+function normalizeSearch(str) {
+  return str
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+/**
+ * Busca productos por texto en título y descripción
+ * @param {import('./types').Product[]} products
+ * @param {string} query
+ * @returns {import('./types').Product[]}
+ */
+export function searchProducts(products, query) {
+  const normalized = normalizeSearch(query.trim());
+  if (normalized.length < 3) return [];
+
+  return products.filter((p) => {
+    const title = normalizeSearch(p.title ?? "");
+    const description = normalizeSearch(p.description ?? "");
+    return title.includes(normalized) || description.includes(normalized);
+  });
+}

@@ -82,7 +82,7 @@ export function Products() {
         href: sub ? `/productos?category=${category}` : undefined,
       });
       if (sub) {
-        const subcat = cat.subcategories.find(
+        const subcat = cat.subcategories?.find(
           (s) => normalizeString(s.name) === sub,
         );
         if (subcat) {

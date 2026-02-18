@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/navbar/Navbar";
 import { Footer } from "./components/Footer";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 
 // Lazy load pages for better performance
 const Home = lazy(() =>
@@ -41,6 +42,7 @@ function App() {
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
         <main className="flex-1">
+          <ErrorBoundary>
           <Suspense fallback={<LoadingFallback />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -67,6 +69,7 @@ function App() {
               />
             </Routes>
           </Suspense>
+          </ErrorBoundary>
         </main>
         <Footer />
       </div>

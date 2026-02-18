@@ -132,13 +132,7 @@ export function ContactInfoSection() {
 
         <InfoCard
           title="Horario"
-          value={
-            <>
-              Lu-Vié: 9:00 - 18:00
-              <br />
-              Sáb: 9:00 - 13:00
-            </>
-          }
+          value={<>Lu-Vié: 9:00 - 18:00</>}
           icon={<ClockIcon />}
         />
       </div>
@@ -229,11 +223,6 @@ export function Contacto() {
 
         <div className="relative max-w-7xl mx-auto px-4 py-14">
           <div className="max-w-2xl">
-            <p className="inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white px-3 py-1 text-xs font-medium text-ink/70">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-300" />
-              Atención comercial
-            </p>
-
             <h1 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight text-ink">
               Contacto
             </h1>

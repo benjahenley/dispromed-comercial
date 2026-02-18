@@ -6,6 +6,7 @@ import Finder from "../Finder";
 import NavLink from "./NavLink";
 import { navItems } from "../../data/navitems";
 import { BrandHeader } from "../BrandHeader";
+import { useProductSearch } from "../../hooks/useProductSearch";
 
 export function Navbar() {
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
@@ -14,6 +15,8 @@ export function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const timeoutRef = useRef(null);
   const inputRef = useRef(null);
+
+  const { results, isActive } = useProductSearch(searchQuery);
 
   useEffect(() => {
     if (openFinder) inputRef.current?.focus();
@@ -32,10 +35,9 @@ export function Navbar() {
     }, 100);
   };
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    // Handle search logic here
-    console.log("Searching for:", searchQuery);
+  const handleCloseFinder = () => {
+    setOpenFinder(false);
+    setSearchQuery("");
   };
 
   return (
@@ -88,8 +90,9 @@ export function Navbar() {
                   inputRef={inputRef}
                   searchQuery={searchQuery}
                   setSearchQuery={setSearchQuery}
-                  handleSearch={handleSearch}
-                  onClose={() => setOpenFinder(false)}
+                  onClose={handleCloseFinder}
+                  searchResults={results}
+                  isSearchActive={isActive}
                 />
               </div>
 
