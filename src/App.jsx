@@ -16,9 +16,6 @@ const ProductDetail = lazy(() =>
     default: module.ProductDetail,
   })),
 );
-const Catalogos = lazy(() =>
-  import("./pages/Catalogos").then((module) => ({ default: module.Catalogos })),
-);
 const Contacto = lazy(() =>
   import("./pages/Contacto").then((module) => ({ default: module.Contacto })),
 );
@@ -59,7 +56,6 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/productos" element={<Products />} />
               <Route path="/productos/:slug" element={<ProductDetail />} />
-              <Route path="/catalogos" element={<Catalogos />} />
               <Route path="/contacto" element={<Contacto />} />
               <Route path="/novedades" element={<Novedades />} />
               <Route

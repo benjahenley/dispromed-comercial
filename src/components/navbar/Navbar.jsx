@@ -241,7 +241,7 @@ export function Navbar() {
           isOpen={topMegaMenuOpen}
           onMouseLeave={handleTopMouseLeave}
           onClose={() => setTopMegaMenuOpen(false)}
-          topPaddingClass="pt-[4.5rem]"
+          topPaddingClass="pt-16"
         />
         <Drawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)} />
       </div>

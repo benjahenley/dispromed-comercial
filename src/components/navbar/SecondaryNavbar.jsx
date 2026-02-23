@@ -10,6 +10,7 @@ import { useProductSearch } from "../../hooks/useProductSearch";
 
 export function SecondaryNavbar() {
   const location = useLocation();
+  const isProductsPage = location.pathname === "/productos";
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
   const [openFinder, setOpenFinder] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -45,6 +46,7 @@ export function SecondaryNavbar() {
   }, [location.pathname, location.search]);
 
   const handleMouseEnter = () => {
+    if (isProductsPage) return;
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
@@ -126,7 +128,7 @@ export function SecondaryNavbar() {
                     <NavLink
                       color={"text-white"}
                       item={item}
-                      handleMouseEnter={handleMouseEnter}
+                      handleMouseEnter={isProductsPage ? undefined : handleMouseEnter}
                     />
                   ))}
                 </div>
@@ -135,12 +137,14 @@ export function SecondaryNavbar() {
           </nav>
         </div>
 
-        <MegaMenu
-          isOpen={megaMenuOpen}
-          onMouseLeave={handleMouseLeave}
-          onClose={() => setMegaMenuOpen(false)}
-          topPaddingClass="pt-[3.25rem]"
-        />
+        {!isProductsPage && (
+          <MegaMenu
+            isOpen={megaMenuOpen}
+            onMouseLeave={handleMouseLeave}
+            onClose={() => setMegaMenuOpen(false)}
+            topPaddingClass="pt-[3.25rem]"
+          />
+        )}
         <Drawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)} />
       </div>
     </>

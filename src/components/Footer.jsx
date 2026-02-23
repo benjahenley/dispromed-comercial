@@ -45,13 +45,6 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  to="/catalogos"
-                  className="hover:text-brand-100 transition-colors">
-                  Catálogos
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/novedades"
                   className="hover:text-brand-100 transition-colors">
                   Novedades

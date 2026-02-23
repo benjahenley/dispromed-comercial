@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import categories from "../data/categories.json";
 import { normalizeString } from "../lib/filters";
+import { products } from "../data/products/products";
 
 export function CategorySidebar() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -46,6 +47,14 @@ export function CategorySidebar() {
     const newParams = new URLSearchParams(searchParams);
     newParams.set("category", normalizeString(catName));
     newParams.set("sub", normalizeString(subName));
+    newParams.delete("offset");
+    setSearchParams(newParams);
+  };
+
+  const handleSubcategoryValueClick = (catName, subValue) => {
+    const newParams = new URLSearchParams(searchParams);
+    newParams.set("category", normalizeString(catName));
+    newParams.set("sub", subValue);
     newParams.delete("offset");
     setSearchParams(newParams);
   };
@@ -96,6 +105,17 @@ export function CategorySidebar() {
               {categories.map((cat) => {
                 const isOpen = openCategory === cat.id;
                 const isActive = normalizeString(cat.name) === currentCategory;
+                const sidebarSubItems =
+                  cat.id === "energia"
+                    ? products
+                        .filter((p) => p.categoryId === "energia")
+                        .map((p) => ({
+                          id: p.id,
+                          name: p.title,
+                          subValue: p.subcategoryId,
+                        }))
+                    : cat.subcategories || [];
+                const hasSubItems = sidebarSubItems.length > 0;
 
                 return (
                   <div
@@ -118,7 +138,7 @@ export function CategorySidebar() {
                           {cat.name}
                         </span>
                       </span>
-                      {cat.subcategories && (
+                      {hasSubItems && (
                         <span
                           className={`flex flex-shrink-0 items-center justify-center rounded-full text-ink/45 transition-transform duration-250 ${
                             isOpen
@@ -143,7 +163,7 @@ export function CategorySidebar() {
                     </button>
 
                     {/* Subcategories */}
-                    {cat.subcategories && (
+                    {hasSubItems && (
                       <div
                         className={`grid transition-[grid-template-rows,opacity] duration-250 ${
                           isOpen
@@ -153,21 +173,30 @@ export function CategorySidebar() {
                         <div className="min-h-0 overflow-hidden">
                           <div className="px-3 pb-3">
                             <ul className="mt-1 space-y-1 pl-4">
-                              {cat.subcategories.map((sub) => {
+                              {sidebarSubItems.map((sub) => {
                                 const isSubActive =
                                   normalizeString(cat.name) ===
                                     currentCategory &&
-                                  normalizeString(sub.name) === currentSub;
+                                  (sub.subValue
+                                    ? sub.subValue === currentSub
+                                    : normalizeString(sub.name) === currentSub);
 
                                 return (
                                   <li key={sub.id}>
                                     <button
-                                      onClick={() =>
-                                        handleSubcategoryClick(
-                                          cat.name,
-                                          sub.name
-                                        )
-                                      }
+                                      onClick={() => {
+                                        if (sub.subValue) {
+                                          handleSubcategoryValueClick(
+                                            cat.name,
+                                            sub.subValue
+                                          );
+                                        } else {
+                                          handleSubcategoryClick(
+                                            cat.name,
+                                            sub.name
+                                          );
+                                        }
+                                      }}
                                       className={`flex w-full cursor-pointer items-center justify-between px-3 py-2 text-left text-sm transition-colors duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-ink/10 ${
                                         isSubActive
                                           ? "text-ink/90 font-semibold"

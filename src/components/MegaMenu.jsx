@@ -123,7 +123,7 @@ export function MegaMenu({
                                   )}&sub=${normalizeString(sub.name)}`
                             }
                             onClick={onClose}
-                            className="text-sm text-ink/70 hover:text-accent-300 transition-colors duration-150 font-medium flex flex-row gap-2 items-center">
+                            className="text-sm text-ink/70 visited:text-ink/70 hover:text-brand-300 transition-colors duration-150 font-medium flex flex-row gap-2 items-center">
                             {sub.name}
                             {hasSubProducts && (
                               <svg
@@ -171,7 +171,7 @@ export function MegaMenu({
                                       <Link
                                         to={`/productos/${slug}`}
                                         onClick={onClose}
-                                        className="block text-xs text-ink/60 transition-colors duration-150">
+                                        className="block text-xs text-ink/60 visited:text-ink/60 hover:text-brand-400 transition-colors duration-150">
                                         {displayName}
                                       </Link>
                                     </li>

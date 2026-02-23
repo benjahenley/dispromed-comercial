@@ -49,7 +49,7 @@ export function Drawer({ isOpen, onClose }) {
         <nav className="p-4">
           <Link
             to="/"
-            className="block py-3 font-medium hover:text-brand-300 transition-colors"
+            className="block py-3 font-medium text-ink visited:text-ink hover:text-brand-300 transition-colors"
             onClick={onClose}>
             Inicio
           </Link>
@@ -57,7 +57,7 @@ export function Drawer({ isOpen, onClose }) {
           <div className="">
             <button
               onClick={() => toggleCategory("productos")}
-              className="flex items-center justify-between w-full py-3 font-medium hover:text-brand-300 transition-colors">
+              className="flex items-center justify-between w-full py-3 font-medium text-ink hover:text-brand-300 transition-colors">
               <span>Productos</span>
               <svg
                 className={`w-5 h-5 transition-transform ${
@@ -81,7 +81,7 @@ export function Drawer({ isOpen, onClose }) {
                   <div key={cat.id} className="mb-3">
                     <Link
                       to={`/productos?category=${normalizeString(cat.name)}`}
-                      className="block py-2 font-medium text-sm hover:text-brand-300 transition-colors"
+                      className="block py-2 font-medium text-sm text-ink/80 visited:text-ink/80 hover:text-brand-300 transition-colors"
                       onClick={() => setOpenCategory(cat.name)}>
                       {cat.name}
                     </Link>
@@ -106,7 +106,7 @@ export function Drawer({ isOpen, onClose }) {
                                       cat.name
                                     )}&sub=${normalizeString(sub.name)}`
                               }
-                              className="block py-1.5 text-sm text-ink/70 hover:text-brand-300 transition-colors"
+                              className="block py-1.5 text-sm text-ink/70 visited:text-ink/70 hover:text-brand-300 transition-colors"
                               onClick={onClose}>
                               {sub.name}
                             </Link>
@@ -121,20 +121,14 @@ export function Drawer({ isOpen, onClose }) {
           </div>
 
           <Link
-            to="/catalogos"
-            className="block py-3 font-medium hover:text-brand-300 transition-colors "
-            onClick={onClose}>
-            Catálogos
-          </Link>
-          <Link
             to="/novedades"
-            className="block py-3 font-medium hover:text-brand-300 transition-colors"
+            className="block py-3 font-medium text-ink visited:text-ink hover:text-brand-300 transition-colors"
             onClick={onClose}>
             Novedades
           </Link>
           <Link
             to="/contacto"
-            className="block py-3 font-medium hover:text-brand-300 transition-colors"
+            className="block py-3 font-medium text-ink visited:text-ink hover:text-brand-300 transition-colors"
             onClick={onClose}>
             Contacto
           </Link>
