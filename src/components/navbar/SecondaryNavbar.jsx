@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { MegaMenu } from "../MegaMenu";
 import { Drawer } from "../Drawer";
 import Finder from "../Finder";
@@ -9,6 +9,7 @@ import { BrandHeader } from "../BrandHeader";
 import { useProductSearch } from "../../hooks/useProductSearch";
 
 export function SecondaryNavbar() {
+  const location = useLocation();
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
   const [openFinder, setOpenFinder] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -21,6 +22,27 @@ export function SecondaryNavbar() {
   useEffect(() => {
     if (openFinder) inputRef.current?.focus();
   }, [openFinder]);
+
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 1024px)");
+
+    const handleDesktop = (event) => {
+      if (event.matches) {
+        setDrawerOpen(false);
+      }
+    };
+
+    if (media.matches) {
+      setDrawerOpen(false);
+    }
+
+    media.addEventListener("change", handleDesktop);
+    return () => media.removeEventListener("change", handleDesktop);
+  }, []);
+
+  useEffect(() => {
+    setMegaMenuOpen(false);
+  }, [location.pathname, location.search]);
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
@@ -44,10 +66,9 @@ export function SecondaryNavbar() {
     <>
       <div className="relative top-0 z-100 left-0 right-0">
         {/* Top bar with search, logo, and icons */}
-        <div className="bg-linear-to-br from-brand-400 via-brand-300 to-brand-200 relative">
+        <div className="relative bg-linear-to-br from-brand-400/95 via-brand-300/95 to-brand-200/95">
           {/* Subtle Texture */}
-          <div
-            className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
               className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.3)_1px,transparent_1px)] bg-size-[20px_20px] opacity-60"
               style={{
@@ -58,14 +79,14 @@ export function SecondaryNavbar() {
               }}></div>
           </div>
           {/* Header */}
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 w-full flex justify-center">
+          <div className="relative mx-auto flex w-full max-w-7xl justify-center px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8 lg:py-4">
             <BrandHeader onOpenMenu={() => setDrawerOpen(true)} />
           </div>
 
           {/* Navigation Menu - Desktop */}
           <nav className="hidden lg:block relative overflow-visible z-100">
-            <div className="relative max-w-8xl mx-auto px-4">
-              <div className="flex items-center justify-between gap-6 rounded-full w-full max-w-7xl mx-auto px-8 min-h-[72px]  z-100000">
+            <div className="relative max-w-8xl mx-auto">
+              <div className="z-100000 mx-auto flex min-h-[64px] w-full max-w-7xl items-center justify-between gap-6 rounded-full px-8">
                 {/* Search Button */}
                 <div className="flex flex-row gap-5 items-center w-full">
                   <button
@@ -105,7 +126,7 @@ export function SecondaryNavbar() {
                     <NavLink
                       color={"text-white"}
                       item={item}
-                      handleMouseEnter={() => handleMouseEnter}
+                      handleMouseEnter={handleMouseEnter}
                     />
                   ))}
                 </div>
@@ -114,7 +135,12 @@ export function SecondaryNavbar() {
           </nav>
         </div>
 
-        <MegaMenu isOpen={megaMenuOpen} onMouseLeave={handleMouseLeave} />
+        <MegaMenu
+          isOpen={megaMenuOpen}
+          onMouseLeave={handleMouseLeave}
+          onClose={() => setMegaMenuOpen(false)}
+          topPaddingClass="pt-[3.25rem]"
+        />
         <Drawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)} />
       </div>
     </>

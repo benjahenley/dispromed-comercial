@@ -1,6 +1,7 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { products } from "../data/products/products";
+import categories from "../data/categories.json";
 import { CategorySidebar } from "../components/CategorySidebar";
 import { Breadcrumbs } from "../components/Breadcrumbs";
 import { SecondaryNavbar } from "../components/navbar/SecondaryNavbar";
@@ -10,9 +11,13 @@ import { ProductImageCarousel } from "../components/ProductImageCarrousel";
 export function ProductDetail() {
   const { slug } = useParams();
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [slug]);
+
   const product = useMemo(
     () => products.find((p) => p.navProductId === slug),
-    [slug],
+    [slug]
   );
 
   if (!product) {
@@ -37,21 +42,32 @@ export function ProductDetail() {
     );
   }
 
+  const images = product.images ?? [];
+  const validImages = images.filter((img) => img?.src);
+  const primaryImage = validImages[0] ?? null;
+  const shouldUseCarousel =
+    (product.imageCount ?? images.length) > 1 && validImages.length > 0;
+  const categoryData = categories.find((c) => c.id === product.categoryId);
+  const categoryLabel = categoryData?.name ?? product.categoryId;
+  const subcategoryLabel =
+    categoryData?.subcategories?.find((s) => s.id === product.subcategoryId)
+      ?.name ?? product.subcategoryId;
   const breadcrumbs = [
     { label: "Productos", href: "/productos" },
     {
-      label: product.categoryId,
+      label: categoryLabel,
       href: `/productos?category=${product.categoryId}`,
     },
   ];
 
-  const images = product.images ?? [];
-  const shouldUseCarousel = (product.imageCount ?? images.length) > 1;
+  const whatsappUrl = `https://wa.me/5491135921100?text=${encodeURIComponent(
+    `Hola, me interesa consultar disponibilidad del producto: ${product.title}`
+  )}`;
 
   return (
     <div className="min-h-screen bg-white">
       <SecondaryNavbar />
-      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 py-6 sm:px-6 lg:px-8  max-w-xl lg:max-w-7xl">
         <Breadcrumbs items={breadcrumbs} />
 
         <div className="mt-6 flex flex-col gap-6 lg:flex-row lg:gap-10">
@@ -59,21 +75,50 @@ export function ProductDetail() {
             <div className="overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-sm">
               <div className="grid grid-cols-1 gap-6 p-5 sm:p-6 lg:grid-cols-2 lg:gap-10 lg:p-10">
                 {/* LEFT */}
-                <div className="flex flex-col">
+                <div className="flex flex-col order-2 lg:order-1">
                   <div className="relative overflow-hidden rounded-3xl bg-ink/5 ">
                     {shouldUseCarousel ? (
                       <ProductImageCarousel
                         images={images}
                         title={product.title}
                       />
-                    ) : (
+                    ) : primaryImage ? (
                       <div className="aspect-square">
                         <img
-                          src={images?.[0]?.src || ""}
-                          alt={images?.[0]?.alt || product.title}
+                          src={primaryImage.src}
+                          alt={primaryImage.alt || product.title}
                           loading="lazy"
                           className="h-full w-full object-cover"
                         />
+                      </div>
+                    ) : (
+                      <div className="flex aspect-square w-full items-center justify-center bg-ink/4 p-6 text-center">
+                        <div className="max-w-xs">
+                          <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl border border-ink/10 bg-white/75 text-ink/45">
+                            <svg
+                              className="h-7 w-7"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="1.8"
+                              aria-hidden="true">
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M3 7.5A2.5 2.5 0 0 1 5.5 5h13A2.5 2.5 0 0 1 21 7.5v9A2.5 2.5 0 0 1 18.5 19h-13A2.5 2.5 0 0 1 3 16.5v-9Z"
+                              />
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="m7.5 14 2.2-2.2a1 1 0 0 1 1.4 0L13 13.5l1.7-1.7a1 1 0 0 1 1.4 0L18 13.7"
+                              />
+                              <circle cx="8.5" cy="9" r="1.1" />
+                            </svg>
+                          </div>
+                          <p className="text-sm font-medium text-ink/70">
+                            Imagen no disponible
+                          </p>
+                        </div>
                       </div>
                     )}
 
@@ -93,7 +138,10 @@ export function ProductDetail() {
 
                   {/* CTA */}
                   <div className="rounded-3xl sm:p-5">
-                    <PrimaryButton text={"Consultar disponibilidad"} />
+                    <PrimaryButton
+                      text={"Consultar disponibilidad"}
+                      href={whatsappUrl}
+                    />
                     <p className="mt-3 text-center text-xs text-ink/50">
                       Respondemos a la brevedad.
                     </p>
@@ -101,19 +149,25 @@ export function ProductDetail() {
                 </div>
 
                 {/* RIGHT */}
-                <div className="flex flex-col">
+                <div className="flex flex-col order-1 lg:order-2">
                   <div className="flex flex-wrap gap-2">
-                    <span className="inline-flex items-center rounded-full bg-brand-100/20 px-3 py-1 text-xs font-medium text-brand-400">
-                      {product.subcategoryId}
+                    <span
+                      title={categoryLabel}
+                      className="inline-flex max-w-[16rem] items-center rounded-full bg-brand-100/20 px-3 py-1 text-xs font-medium text-brand-400 truncate">
+                      {categoryLabel}
                     </span>
-                    {product.subcategoryId && (
-                      <span className="inline-flex items-center rounded-full bg-ink/5 px-3 py-1 text-xs font-medium text-ink/70">
-                        {product.subcategoryId}
+                    {subcategoryLabel && subcategoryLabel !== categoryLabel && (
+                      <span
+                        title={subcategoryLabel}
+                        className="inline-flex max-w-[16rem] items-center rounded-full bg-ink/5 px-3 py-1 text-xs font-medium text-ink/70 truncate">
+                        {subcategoryLabel}
                       </span>
                     )}
                   </div>
 
-                  <h1 className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
+                  <h1
+                    title={product.title}
+                    className="mt-4 truncate text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
                     {product.title}
                   </h1>
 
@@ -153,7 +207,7 @@ export function ProductDetail() {
                           <li
                             key={idx}
                             className="flex items-start gap-2 text-sm leading-relaxed text-ink/70">
-                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-300" />
                             {item}
                           </li>
                         ))}

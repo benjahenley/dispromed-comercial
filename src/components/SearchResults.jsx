@@ -1,4 +1,9 @@
 import { Link } from "react-router-dom";
+import categories from "../data/categories.json";
+
+const categoryNameById = Object.fromEntries(
+  categories.map((category) => [category.id, category.name]),
+);
 
 export default function SearchResults({ results, isActive, onSelect }) {
   if (!isActive) return null;
@@ -33,7 +38,7 @@ export default function SearchResults({ results, isActive, onSelect }) {
                     {product.title}
                   </p>
                   <p className="truncate text-xs text-ink/50">
-                    {product.categoryId}
+                    {categoryNameById[product.categoryId] ?? product.categoryId}
                   </p>
                 </div>
               </Link>

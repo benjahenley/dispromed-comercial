@@ -1,0 +1,291 @@
+{
+  "categoryId": "barcat",
+  "products": [
+    {
+      "id": "sonda-aspiracion-succion",
+      "navProductId": "sonda-aspiracion-succion",
+      "categoryId": "barcat",
+      "subcategoryId": "sondas",
+      "title": "Sondas de Aspiración y Succión",
+      "description": "Sondas de aspiración y succión Barcat estériles descartables para eliminación de secreciones en vías aéreas y cavidades. Fabricadas en PVC suave con punta atraumática. Disponibles en múltiples modelos para uso en adultos y pacientes pediátricos.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [
+          ["BSS 29 T/S"], ["BSS 29P"], ["BSS 30P"], ["BSS 31P"],
+          ["BSS 32"], ["BSS 32P"], ["BSS 33P"], ["BSS 35P"], ["BSS 132P"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Sondas de Aspiración y Succión" }]
+    },
+    {
+      "id": "sonda-alimentacion",
+      "navProductId": "sonda-alimentacion",
+      "categoryId": "barcat",
+      "subcategoryId": "sondas",
+      "title": "Sonda de Alimentación",
+      "description": "Sonda de alimentación enteral Barcat para nutrición en pacientes con imposibilidad de ingesta oral. Fabricada en poliuretano suave y biocompatible para mayor tolerancia. Disponible en modelo simple y doble vía para alimentación e irrigación simultánea.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [["BNEP 108"], ["BNEP 108 Doble Vía"]]
+      },
+      "images": [{ "imgId": "", "alt": "Sonda de Alimentación" }]
+    },
+    {
+      "id": "sondas-levine",
+      "navProductId": "sondas-levine",
+      "categoryId": "barcat",
+      "subcategoryId": "sondas",
+      "title": "Sondas de Levin",
+      "description": "Sondas nasogástricas de Levin Barcat para intubación gástrica, drenaje digestivo y administración de medicamentos. Fabricadas en PVC transparente con línea radiopaca y marcas de inserción. Punta redondeada para reducir el traumatismo durante la colocación.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [["BSL 9"], ["BSL 10"], ["BSL 11"]]
+      },
+      "images": [{ "imgId": "", "alt": "Sondas de Levin" }]
+    },
+    {
+      "id": "sondas-nasogastricas",
+      "navProductId": "sondas-nasogastricas",
+      "categoryId": "barcat",
+      "subcategoryId": "sondas",
+      "title": "Sondas Nasogástricas",
+      "description": "Sondas nasogástricas Barcat para drenaje gástrico, descompresión intestinal y nutrición enteral de corto plazo. Fabricadas en PVC con múltiples orificios laterales para una aspiración eficiente.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [["BSN 30"], ["BSN 31"], ["BSN 33"], ["BSN 35"]]
+      },
+      "images": [{ "imgId": "", "alt": "Sondas Nasogástricas" }]
+    },
+    {
+      "id": "sondas-nelaton",
+      "navProductId": "sondas-nelaton",
+      "categoryId": "barcat",
+      "subcategoryId": "sondas",
+      "title": "Sondas Nelaton",
+      "description": "Sondas Nelaton Barcat descartables estériles para cateterización vesical intermitente en hombres y mujeres. Punta recta atraumática. Disponibles en amplia gama de calibres para adultos y pacientes pediátricos.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [
+          ["BSNT 24"], ["BSNT 26"], ["BSNT 92"], ["BSNT 93"], ["BSNT 94"],
+          ["BSNT 95"], ["BSNT 96"], ["BSNT 97"], ["BSNT 98"], ["BSNT 99"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Sondas Nelaton" }]
+    },
+    {
+      "id": "sondas-bequille",
+      "navProductId": "sondas-bequille",
+      "categoryId": "barcat",
+      "subcategoryId": "sondas",
+      "title": "Sondas Bequille",
+      "description": "Sondas tipo Bequille Barcat para cateterización uretral en casos de obstrucción prostática o estrechez uretral. Punta curva (coudé) diseñada para superar obstrucciones uretrales. Disponibles en calibres del 8 al 26.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [
+          ["BSB 8"], ["BSB 10"], ["BSB 12"], ["BSB 14"], ["BSB 16"],
+          ["BSB 18"], ["BSB 20"], ["BSB 22"], ["BSB 24"], ["BSB 26"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Sondas Bequille" }]
+    },
+    {
+      "id": "sondas-rectales",
+      "navProductId": "sondas-rectales",
+      "categoryId": "barcat",
+      "subcategoryId": "sondas",
+      "title": "Sondas Rectales",
+      "description": "Sondas rectales Barcat estériles descartables para enemas, drenaje rectal y descompresión intestinal. Fabricadas en PVC suave con punta roma para minimizar el traumatismo mucoso. Disponibles en calibres del 10 al 40.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [
+          ["BSR 10"], ["BSR 12"], ["BSR 14"], ["BSR 16"], ["BSR 18"],
+          ["BSR 20"], ["BSR 22"], ["BSR 24"], ["BSR 26"], ["BSR 28"], ["BSR 40"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Sondas Rectales" }]
+    },
+    {
+      "id": "prolongadores",
+      "navProductId": "prolongadores",
+      "categoryId": "barcat",
+      "subcategoryId": "vias-y-tubos",
+      "title": "Prolongadores",
+      "description": "Prolongadores Barcat (BPRO) con conectores Luer para extensión de líneas de infusión intravenosa. Fabricados en PVC transparente de alta calidad. Disponibles en cuatro diámetros y múltiples longitudes.",
+      "table": {
+        "headers": ["Diámetro", "Longitudes (m)"],
+        "rows": [
+          ["DEL 16", "0.10 / 0.15 / 0.20 / 0.50 / 0.70 / 1 / 1.5"],
+          ["DEL 20", "0.10 / 0.15 / 0.20 / 0.25 / 0.35 / 0.50 / 1 / 1.20 / 1.50 / 2"],
+          ["DEL 26", "0.10 / 0.15 / 0.30 / 0.50 / 1 / 1.20 / 1.5 / 2 / 2.20 / 2.5"],
+          ["DEL 35", "0.15 / 0.30 / 0.50 / 0.70 / 1 / 1.20 / 1.50 / 2 / 2.20"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Prolongadores" }]
+    },
+    {
+      "id": "prolongadores-con-sonda",
+      "navProductId": "prolongadores-con-sonda",
+      "categoryId": "barcat",
+      "subcategoryId": "vias-y-tubos",
+      "title": "Prolongadores con Sonda",
+      "description": "Prolongadores con sonda de aspiración integrada Barcat para la aspiración de secreciones bronquiales sin desconexión del circuito ventilatorio. Especialmente útiles en pacientes con ventilación mecánica.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [
+          ["BSS 3529P"], ["BSS 3530P"], ["BSS 3531P"],
+          ["BSS 3532P"], ["BSS 3533P"], ["BSS 3535P"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Prolongadores con Sonda" }]
+    },
+    {
+      "id": "tubuladuras",
+      "navProductId": "tubuladuras",
+      "categoryId": "barcat",
+      "subcategoryId": "vias-y-tubos",
+      "title": "Tubuladuras",
+      "description": "Tubuladuras Barcat (BTUB) de PVC flexible para circuitos de respiración, perfusión y conexiones hospitalarias. Disponibles en diámetros 63 y 95 mm, en longitudes de 1 a 5 metros.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [
+          ["BTUB 95 Granel"], ["BTUB 63 Granel"],
+          ["BTUB 63 × 1 m"], ["BTUB 63 × 1.5 m"], ["BTUB 63 × 2 m"],
+          ["BTUB 63 × 2.5 m"], ["BTUB 63 × 3 m"], ["BTUB 63 × 4 m"],
+          ["BTUB 63 × 5 m"], ["BTUB 95 × 2.5 m"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Tubuladuras" }]
+    },
+    {
+      "id": "tubos-canalizacion-venosa-anestesica",
+      "navProductId": "tubos-canalizacion-venosa-anestesica",
+      "categoryId": "barcat",
+      "subcategoryId": "vias-y-tubos",
+      "title": "Tubos para Canalización Venosa o Anestésica",
+      "description": "Tubos Barcat para canalización venosa periférica y central, o para circuitos de anestesia. Series BTC y BTR fabricadas en PVC de alta pureza. Disponibles en longitudes de 40 a 150 cm.",
+      "table": {
+        "headers": ["Modelo", "Longitud (cm)"],
+        "rows": [
+          ["BTC 40", "40"], ["BTC 50", "50"], ["BTC 75", "75"],
+          ["BTC 100", "100"], ["BTC 150", "150"],
+          ["BTR 40", "40"], ["BTR 50", "50"], ["BTR 75", "75"],
+          ["BTR 100", "100"], ["BTR 150", "150"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Tubos para Canalización Venosa o Anestésica" }]
+    },
+    {
+      "id": "drenajes-toraxicos",
+      "navProductId": "drenajes-toraxicos",
+      "categoryId": "barcat",
+      "subcategoryId": "drenajes-y-colectores",
+      "title": "Drenajes Torácicos",
+      "description": "Drenajes torácicos Barcat estériles descartables para evacuación de neumotórax, hemotórax y derrame pleural. Fabricados en PVC transparente con línea radiopaca y múltiples orificios laterales para drenaje eficiente.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [["BSDT 224"], ["BSDT 225"], ["BSDT 227"]]
+      },
+      "images": [{ "imgId": "", "alt": "Drenajes Torácicos" }]
+    },
+    {
+      "id": "bolsas-colectoras-orina",
+      "navProductId": "bolsas-colectoras-orina",
+      "categoryId": "barcat",
+      "subcategoryId": "drenajes-y-colectores",
+      "title": "Bolsas Colectoras de Orina",
+      "description": "Bolsas colectoras de orina Barcat con válvula antirreflujo para prevenir infecciones urinarias ascendentes. Sistema de drenaje inferior de apertura fácil. Fabricadas en PVC transparente con escala de medición.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [["BD 204"], ["BD 206"], ["BD 207 P"], ["BD 207 C"]]
+      },
+      "images": [{ "imgId": "", "alt": "Bolsas Colectoras de Orina" }]
+    },
+    {
+      "id": "colectores-orina-pediatricos",
+      "navProductId": "colectores-orina-pediatricos",
+      "categoryId": "barcat",
+      "subcategoryId": "drenajes-y-colectores",
+      "title": "Colectores de Orina Pediátricos",
+      "description": "Colectores de orina pediátricos Barcat para toma de muestras en recién nacidos y lactantes. Bolsa adhesiva hipoalergénica con adhesivo suave para la piel delicada del neonato. Disponibles en modelos masculino y femenino.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [["BCO 50"], ["BCO 51"]]
+      },
+      "images": [{ "imgId": "", "alt": "Colectores de Orina Pediátricos" }]
+    },
+    {
+      "id": "canulas-oxigeno",
+      "navProductId": "canulas-oxigeno",
+      "categoryId": "barcat",
+      "subcategoryId": "equipamiento",
+      "title": "Cánulas de Oxígeno",
+      "description": "Cánulas nasales Barcat para oxigenoterapia de bajo flujo en pacientes ambulatorios y hospitalizados. Fabricadas en PVC suave y flexible para mayor comodidad en el uso prolongado. Disponibles en modelos para adultos y pediátrico.",
+      "table": {
+        "headers": ["Modelo", "Uso"],
+        "rows": [
+          ["BINH 27 N", "Adulto"],
+          ["BINH 27P", "Pediátrico"],
+          ["BINH 27T/S", "—"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Cánulas de Oxígeno" }]
+    },
+    {
+      "id": "canulas-aspiracion",
+      "navProductId": "canulas-aspiracion",
+      "categoryId": "barcat",
+      "subcategoryId": "equipamiento",
+      "title": "Cánulas de Aspiración",
+      "description": "Cánulas de aspiración oral y faríngea Barcat para eliminación de secreciones en la vía aérea superior. Diseño rígido con punta redondeada para evitar lesiones en la mucosa. Disponibles en tres modelos.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [["BC 65"], ["BC 66"], ["BC 67"]]
+      },
+      "images": [{ "imgId": "", "alt": "Cánulas de Aspiración" }]
+    },
+    {
+      "id": "conectores",
+      "navProductId": "conectores",
+      "categoryId": "barcat",
+      "subcategoryId": "equipamiento",
+      "title": "Conectores",
+      "description": "Conectores Barcat para unión de tubuladuras, circuitos de ventilación y líneas de perfusión. Disponibles en diámetros 6.3 mm y 9.5 mm, en versión recta (BCR) y en Y (BCY).",
+      "table": {
+        "headers": ["Modelo", "Tipo", "Diámetro (mm)"],
+        "rows": [
+          ["BCR 6.3", "Recto", "6.3"],
+          ["BCR 9.5", "Recto", "9.5"],
+          ["BCY 6.3", "En Y", "6.3"],
+          ["BCY 9.5", "En Y", "9.5"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Conectores" }]
+    },
+    {
+      "id": "equipos-irrigacion",
+      "navProductId": "equipos-irrigacion",
+      "categoryId": "barcat",
+      "subcategoryId": "equipamiento",
+      "title": "Equipos de Irrigación",
+      "description": "Equipos de irrigación Barcat para lavado y limpieza de cavidades corporales en procedimientos urológicos, quirúrgicos y de enfermería. Fabricados en PVC de alta pureza con componentes estériles.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [["BE 106"], ["BE 109"]]
+      },
+      "images": [{ "imgId": "", "alt": "Equipos de Irrigación" }]
+    },
+    {
+      "id": "compo-quirurgico",
+      "navProductId": "compo-quirurgico",
+      "categoryId": "barcat",
+      "subcategoryId": "equipamiento",
+      "title": "Campo Quirúrgico",
+      "description": "Campo quirúrgico Barcat descartable estéril para delimitación del área estéril durante procedimientos médicos y quirúrgicos. Fabricado en material no tejido hidrófugo resistente a líquidos biológicos.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [["BCO 58"]]
+      },
+      "images": [{ "imgId": "", "alt": "Campo Quirúrgico" }]
+    }
+  ]
+}

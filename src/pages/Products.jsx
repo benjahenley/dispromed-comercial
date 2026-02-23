@@ -67,23 +67,19 @@ export function Products() {
     setSearchParams(newParams);
   };
 
-  const breadcrumbs = [];
+  const breadcrumbs = [{ label: "Inicio", href: "/" }];
 
-  // Always show "Productos" as base
   if (category) {
     const cat = categories.find((c) => normalizeString(c.name) === category);
     if (cat) {
-      breadcrumbs.push({
-        label: "Productos",
-        href: "/productos",
-      });
+      breadcrumbs.push({ label: "Productos", href: "/productos" });
       breadcrumbs.push({
         label: cat.name,
         href: sub ? `/productos?category=${category}` : undefined,
       });
       if (sub) {
         const subcat = cat.subcategories?.find(
-          (s) => normalizeString(s.name) === sub,
+          (s) => normalizeString(s.name) === sub
         );
         if (subcat) {
           breadcrumbs.push({ label: subcat.name });
@@ -95,19 +91,46 @@ export function Products() {
   }
 
   const currentCategory = categories.find(
-    (c) => normalizeString(c.name) === category,
+    (c) => normalizeString(c.name) === category
   );
+  const currentSubcategory = currentCategory?.subcategories?.find(
+    (s) => normalizeString(s.name) === sub
+  );
+  const productsHeading = currentCategory?.name || "Productos";
+  const hasActiveFilters = Boolean(category || sub);
+
+  const handleClearAllFilters = () => {
+    const newParams = new URLSearchParams(searchParams);
+    newParams.delete("category");
+    newParams.delete("sub");
+    newParams.delete("offset");
+    setSearchParams(newParams);
+  };
+
+  const handleRemoveSubFilter = () => {
+    const newParams = new URLSearchParams(searchParams);
+    newParams.delete("sub");
+    newParams.delete("offset");
+    setSearchParams(newParams);
+  };
 
   return (
     <div className="min-h-screen bg-white">
       <SecondaryNavbar />
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <Breadcrumbs items={breadcrumbs} />
+
+      <div className="max-w-7xl mx-auto px-4 py-8 sm:py-10">
+        <div className="lg:hidden anim-bubble anim-bubble-d1">
+          <Breadcrumbs items={breadcrumbs} hideSingleItemLabel />
+        </div>
 
         {/* Mobile Filters */}
-        <div className="lg:hidden mb-6 space-y-4">
+        <div className="lg:hidden mb-6 space-y-4 anim-bubble anim-bubble-d2">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold">Productos</h1>
+            <h1
+              title="Productos"
+              className="truncate text-2xl font-semibold tracking-tight">
+              Productos
+            </h1>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -170,7 +193,7 @@ export function Products() {
                 id="mobile-sort"
                 value={sort}
                 onChange={handleSortChange}
-                className="px-3 py-1.5 border border-ink/10 text-sm focus:outline-none focus:ring-2 focus:ring-brand-300">
+                className="cursor-pointer appearance-none bg-white px-3 py-1.5 border border-ink/10 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-brand-300">
                 <option value="title-asc">A-Z</option>
                 <option value="title-desc">Z-A</option>
               </select>
@@ -181,20 +204,22 @@ export function Products() {
         {/* Desktop Layout */}
         <div className="flex gap-8">
           {/* Sidebar - Desktop Only */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block anim-bubble anim-bubble-d1">
             <CategorySidebar />
           </div>
 
           {/* Products */}
-          <div className="flex-1">
-            <div className="hidden lg:flex items-center justify-between mb-6">
-              <h1 className="text-3xl font-bold">
-                {category
-                  ? categories.find((c) => normalizeString(c.name) === category)
-                      ?.name || "Productos"
-                  : "Todos los Productos"}
+          <div className="flex-1 anim-bubble anim-bubble-d2">
+            <div className="hidden lg:block mb-8">
+              <h1
+                title={productsHeading}
+                className="max-w-[70%] truncate text-2xl font-semibold tracking-tight text-ink">
+                {productsHeading}
               </h1>
-              <div className="flex items-center gap-4">
+              <div className="mt-2 [&_ol]:text-xs [&_a]:text-ink/45 [&_a:hover]:text-ink/70 [&_span]:text-ink/55">
+                <Breadcrumbs items={breadcrumbs} hideSingleItemLabel />
+              </div>
+              <div className="mt-4 flex items-center justify-between">
                 <span className="text-sm text-ink/60">
                   {filteredAndSorted.length}{" "}
                   {filteredAndSorted.length === 1 ? "producto" : "productos"}
@@ -207,7 +232,7 @@ export function Products() {
                     id="sort"
                     value={sort}
                     onChange={handleSortChange}
-                    className="px-3 py-2 border border-ink/10 text-sm focus:outline-none focus:ring-2 focus:ring-brand-300">
+                    className="cursor-pointer appearance-none bg-white px-3 py-2 border border-ink/10 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-brand-300">
                     <option value="title-asc">A-Z</option>
                     <option value="title-desc">Z-A</option>
                   </select>
@@ -215,7 +240,32 @@ export function Products() {
               </div>
             </div>
 
-            <ProductGrid products={paginatedProducts} />
+            {sub && (
+              <div className="mb-5">
+                <div className="inline-flex items-center gap-2 rounded-full border border-ink/10 bg-ink/5 px-3 py-1.5 text-xs font-medium text-ink/70">
+                  <span>
+                    Filtro activo:{" "}
+                    <span className="font-semibold text-ink/90">
+                      {currentSubcategory?.name || sub}
+                    </span>
+                  </span>
+                  <button
+                    type="button"
+                    onClick={handleRemoveSubFilter}
+                    className="inline-flex h-5 w-5 items-center justify-center rounded-full text-ink/60 transition hover:bg-ink/10 hover:text-ink"
+                    aria-label="Quitar filtro activo">
+                    ✕
+                  </button>
+                </div>
+              </div>
+            )}
+
+            <ProductGrid
+              products={paginatedProducts}
+              hasFilters={hasActiveFilters}
+              onViewAll={handleClearAllFilters}
+              onClearFilters={handleClearAllFilters}
+            />
             <Pagination
               total={filteredAndSorted.length}
               limit={limit}

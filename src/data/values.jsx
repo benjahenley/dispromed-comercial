@@ -2,13 +2,13 @@
 
 export const values = [
   {
-    title: "Integridad",
-    description: `Nos preocupamos constantemente por las necesidades de nuestros clientes y socios comerciales para dar solución a sus problemas, superando sus expectativas.`,
+    title: "Orientación al Cliente",
+    description: `Escuchamos activamente a nuestros clientes y socios, buscamos satisfacer sus necesidades y ampliamos nuestra red comercial para crecer juntos.`,
     icon: () => (
       <img
-        src="/icons/shield_dna_green.svg"
-        alt="Integridad"
-        className="w-18 h-18"
+        src="/icons/stethoscope_green.svg"
+        alt="Orientación al cliente"
+        className="w-20 h-20"
         loading="lazy"
       />
     ),
@@ -26,13 +26,13 @@ export const values = [
     ),
   },
   {
-    title: "Orientación al Cliente",
-    description: `Escuchamos activamente a nuestros clientes y socios, buscamos satisfacer sus necesidades y ampliamos nuestra red comercial para crecer juntos.`,
+    title: "Integridad",
+    description: `Nos preocupamos constantemente por las necesidades de nuestros clientes y socios comerciales para dar solución a sus problemas, superando sus expectativas.`,
     icon: () => (
       <img
-        src="/icons/stethoscope_green.svg"
-        alt="Orientación al cliente"
-        className="w-20 h-20"
+        src="/icons/shield_dna_green.svg"
+        alt="Integridad"
+        className="w-18 h-18"
         loading="lazy"
       />
     ),

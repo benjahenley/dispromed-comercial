@@ -35,6 +35,13 @@ export function CategorySidebar() {
     setSearchParams(newParams);
   };
 
+  const handleCategoryRowClick = (cat) => {
+    handleCategoryClick(cat.name);
+    if (cat.subcategories) {
+      toggleCategory(cat.id);
+    }
+  };
+
   const handleSubcategoryClick = (catName, subName) => {
     const newParams = new URLSearchParams(searchParams);
     newParams.set("category", normalizeString(catName));
@@ -43,37 +50,49 @@ export function CategorySidebar() {
     setSearchParams(newParams);
   };
 
-  const handleClearFilters = () => setSearchParams({});
+  const handleClearFilters = () => {
+    setOpenCategory(null);
+    setSearchParams({});
+  };
 
   const hasFilters = Boolean(currentCategory || currentSub);
 
   return (
-    <aside className="w-full lg:w-72 flex-shrink-0">
+    <aside className="w-full lg:w-64 flex-shrink-0">
       <div className="lg:sticky lg:top-24">
-        <div className="">
+        <div className="rounded-2xl border border-ink/10 bg-white/60 backdrop-blur-sm">
           {/* Header */}
-          <div className="flex items-center justify-between gap-3 border-b border-ink/10 p-4 sm:p-5">
-            <div>
-              <h2 className="text-base font-semibold tracking-tight">
+          <div className="flex items-center justify-between gap-3 border-b border-ink/10 p-5 sm:p-6">
+            <div className="min-w-0">
+              <h2 className="text-sm font-semibold tracking-tight text-ink/90">
                 Categorías
               </h2>
-              <p className="mt-0.5 text-xs text-ink/50">
-                Filtrá por categoría y subcategoría
+              <p className="mt-0.5 text-xs leading-4 text-ink/50">
+                <span className="block">
+                  Filtrá por categoría y subcategoría
+                </span>
               </p>
             </div>
 
-            {hasFilters && (
+            <div className="flex w-[88px] justify-end">
               <button
                 onClick={handleClearFilters}
-                className="inline-flex items-center rounded-full border border-ink/10 bg-white px-3 py-1.5 text-xs font-medium text-ink/70 transition hover:border-brand-300/40 hover:text-brand-300 focus:outline-none focus:ring-4 focus:ring-brand-300/20">
+                disabled={!hasFilters}
+                tabIndex={hasFilters ? 0 : -1}
+                aria-hidden={!hasFilters}
+                className={`inline-flex items-center rounded-full border border-ink/10 bg-white px-3 py-1.5 text-xs font-medium text-ink/65 transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-ink/10 ${
+                  hasFilters
+                    ? "cursor-pointer hover:border-ink/25 hover:text-ink/85"
+                    : "pointer-events-none cursor-not-allowed opacity-0"
+                }`}>
                 Limpiar
               </button>
-            )}
+            </div>
           </div>
 
           {/* List */}
-          <div className="p-2 sm:p-3">
-            <div className="space-y-1">
+          <div className="">
+            <div className="space-y-0">
               {categories.map((cat) => {
                 const isOpen = openCategory === cat.id;
                 const isActive = normalizeString(cat.name) === currentCategory;
@@ -81,40 +100,30 @@ export function CategorySidebar() {
                 return (
                   <div
                     key={cat.id}
-                    className={`overflow-hidden rounded-2xl border transition ${
-                      isOpen || isActive
-                        ? "border-brand-300/25 bg-brand-100/10"
-                        : "border-ink/10 bg-white"
-                    }`}>
+                    className="overflow-hidden border-b border-ink/8 last:border-b-0">
                     {/* Category row */}
                     <button
-                      onClick={
-                        cat.subcategories
-                          ? () => toggleCategory(cat.id)
-                          : () => {}
-                      }
-                      className="flex w-full items-center justify-between gap-3 p-3 text-left focus:outline-none focus:ring-4 focus:ring-brand-300/15"
+                      onClick={() => handleCategoryRowClick(cat)}
+                      className={`group flex w-full cursor-pointer items-center justify-between gap-3 px-6 py-3.5 text-left transition-colors duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-ink/10 ${
+                        isActive ? "bg-ink/4" : "hover:bg-ink/4"
+                      }`}
                       aria-expanded={isOpen}>
                       <span className="min-w-0">
                         <span
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleCategoryClick(cat.name);
-                          }}
-                          className={`block truncate text-sm font-medium transition ${
+                          className={`block truncate text-sm font-medium transition-colors duration-200 ${
                             isActive
-                              ? "text-brand-300"
-                              : "text-ink hover:text-brand-300"
+                              ? "text-ink/95"
+                              : "text-ink/70 group-hover:text-ink/90"
                           }`}>
                           {cat.name}
                         </span>
                       </span>
                       {cat.subcategories && (
                         <span
-                          className={`flex flex-shrink-0  items-center justify-center rounded-full text-ink/70 transition ${
+                          className={`flex flex-shrink-0 items-center justify-center rounded-full text-ink/45 transition-transform duration-250 ${
                             isOpen
-                              ? "rotate-180 border-brand-300/30 text-brand-300"
-                              : "group-hover:text-brand-300"
+                              ? "rotate-180 text-ink/65"
+                              : "group-hover:text-ink/65"
                           }`}
                           aria-hidden="true">
                           <svg
@@ -136,14 +145,14 @@ export function CategorySidebar() {
                     {/* Subcategories */}
                     {cat.subcategories && (
                       <div
-                        className={`grid transition-[grid-template-rows,opacity] duration-300 ${
+                        className={`grid transition-[grid-template-rows,opacity] duration-250 ${
                           isOpen
                             ? "grid-rows-[1fr] opacity-100"
                             : "grid-rows-[0fr] opacity-0"
                         }`}>
                         <div className="min-h-0 overflow-hidden">
-                          <div className="border-t border-ink/10 px-3 pb-3">
-                            <ul className="mt-2 space-y-1">
+                          <div className="px-3 pb-3">
+                            <ul className="mt-1 space-y-1 pl-4">
                               {cat.subcategories.map((sub) => {
                                 const isSubActive =
                                   normalizeString(cat.name) ===
@@ -159,19 +168,14 @@ export function CategorySidebar() {
                                           sub.name
                                         )
                                       }
-                                      className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm transition focus:outline-none focus:ring-4 focus:ring-brand-300/15 ${
+                                      className={`flex w-full cursor-pointer items-center justify-between px-3 py-2 text-left text-sm transition-colors duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-ink/10 ${
                                         isSubActive
-                                          ? "bg-white text-brand-300 shadow-sm"
-                                          : "text-ink/70 hover:bg-ink/5 hover:text-brand-300"
+                                          ? "text-ink/90 font-semibold"
+                                          : "text-ink/58 hover:text-ink/78"
                                       }`}>
                                       <span className="truncate">
                                         {sub.name}
                                       </span>
-                                      {isSubActive && (
-                                        <span className="text-xs font-medium text-brand-300">
-                                          Activo
-                                        </span>
-                                      )}
                                     </button>
                                   </li>
                                 );
@@ -188,7 +192,7 @@ export function CategorySidebar() {
           </div>
 
           {/* Footer hint */}
-          <div className="border-t border-ink/10 p-4 text-center text-xs text-ink/50">
+          <div className="border-t border-ink/10 p-5 text-center text-xs text-ink/45">
             Tip: podés combinar categoría + subcategoría
           </div>
         </div>

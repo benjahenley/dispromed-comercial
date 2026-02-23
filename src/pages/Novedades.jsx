@@ -1,29 +1,36 @@
 import { Section } from "../components/Section";
-import { Breadcrumbs } from "../components/Breadcrumbs";
 import { SecondaryNavbar } from "../components/navbar/SecondaryNavbar";
 import { NewsCard } from "../components/NewsCard";
+import { PageHero } from "../components/PageHero";
 import news from "../data/news.json";
 
 export function Novedades() {
   return (
     <div className="min-h-screen bg-white">
-      <SecondaryNavbar></SecondaryNavbar>
-      <div className="max-w-7xl mx-auto px-4 py-6">
-        <Breadcrumbs items={[{ label: "Novedades" }]} />
+      <SecondaryNavbar />
+      <PageHero
+        title="Novedades"
+        subtitle="Mantenete informado sobre lo último en Dispromed."
+        compact
+      />
 
-        <Section
-          title="Novedades"
-          subtitle="Mantenete informado sobre las últimas noticias y actualizaciones de Dispromed">
+      <div className="max-w-7xl mx-auto px-4 py-8 sm:py-10">
+        <Section padding={false}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {news.map((item) => (
-              <NewsCard key={item.id} item={item} />
+            {news.map((item, idx) => (
+              <div
+                key={item.id}
+                className="anim-bubble"
+                style={{ animationDelay: `${80 + idx * 40}ms` }}>
+                <NewsCard item={item} />
+              </div>
             ))}
           </div>
         </Section>
 
         <Section>
           <div className="mx-auto max-w-3xl  sm:px-6 lg:px-8">
-            <div className="rounded-3xl border border-ink/10 bg-white/70 p-8 shadow-sm backdrop-blur sm:p-10">
+            <div className="rounded-3xl border border-ink/10 bg-white/70 p-8 shadow-sm backdrop-blur sm:p-10 anim-bubble anim-bubble-d2">
               <div className="text-center">
                 <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
                   ¿Querés recibir nuestras novedades?

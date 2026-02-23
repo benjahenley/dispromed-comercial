@@ -1,0 +1,90 @@
+{
+  "categoryId": "mallas-y-fijadores",
+  "products": [
+    {
+      "id": "malla-polipropileno",
+      "navProductId": "malla-polipropileno",
+      "categoryId": "mallas-y-fijadores",
+      "subcategoryId": "mallas",
+      "title": "Malla de Polipropileno",
+      "description": "Malla quirúrgica de polipropileno monofilamento no absorbible para reparación de hernias y defectos de la pared abdominal. Material inerte con excelente integración tisular a largo plazo. Disponible en medidas 7.5×15 cm, 15×15 cm y 30×30 cm.",
+      "table": {
+        "headers": ["Medida"],
+        "rows": [["7.5 × 15 cm"], ["15 × 15 cm"], ["30 × 30 cm"]]
+      },
+      "images": [{ "imgId": "", "alt": "Malla de Polipropileno" }]
+    },
+    {
+      "id": "malla-polipropileno-3d",
+      "navProductId": "malla-polipropileno-3d",
+      "categoryId": "mallas-y-fijadores",
+      "subcategoryId": "mallas",
+      "title": "Malla de Polipropileno 3D",
+      "description": "Malla quirúrgica de polipropileno tridimensional con diseño anatómico para hernioplastia inguinal laparoscópica (TEP/TAPP). Su geometría preformada facilita la colocación y se adapta a la anatomía inguinal. Disponible en tallas S, M y L, en versión derecha e izquierda.",
+      "table": {
+        "headers": ["Talla", "Lateralidad"],
+        "rows": [
+          ["S", "Derecha / Izquierda"],
+          ["M", "Derecha / Izquierda"],
+          ["L", "Derecha / Izquierda"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Malla de Polipropileno 3D" }]
+    },
+    {
+      "id": "malla-polipropileno-baja-densidad",
+      "navProductId": "malla-polipropileno-baja-densidad",
+      "categoryId": "mallas-y-fijadores",
+      "subcategoryId": "mallas",
+      "title": "Malla de Polipropileno Baja Densidad",
+      "description": "Malla quirúrgica de polipropileno de baja densidad y peso reducido. Mayor flexibilidad y menor sensación de cuerpo extraño en el postoperatorio en comparación con mallas estándar. Indicada para reparación de hernias inguinales, umbilicales e incisionales. Disponible en medidas 7.5×15 cm, 15×15 cm y 30×30 cm.",
+      "table": {
+        "headers": ["Medida"],
+        "rows": [["7.5 × 15 cm"], ["15 × 15 cm"], ["30 × 30 cm"]]
+      },
+      "images": [{ "imgId": "", "alt": "Malla de Polipropileno Baja Densidad" }]
+    },
+    {
+      "id": "malla-contacto-viseral",
+      "navProductId": "malla-contacto-viseral",
+      "categoryId": "mallas-y-fijadores",
+      "subcategoryId": "mallas",
+      "title": "Malla de Contacto Visceral",
+      "description": "Malla compuesta de polipropileno, ácido poliglicólico y policaprolactona. La cara de contacto visceral cuenta con una capa absorbible que previene adherencias a órganos internos, mientras que la cara parietal de polipropileno garantiza la integración con la pared abdominal. Indicada para hernias ventrales e incisionales con exposición intraabdominal. Disponible en medidas 15×15 cm y 30×30 cm.",
+      "table": {
+        "headers": ["Composición", "Medida"],
+        "rows": [
+          ["Polipropileno + Ácido Poliglicólico + Policaprolactona", "15 × 15 cm"],
+          ["Polipropileno + Ácido Poliglicólico + Policaprolactona", "30 × 30 cm"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Malla de Contacto Visceral" }]
+    },
+    {
+      "id": "fijador-absorbible",
+      "navProductId": "fijador-absorbible",
+      "categoryId": "mallas-y-fijadores",
+      "subcategoryId": "fijadores",
+      "title": "Fijador Absorbible",
+      "description": "Dispositivo de fijación absorbible para la sujeción de mallas quirúrgicas durante hernioplastias. Las tachuelas de material absorbible fijan la malla firmemente al tejido sin dejar material permanente residual, lo que reduce el dolor crónico postoperatorio. Compatible con abordajes laparoscópicos y abiertos. Disponible en cartuchos de x15 y x30 fijadores.",
+      "table": {
+        "headers": ["Presentación"],
+        "rows": [["× 15 fijadores"], ["× 30 fijadores"]]
+      },
+      "images": [{ "imgId": "", "alt": "Fijador Absorbible" }]
+    },
+    {
+      "id": "fijador-permanente",
+      "navProductId": "fijador-permanente",
+      "categoryId": "mallas-y-fijadores",
+      "subcategoryId": "fijadores",
+      "title": "Fijador Permanente",
+      "description": "Dispositivo de fijación permanente para mallas quirúrgicas. Proporciona sujeción definitiva y segura de la malla al tejido muscular y aponeurótico. Indicado cuando se requiere una fijación duradera para prevenir la migración o recidiva herniaria. Compatible con abordajes laparoscópicos y abiertos. Disponible en cartuchos de x15 y x30 fijadores.",
+      "table": {
+        "headers": ["Presentación"],
+        "rows": [["× 15 fijadores"], ["× 30 fijadores"]]
+      },
+      "images": [{ "imgId": "", "alt": "Fijador Permanente" }]
+    }
+  ]
+}

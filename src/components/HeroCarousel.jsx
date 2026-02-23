@@ -5,23 +5,23 @@ const slides = [
   {
     id: 1,
     image:
-      "https://unsplash.com/photos/cheerful-surgeon-with-assistants-in-masks-are-crossing-arms-and-looking-at-camera-with-joy-t9KN97BinLY",
-    title: "Insumos Médicos de Calidad",
-    subtitle: "Distribución especializada para profesionales de la salud",
+      "https://images.pexels.com/photos/33916267/pexels-photo-33916267.jpeg?cs=srgb&dl=pexels-davegarcia-33916267.jpg&fm=jpg",
+    title: "Soluciones Quirúrgicas Especializadas",
+    subtitle: "Equipamiento e insumos para entornos de alta exigencia clínica",
   },
   {
     id: 2,
     image:
-      "https://images.unsplash.com/photo-1584362917165-526a968579e8?w=1600&h=600&fit=crop",
-    title: "Equipamiento Hospitalario",
-    subtitle: "Tecnología y confianza para tu institución",
+      "https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?cs=srgb&dl=pexels-shvetsa-3844581.jpg&fm=jpg",
+    title: "Tecnología Médica Confiable",
+    subtitle: "Monitoreo y soporte para procedimientos seguros y precisos",
   },
   {
     id: 3,
     image:
-      "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1600&h=600&fit=crop",
-    title: "Compromiso con la Excelencia",
-    subtitle: "Más de 20 años acompañando al sector salud",
+      "https://images.pexels.com/photos/16450622/pexels-photo-16450622.jpeg?cs=srgb&dl=pexels-jorge-chan-515189442-16450622.jpg&fm=jpg",
+    title: "Insumos de Precisión",
+    subtitle: "Instrumental y descartables seleccionados para cada intervención",
   },
 ];
 
@@ -93,7 +93,7 @@ export function HeroCarousel() {
 
         {/* Wave Overlay */}
         <div
-          className="elementor-shape elementor-shape-bottom absolute -bottom-1 left-0 right-0 z-10 pointer-events-none"
+          className="elementor-shape elementor-shape-bottom absolute -bottom-1 left-0 right-0 z-[2] pointer-events-none"
           data-negative="true">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@ export function HeroCarousel() {
         </div>
 
         {/* Dots Navigation */}
-        <div className="absolute bottom-20 sm:bottom-24 md:bottom-[30vh]  left-0 right-0 z-10">
+        <div className="absolute bottom-20 sm:bottom-24 md:bottom-[30vh]  left-0 right-0 z-[6]">
           <div className="flex items-center justify-center gap-3">
             {slides.map((_, index) => (
               <button

@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import categories from "../data/categories.json";
 import { normalizeString } from "../lib/filters";
+import { products } from "../data/products/products";
 
 export function Drawer({ isOpen, onClose }) {
   const [openItem, setOpenItem] = useState(null);
   const [openCategory, setOpenCategory] = useState(null);
-  const [openSubcategory, setOpenSubcategory] = useState(null);
 
   const toggleCategory = (catId) => {
     setOpenItem(openItem === catId ? null : catId);
@@ -87,12 +87,25 @@ export function Drawer({ isOpen, onClose }) {
                     </Link>
                     {openCategory === cat.name && (
                       <ul className="pl-4 space-y-1">
-                        {cat.subcategories.map((sub) => (
+                        {(cat.id === "energia"
+                          ? products
+                              .filter((p) => p.categoryId === "energia")
+                              .map((p) => ({
+                                id: p.id,
+                                name: p.title,
+                                navProductId: p.navProductId,
+                              }))
+                          : cat.subcategories || []
+                        ).map((sub) => (
                           <li key={sub.id}>
                             <Link
-                              to={`/productos?category=${normalizeString(
-                                cat.name
-                              )}&sub=${normalizeString(sub.name)}`}
+                              to={
+                                sub.navProductId
+                                  ? `/productos/${sub.navProductId}`
+                                  : `/productos?category=${normalizeString(
+                                      cat.name
+                                    )}&sub=${normalizeString(sub.name)}`
+                              }
                               className="block py-1.5 text-sm text-ink/70 hover:text-brand-300 transition-colors"
                               onClick={onClose}>
                               {sub.name}

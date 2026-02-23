@@ -3,12 +3,22 @@
 
 import suturasMecanicasYLaparoscopia from "./suturas-mecanicas-y-laparoscopia.json";
 import selladoresDeVasos from "./selladores-de-vasos.json";
+import energia from "./energia.json";
+import hilosDeSuturas from "./hilos-de-suturas.json";
+import mallasYFijadores from "./mallas-y-fijadores.json";
+import hospitalario from "./hospitalario.json";
+import barcat from "./barcat.json";
 import imageRegistry from "../imageRegistry";
 import { resolveModelImages } from "../../lib/resolveModelImages";
 
 export const productGroups = [
   suturasMecanicasYLaparoscopia,
   selladoresDeVasos,
+  energia,
+  hilosDeSuturas,
+  mallasYFijadores,
+  hospitalario,
+  barcat,
 ];
 
 const rawProducts = productGroups.flatMap(g => g.products);

@@ -74,7 +74,9 @@ export function StatCircle({
 
         {/* center */}
         <div className=" px-4 py-3">
-          <span className="text-2xl font-semibold text-brand-400 tabular-nums">
+          <span
+            className="text-2xl font-semibold tabular-nums"
+            style={{ color }}>
             {value}
             {suffix}
           </span>

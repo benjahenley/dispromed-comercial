@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(/Users/benjaminhenley/Desktop/DATA/Laburo/freelance/dispromed-comercial/src/data/categories.json:*)"
+    ]
+  }
+}

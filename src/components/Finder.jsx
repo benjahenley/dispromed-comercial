@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import SearchResults from "./SearchResults";
 
 export default function Finder({
@@ -14,19 +14,6 @@ export default function Finder({
 }) {
   const containerRef = useRef(null);
 
-  useEffect(() => {
-    if (!open) return;
-
-    function handleClickOutside(e) {
-      if (containerRef.current && !containerRef.current.contains(e.target)) {
-        onClose?.();
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [open, onClose]);
-
   const classes = inverted
     ? "border-white text-white placeholder-white focus:outline-none focus:none"
     : "border-brand-400 text-brand-400 placeholder-ink/50 focus:outline-none focus:brand-400";
@@ -40,9 +27,9 @@ export default function Finder({
     <div
       ref={containerRef}
       className={`
-        overflow-visible lg:mr-20 relative
-        transition-all duration-300 ease-out
-        ${open ? "w-full opacity-100" : "w-full opacity-0 pointer-events-none"}
+        relative min-w-0 overflow-visible
+        transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)]
+        ${open ? "ml-1 w-full max-w-[22rem] opacity-100 translate-x-0" : "ml-0 max-w-0 opacity-0 -translate-x-1 pointer-events-none"}
       `}>
       <form
         onSubmit={(e) => {
@@ -55,7 +42,7 @@ export default function Finder({
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="BUSCAR"
+          placeholder="Buscar"
           onKeyDown={(e) => e.key === "Escape" && onClose?.()}
           className={
             classes +

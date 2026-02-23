@@ -1,8 +1,8 @@
-import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Navbar } from "./components/navbar/Navbar";
+import { lazy, Suspense, useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Footer } from "./components/Footer";
 import { ErrorBoundary } from "./components/ErrorBoundary";
+import { WhatsAppFab } from "./components/WhatsAppFab";
 
 // Lazy load pages for better performance
 const Home = lazy(() =>
@@ -37,9 +37,20 @@ function LoadingFallback() {
   );
 }
 
+function ScrollToTop() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location.pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <main className="flex-1">
           <ErrorBoundary>
@@ -72,6 +83,7 @@ function App() {
           </ErrorBoundary>
         </main>
         <Footer />
+        <WhatsAppFab />
       </div>
     </BrowserRouter>
   );

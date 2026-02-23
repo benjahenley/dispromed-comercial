@@ -34,20 +34,25 @@
   {
     "id": "mallas-y-fijadores",
     "name": "Mallas y Fijadores",
-    "products": [
-      { "id": "polipropileno", "name": "Polipropileno" },
-      { "id": "polipropileno-3d", "name": "Polipropileno 3D" },
+    "subcategories": [
       {
-        "id": "polipropileno-baja-densidad",
-        "name": "Polipropileno Baja Densidad"
+        "id": "mallas",
+        "name": "Mallas",
+        "products": [
+          "malla-polipropileno",
+          "malla-polipropileno-3d",
+          "malla-polipropileno-baja-densidad",
+          "malla-contacto-viseral"
+        ]
       },
       {
-        "id": "polipropileno-mezclas",
-        "name": "Polipropileno + Acido Poliglicolico + Policaprolactona"
-      },
-      { "id": "polipropileno-silicona", "name": "Polipropileno + Silicona" },
-      { "id": "fijador-absorbible", "name": "Fijador Absorbible" },
-      { "id": "fijador-permanente", "name": "Fijador Permanente" }
+        "id": "fijadores",
+        "name": "Fijadores",
+        "products": [
+          "fijador-absorbible",
+          "fijador-permanente"
+        ]
+      }
     ]
   },
   {
@@ -76,7 +81,8 @@
           "trocares",
           "retractor-de-heridas",
           "bolsa-de-especimen",
-          "clips-de-polimero"
+          "clips-de-polimero",
+          "aguja-de-veress"
         ]
       }
     ]
@@ -84,60 +90,81 @@
   {
     "id": "selladores-de-vasos",
     "name": "Selladores de Vasos",
+    "subcategories": [
+      {
+        "id": "ultrasonido",
+        "name": "Ultrasonido",
+        "products": ["ultrasonido"]
+      },
+      {
+        "id": "ultrasonido-y-radiofrecuencia",
+        "name": "Ultrasonido y Radiofrecuencia",
+        "products": ["ultrasonido-radiofrecuencia"]
+      }
+    ]
+  },
+  {
+    "id": "energia",
+    "name": "Energía",
     "products": [
       { "id": "ultrasonido", "name": "Ultrasonido" },
-      {
-        "id": "ultrasonido-radiofrecuencia",
-        "name": "Ultrasonido + Radiofrecuencia"
-      }
+      { "id": "ultrasonido-radiofrecuencia", "name": "Ultrasonido + Radiofrecuencia" }
     ]
   },
   {
     "id": "hospitalario",
     "name": "Hospitalario",
-    "products": [
-      { "id": "guias-de-suero", "name": "Guías de Suero" },
-      { "id": "guantes-de-examen", "name": "Guantes de Examen" },
+    "subcategories": [
       {
-        "id": "guantes-esteriles-cirugia",
-        "name": "Guantes Estériles para Cirugía"
+        "id": "descartables",
+        "name": "Descartables",
+        "products": ["guias-de-suero", "agujas", "jeringas", "llaves-3-vias"]
       },
-      { "id": "agujas", "name": "Agujas" },
-      { "id": "llaves-3-vias", "name": "Llaves de 3 Vías" },
-      { "id": "jeringas", "name": "Jeringas" },
-      { "id": "tubo-endotraqueales", "name": "Tubo Endotraqueales" },
-      { "id": "sondas-folex", "name": "Sondas Folex" },
-      { "id": "cateteres-intravenosos", "name": "Catéteres Intravenosos" },
-      { "id": "equipos-transfusion", "name": "Equipos de Transfusión" },
-      { "id": "antisepticos", "name": "Antisépticos" },
-      { "id": "equipos-infusion", "name": "Equipos de Infusión" },
-      { "id": "cateteres-via-central", "name": "Catéteres Vía Central" },
-      { "id": "algodon", "name": "Algodón" },
-      { "id": "alcohol", "name": "Alcohol" },
-      { "id": "gasas-esteriles", "name": "Gasas Estériles" }
+      {
+        "id": "guantes",
+        "name": "Guantes",
+        "products": ["guantes-de-examen", "guantes-esteriles-cirugia"]
+      },
+      {
+        "id": "acceso-vascular",
+        "name": "Acceso Vascular",
+        "products": ["cateteres-intravenosos", "cateteres-via-central", "equipos-transfusion", "equipos-infusion"]
+      },
+      {
+        "id": "vias-aereas-y-sondas",
+        "name": "Vías Aéreas y Sondas",
+        "products": ["tubo-endotraqueales", "sondas-foley"]
+      },
+      {
+        "id": "antisepticos-y-curacion",
+        "name": "Antisépticos y Curación",
+        "products": ["algodon", "alcohol", "gasas-esteriles", "vaselina", "antisepticos"]
+      }
     ]
   },
   {
     "id": "barcat",
     "name": "Barcat",
-    "products": [
-      { "id": "bolsas-colectoras-orina", "name": "Bolsas Colectoras de Orina" },
-      { "id": "canulas-oxigeno", "name": "Cánulas de Oxígeno" },
-      { "id": "canulas-aspiracion", "name": "Cánulas de Aspiración" },
-      { "id": "conectores", "name": "Conectores" },
-      { "id": "equipos-irrigacion", "name": "Equipos de Irrigación" },
-      { "id": "prolongadores", "name": "Prolongadores" },
+    "subcategories": [
       {
-        "id": "sonda-aspiracion-succion",
-        "name": "Sondas de Aspiración y Succión"
+        "id": "sondas",
+        "name": "Sondas",
+        "products": ["sonda-aspiracion-succion", "sonda-alimentacion", "sondas-levine", "sondas-nasogastricas", "sondas-nelaton", "sondas-bequille", "sondas-rectales"]
       },
-      { "id": "sonda-alimentacion", "name": "Sonda de Alimentación" },
-      { "id": "sondas-nelaton", "name": "Sondas Nelaton" },
-      { "id": "sondas-bequille", "name": "Sondas Bequille" },
-      { "id": "tubuladuras", "name": "Tubuladuras" },
       {
-        "id": "tubos-canalizacion-venosa-anestesica",
-        "name": "Tubos para Canalización Venosa o Anestésica"
+        "id": "vias-y-tubos",
+        "name": "Vías y Tubos",
+        "products": ["prolongadores", "prolongadores-con-sonda", "tubuladuras", "tubos-canalizacion-venosa-anestesica"]
+      },
+      {
+        "id": "drenajes-y-colectores",
+        "name": "Drenajes y Colectores",
+        "products": ["drenajes-toraxicos", "bolsas-colectoras-orina", "colectores-orina-pediatricos"]
+      },
+      {
+        "id": "equipamiento",
+        "name": "Equipamiento",
+        "products": ["canulas-oxigeno", "canulas-aspiracion", "conectores", "equipos-irrigacion", "compo-quirurgico"]
       }
     ]
   }

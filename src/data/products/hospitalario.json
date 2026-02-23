@@ -1,0 +1,284 @@
+{
+  "categoryId": "hospitalario",
+  "products": [
+    {
+      "id": "guias-de-suero",
+      "navProductId": "guias-de-suero",
+      "categoryId": "hospitalario",
+      "subcategoryId": "descartables",
+      "title": "Guías de Suero",
+      "description": "Equipos de venoclisis estériles descartables para la administración de fluidos intravenosos. Fabricados con material transparente que permite visualizar el flujo. Disponibles en V 14 (macrogotero, 20 gotas/ml) y V 17 (microgotero, 60 gotas/ml).",
+      "table": {
+        "headers": ["Modelo", "Tipo"],
+        "rows": [
+          ["V 14", "Macrogotero (20 gotas/ml)"],
+          ["V 17", "Microgotero (60 gotas/ml)"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Guías de Suero" }]
+    },
+    {
+      "id": "agujas",
+      "navProductId": "agujas",
+      "categoryId": "hospitalario",
+      "subcategoryId": "descartables",
+      "title": "Agujas Hipodérmicas",
+      "description": "Agujas hipodérmicas descartables estériles de acero inoxidable con bisel tri-cortante de alta precisión. Cubo de plástico codificado por color según calibre. Disponibles en múltiples calibres y longitudes para aplicaciones intradérmicas, subcutáneas e intramusculares.",
+      "table": {
+        "headers": ["Calibre × Longitud (mm)"],
+        "rows": [
+          ["13 × 4"],
+          ["16 × 5"],
+          ["25 × 8"],
+          ["40 × 8"],
+          ["50 × 8"],
+          ["40 × 12"],
+          ["25 × 9"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Agujas Hipodérmicas" }]
+    },
+    {
+      "id": "jeringas",
+      "navProductId": "jeringas",
+      "categoryId": "hospitalario",
+      "subcategoryId": "descartables",
+      "title": "Jeringas",
+      "description": "Jeringas descartables estériles con émbolo de caucho suave para administración precisa de medicamentos. Disponibles con o sin aguja en múltiples volúmenes. Graduación clara y visible. Incluye presentaciones especiales para insulina y tuberculina.",
+      "table": {
+        "headers": ["Presentación"],
+        "rows": [
+          ["3 ml"],
+          ["5 ml"],
+          ["10 ml"],
+          ["20 ml"],
+          ["60 ml"],
+          ["Insulina 100 UI"],
+          ["Tuberculina"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Jeringas" }]
+    },
+    {
+      "id": "llaves-3-vias",
+      "navProductId": "llaves-3-vias",
+      "categoryId": "hospitalario",
+      "subcategoryId": "descartables",
+      "title": "Llaves de 3 Vías",
+      "description": "Llave de paso de 3 vías descartable estéril para circuitos de infusión intravenosa. Permite la conexión simultánea de múltiples líneas de administración y el control del flujo de forma independiente. Conexiones Luer-lock macho y hembra.",
+      "images": [{ "imgId": "", "alt": "Llave de 3 Vías" }]
+    },
+    {
+      "id": "guantes-de-examen",
+      "navProductId": "guantes-de-examen",
+      "categoryId": "hospitalario",
+      "subcategoryId": "guantes",
+      "title": "Guantes de Examen",
+      "description": "Guantes descartables de látex para examen médico, sin polvo y con texturizado en los dedos para mayor agarre. Cumplen estándares internacionales de protección de barrera. Disponibles en tallas S, M y L.",
+      "table": {
+        "headers": ["Talla"],
+        "rows": [["S"], ["M"], ["L"]]
+      },
+      "images": [{ "imgId": "", "alt": "Guantes de Examen" }]
+    },
+    {
+      "id": "guantes-esteriles-cirugia",
+      "navProductId": "guantes-esteriles-cirugia",
+      "categoryId": "hospitalario",
+      "subcategoryId": "guantes",
+      "title": "Guantes Estériles para Cirugía",
+      "description": "Guantes estériles de látex natural para uso en campo quirúrgico. Superficie texturizada para mayor destreza y agarre de instrumental. Cumplen con normas ISO y ASTM para guantes quirúrgicos. Disponibles en tallas 6.5, 7, 7.5, 8 y 8.5.",
+      "table": {
+        "headers": ["Talla"],
+        "rows": [["6.5"], ["7"], ["7.5"], ["8"], ["8.5"]]
+      },
+      "images": [{ "imgId": "", "alt": "Guantes Estériles para Cirugía" }]
+    },
+    {
+      "id": "cateteres-intravenosos",
+      "navProductId": "cateteres-intravenosos",
+      "categoryId": "hospitalario",
+      "subcategoryId": "acceso-vascular",
+      "title": "Catéteres Intravenosos",
+      "description": "Catéteres intravenosos periféricos descartables con guía metálica retráctil y sistema de seguridad pasivo. Cánula de poliuretano o FEP de pared ultra-delgada para mayor flujo. Cubo codificado por color según calibre. Disponibles en calibres 14G al 24G.",
+      "table": {
+        "headers": ["Calibre (G)"],
+        "rows": [["14"], ["16"], ["18"], ["20"], ["22"], ["24"]]
+      },
+      "images": [{ "imgId": "", "alt": "Catéteres Intravenosos" }]
+    },
+    {
+      "id": "cateteres-via-central",
+      "navProductId": "cateteres-via-central",
+      "categoryId": "hospitalario",
+      "subcategoryId": "acceso-vascular",
+      "title": "Catéteres Vía Central",
+      "description": "Catéteres venosos centrales de inserción periférica o yugular/subclavia/femoral para administración de medicamentos, nutrición parenteral y monitoreo hemodinámico. Disponibles en configuraciones de 1, 2 y 3 lúmenes.",
+      "table": {
+        "headers": ["Lúmenes", "Calibre / Longitud"],
+        "rows": [
+          ["1 lumen", "14G × 20 cm / 16 Fr × 20 cm"],
+          ["2 lúmenes", "7 Fr × 20 cm"],
+          ["3 lúmenes", "7 Fr × 20 cm"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Catéteres Vía Central" }]
+    },
+    {
+      "id": "equipos-transfusion",
+      "navProductId": "equipos-transfusion",
+      "categoryId": "hospitalario",
+      "subcategoryId": "acceso-vascular",
+      "title": "Equipos de Transfusión",
+      "description": "Equipos de transfusión sanguínea estériles descartables con filtro para retención de microagregados. Garantizan la seguridad en la administración de hemoderivados. Disponibles en modelos V 20 y V 18.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [["V 20"], ["V 18"]]
+      },
+      "images": [{ "imgId": "", "alt": "Equipos de Transfusión" }]
+    },
+    {
+      "id": "equipos-infusion",
+      "navProductId": "equipos-infusion",
+      "categoryId": "hospitalario",
+      "subcategoryId": "acceso-vascular",
+      "title": "Equipos de Infusión",
+      "description": "Equipos de infusión intravenosa estériles descartables para la administración controlada de soluciones y medicamentos. Cámara de goteo transparente con filtro. Disponibles en modelos V 14 y V 17.",
+      "table": {
+        "headers": ["Modelo"],
+        "rows": [["V 14"], ["V 17"]]
+      },
+      "images": [{ "imgId": "", "alt": "Equipos de Infusión" }]
+    },
+    {
+      "id": "tubo-endotraqueales",
+      "navProductId": "tubo-endotraqueales",
+      "categoryId": "hospitalario",
+      "subcategoryId": "vias-aereas-y-sondas",
+      "title": "Tubos Endotraqueales",
+      "description": "Tubos endotraqueales descartables de PVC con balón de baja presión y alto volumen para minimizar el daño de la mucosa traqueal. Línea radiopaca para control radiológico. Disponibles en diámetros internos de 4 a 8.5 mm para uso en adultos, pediátrico y neonatal.",
+      "table": {
+        "headers": ["Diámetro Interno (mm)"],
+        "rows": [
+          ["4.0"],
+          ["4.5"],
+          ["5.0"],
+          ["5.5"],
+          ["6.0"],
+          ["6.5"],
+          ["7.0"],
+          ["7.5"],
+          ["8.0"],
+          ["8.5"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Tubos Endotraqueales" }]
+    },
+    {
+      "id": "sondas-foley",
+      "navProductId": "sondas-foley",
+      "categoryId": "hospitalario",
+      "subcategoryId": "vias-aereas-y-sondas",
+      "title": "Sondas Foley",
+      "description": "Sondas de Foley descartables estériles para cateterización vesical permanente. Disponibles en silicona de 2 vías (calibres Nº 12-20), látex de 2 vías (calibres Nº 8-24) y látex de 3 vías (calibres Nº 18-24). Las sondas de 3 vías permiten irrigación continua de la vejiga.",
+      "table": {
+        "headers": ["Material", "Vías", "Calibres (Nº)"],
+        "rows": [
+          ["Silicona", "2 vías", "12, 14, 16, 18, 20"],
+          ["Látex", "2 vías", "8, 10, 12, 14, 16, 18, 20, 22, 24"],
+          ["Látex", "3 vías", "18, 20, 22, 24"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Sondas Foley" }]
+    },
+    {
+      "id": "algodon",
+      "navProductId": "algodon",
+      "categoryId": "hospitalario",
+      "subcategoryId": "antisepticos-y-curacion",
+      "title": "Algodón",
+      "description": "Algodón hidrófilo 100% purificado para uso hospitalario y clínico. Alta capacidad de absorción y suavidad. Utilizado para limpieza de heridas, aplicación de antisépticos y apósitos. Presentación x 500 g.",
+      "table": {
+        "headers": ["Presentación"],
+        "rows": [["× 500 g"]]
+      },
+      "images": [{ "imgId": "", "alt": "Algodón" }]
+    },
+    {
+      "id": "alcohol",
+      "navProductId": "alcohol",
+      "categoryId": "hospitalario",
+      "subcategoryId": "antisepticos-y-curacion",
+      "title": "Alcohol",
+      "description": "Alcohol etílico para desinfección de superficies, instrumental y preparación de la piel para procedimientos. Disponible en concentraciones 70% (efectiva para antisepsia) y 96% (para uso técnico). Presentaciones de 100 ml, 500 ml y 1 litro.",
+      "table": {
+        "headers": ["Concentración", "Volumen"],
+        "rows": [
+          ["70%", "100 ml"],
+          ["70%", "500 ml"],
+          ["70%", "1 L"],
+          ["96%", "—"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Alcohol" }]
+    },
+    {
+      "id": "gasas-esteriles",
+      "navProductId": "gasas-esteriles",
+      "categoryId": "hospitalario",
+      "subcategoryId": "antisepticos-y-curacion",
+      "title": "Gasas",
+      "description": "Gasas de algodón 100% para apósitos, limpieza de heridas y procedimientos médicos. Disponibles en presentación estéril (empaque individual) y no estéril a granel, en múltiples medidas y gramajes.",
+      "table": {
+        "headers": ["Tipo", "Medida"],
+        "rows": [
+          ["Estéril", "7 × 7 cm (2 capas)"],
+          ["No estéril", "10 × 10 cm"],
+          ["No estéril", "30 × 30 cm"],
+          ["No estéril", "40 × 40 cm"],
+          ["No estéril (rollo)", "× 1.5 kg"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Gasas" }]
+    },
+    {
+      "id": "vaselina",
+      "navProductId": "vaselina",
+      "categoryId": "hospitalario",
+      "subcategoryId": "antisepticos-y-curacion",
+      "title": "Vaselina",
+      "description": "Vaselina de grado farmacéutico para uso clínico. La vaselina sólida se utiliza en apósitos, protección de la piel y lubricación de sondas. La vaselina líquida (parafina líquida) se emplea como lubricante, vehículo de fármacos y en cuidado de la piel.",
+      "table": {
+        "headers": ["Presentación", "Volumen"],
+        "rows": [
+          ["Sólida", "× 1 kg"],
+          ["Líquida", "× 1 L"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Vaselina" }]
+    },
+    {
+      "id": "antisepticos",
+      "navProductId": "antisepticos",
+      "categoryId": "hospitalario",
+      "subcategoryId": "antisepticos-y-curacion",
+      "title": "Antisépticos y Desinfectantes",
+      "description": "Línea completa de antisépticos y desinfectantes para uso hospitalario: clorhexidina (solución y jabonosa), cloroxilenol, formol 10% y 40%, agua oxigenada 10%, iodopovidona (solución y jabonosa) y nitrofurazona. También incluye cal sodada para adsorción de CO₂ en circuitos anestésicos.",
+      "table": {
+        "headers": ["Producto", "Presentación"],
+        "rows": [
+          ["Cal sodada", "—"],
+          ["Clorhexidina", "250 ml / 500 ml / 1 L / 5 L"],
+          ["Cloroxilenol", "× 1 L"],
+          ["Formol 10%", "× 1 L"],
+          ["Formol 40%", "× 1 L"],
+          ["Agua oxigenada 10%", "500 ml / 1 L"],
+          ["Iodopovidona solución", "250 ml / 500 ml / 1 L"],
+          ["Iodopovidona jabonosa", "250 ml / 500 ml / 1 L"],
+          ["Nitrofurazona solución", "× 1 L"]
+        ]
+      },
+      "images": [{ "imgId": "", "alt": "Antisépticos y Desinfectantes" }]
+    }
+  ]
+}

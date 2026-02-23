@@ -1,0 +1,89 @@
+{
+  "categoryId": "energia",
+  "products": [
+    {
+      "id": "energia-ultrasonido",
+      "navProductId": "ultrasonido",
+      "categoryId": "energia",
+      "subcategoryId": "ultrasonido",
+      "title": "Sellador de Vasos por Ultrasonido",
+      "description": "Sistema quirúrgico de energía ultrasónica orientado a disección fina, corte y sellado consistente. En el folleto se observa una plataforma con zócalo ultrasónico y componentes de mano para trabajo laparoscópico, junto con bisturíes ultrasónicos tipo pistola.",
+      "characteristics": {
+        "title": "Características",
+        "items": [
+          "Disección de vasos con corte simultáneo y sellado consistente",
+          "Baja propagación térmica lateral reportada en el material",
+          "Transductor (pieza de mano) con conexión directa a la plataforma",
+          "Bisturíes ultrasónicos tipo pistola",
+          "Diámetro máximo de cierre del vaso: 7 mm"
+        ]
+      },
+      "benefits": {
+        "title": "Componentes y variantes",
+        "items": [
+          "Tipo Focus de 9 cm",
+          "Tipo Harmónico de 23 cm",
+          "Tipo Harmónico de 36 cm",
+          "Tipo Harmónico de 45 cm",
+          "Pieza de mano ultrasónica para acceso a energía quirúrgica"
+        ]
+      },
+      "imageCount": 1,
+      "images": [
+        {
+          "imgId": "",
+          "alt": "Plataforma de energía ultrasónica con componentes de mano y bisturí para corte y sellado vascular"
+        }
+      ]
+    },
+    {
+      "id": "energia-ultrasonido-radiofrecuencia",
+      "navProductId": "ultrasonido-radiofrecuencia",
+      "categoryId": "energia",
+      "subcategoryId": "ultrasonido-radiofrecuencia",
+      "title": "Sellador de Vasos Ultrasonido + Radiofrecuencia",
+      "description": "Plataforma combinada de radiofrecuencia (HF) y ultrasonido para disección, coagulación y sellado vascular. En el folleto se presentan el generador con zócalo HF y zócalo ultrasónico, transductor (pieza de mano), pieza de mano de alta frecuencia y pieza de mano ultrasónica.",
+      "characteristics": {
+        "title": "Tecnología",
+        "items": [
+          "Combinación de energía por ultrasonido y radiofrecuencia",
+          "Generador con salida conjunta de energía ultrasónica y de radiofrecuencia",
+          "Energía bipolar para coagulación confiable de vasos de mayor calibre",
+          "Pieza de mano BBT multifuncional para eficiencia quirúrgica",
+          "Un único mango acoplable a distintas longitudes de bisturíes"
+        ]
+      },
+      "benefits": {
+        "title": "Rendimiento reportado en folleto",
+        "items": [
+          "Velocidad de corte entre 1 y 2 segundos más rápida",
+          "Efecto de coagulación vascular reportado 15% mayor",
+          "Tasa de éxito de cierre vascular en vasos de 5-7 mm",
+          "Comparativas de daño térmico lateral y tiempo de corte"
+        ]
+      },
+      "table": {
+        "headers": ["Indicador", "BBT", "Otra marca"],
+        "rows": [
+          [
+            "Éxito de cierre vascular (conducto torácico)",
+            "100%",
+            "100%"
+          ],
+          [
+            "Tiempo de corte (conducto torácico de 3 niveles)",
+            "3.28 s",
+            "3.62 s"
+          ]
+        ]
+      },
+      "imageCount": 1,
+      "images": [
+        {
+          "imgId": "",
+          "alt": "Sistema quirúrgico de radiofrecuencia y ultrasonido con generador, transductor y piezas de mano"
+        }
+      ]
+    }
+  ]
+}

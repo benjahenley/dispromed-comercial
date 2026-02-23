@@ -4,8 +4,8 @@
     "dateLabel": "Octubre 2025",
     "title": "Nuevas líneas de productos",
     "excerpt": "Incorporamos nuevas marcas internacionales a nuestro catálogo.",
-    "image": "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1200&h=600&fit=crop",
-    "alt": "Nuevas líneas de productos",
+    "image": "https://images.pexels.com/photos/6291176/pexels-photo-6291176.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&dpr=2",
+    "alt": "Equipamiento quirúrgico en sala de operaciones",
     "href": "/novedades"
   },
   {
@@ -13,8 +13,8 @@
     "dateLabel": "Septiembre 2025",
     "title": "Capacitación continua",
     "excerpt": "Nuestro equipo se mantiene actualizado en las últimas tecnologías.",
-    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=600&fit=crop",
-    "alt": "Capacitación continua",
+    "image": "https://images.pexels.com/photos/4769137/pexels-photo-4769137.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&dpr=2",
+    "alt": "Equipo médico trabajando en quirófano",
     "href": "/novedades"
   },
   {
@@ -22,8 +22,8 @@
     "dateLabel": "Agosto 2025",
     "title": "Expansión de servicios",
     "excerpt": "Ampliamos nuestra cobertura para mejor atención a nuestros clientes.",
-    "image": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1200&h=600&fit=crop",
-    "alt": "Expansión de servicios",
+    "image": "https://images.pexels.com/photos/4483319/pexels-photo-4483319.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&dpr=2",
+    "alt": "Instrumental quirúrgico en entorno estéril",
     "href": "/novedades"
   }
 ]

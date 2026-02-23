@@ -1,0 +1,131 @@
+{
+  "categoryId": "hilos-de-suturas",
+  "products": [
+    {
+      "id": "acido-poliglicolico-antibacterial",
+      "navProductId": "acido-poliglicolico-antibacterial",
+      "categoryId": "hilos-de-suturas",
+      "subcategoryId": "absorbible",
+      "title": "Ácido Poliglicólico Antibacterial",
+      "description": "Hilo de sutura multifilamento absorbible sintético elaborado con ácido poliglicólico, con agente antibacteriano (triclosán) integrado. Alta resistencia a la tensión inicial y biodegradación completa en 60-90 días por hidrólisis. Indicado para ligaduras y suturas de tejidos blandos en ambientes de riesgo infeccioso.",
+      "images": [{ "imgId": "", "alt": "Ácido Poliglicólico Antibacterial" }]
+    },
+    {
+      "id": "poliglactina-antibacterial",
+      "navProductId": "poliglactina-antibacterial",
+      "categoryId": "hilos-de-suturas",
+      "subcategoryId": "absorbible",
+      "title": "Poliglactina Antibacterial",
+      "description": "Hilo de sutura multifilamento trenzado absorbible de poliglactina 910 con acción antibacteriana (triclosán). Excelente manejabilidad y nudo seguro. Absorción completa entre 56 y 70 días. Ideal para cirugía general, ginecológica y pediátrica en contextos de alto riesgo séptico.",
+      "images": [{ "imgId": "", "alt": "Poliglactina Antibacterial" }]
+    },
+    {
+      "id": "polidioxanona-antibacterial",
+      "navProductId": "polidioxanona-antibacterial",
+      "categoryId": "hilos-de-suturas",
+      "subcategoryId": "absorbible",
+      "title": "Polidioxanona Antibacterial",
+      "description": "Hilo de sutura monofilamento absorbible de polidioxanona (PDO) con agente antibacteriano integrado. Mantiene resistencia a la tensión por un período prolongado (hasta 6 semanas al 50%) y se absorbe completamente entre 182 y 238 días. Indicado para cierres de fascia, cirugía cardiovascular pediátrica y tejidos de cicatrización lenta.",
+      "images": [{ "imgId": "", "alt": "Polidioxanona Antibacterial" }]
+    },
+    {
+      "id": "poliglecaprone-antibacterial",
+      "navProductId": "poliglecaprone-antibacterial",
+      "categoryId": "hilos-de-suturas",
+      "subcategoryId": "absorbible",
+      "title": "Poliglecaprone Antibacterial",
+      "description": "Hilo de sutura monofilamento absorbible de poliglecaprone 25 con triclosán. Excelente flexibilidad y baja reacción tisular. Absorción completa en 90-120 días. Especialmente indicado para sutura subcuticular y tejidos delicados donde se busca mínima reacción inflamatoria con protección antibacteriana.",
+      "images": [{ "imgId": "", "alt": "Poliglecaprone Antibacterial" }]
+    },
+    {
+      "id": "poliglactina",
+      "navProductId": "poliglactina",
+      "categoryId": "hilos-de-suturas",
+      "subcategoryId": "absorbible",
+      "title": "Poliglactina",
+      "description": "Hilo de sutura multifilamento trenzado absorbible sintético de poliglactina 910. Ampliamente utilizado en cirugía general, ginecología, urología y obstetricia. Absorción completa en 56-70 días por hidrólisis. Disponible en múltiples calibres con aguja o sin aguja.",
+      "images": [{ "imgId": "", "alt": "Poliglactina" }]
+    },
+    {
+      "id": "polidioxanona",
+      "navProductId": "polidioxanona",
+      "categoryId": "hilos-de-suturas",
+      "subcategoryId": "absorbible",
+      "title": "Polidioxanona",
+      "description": "Hilo de sutura monofilamento absorbible de polidioxanona. Alta resistencia tensional mantenida por más tiempo que otros absorbibles, con absorción completa en 180-240 días. Ideal para cierres de fascia abdominal, cirugía ortopédica pediátrica y tejidos que requieren soporte prolongado.",
+      "images": [{ "imgId": "", "alt": "Polidioxanona" }]
+    },
+    {
+      "id": "poliglecaprone",
+      "navProductId": "poliglecaprone",
+      "categoryId": "hilos-de-suturas",
+      "subcategoryId": "absorbible",
+      "title": "Poliglecaprone",
+      "description": "Hilo de sutura monofilamento absorbible sintético de poliglecaprone 25. Excelente manejo, suavidad y mínima fricción tisular. Absorción completa en 90-120 días. Ampliamente utilizado para sutura subcuticular, cierre de piel y tejidos subcutáneos.",
+      "images": [{ "imgId": "", "alt": "Poliglecaprone" }]
+    },
+    {
+      "id": "acido-poliglicolico",
+      "navProductId": "acido-poliglicolico",
+      "categoryId": "hilos-de-suturas",
+      "subcategoryId": "absorbible",
+      "title": "Ácido Poliglicólico",
+      "description": "Hilo de sutura multifilamento trenzado absorbible sintético de ácido poliglicólico. Alta resistencia tensional inicial y degradación hidrolítica completa en 60-90 días. Indicado para ligaduras y suturas en cirugía general, ginecología y tejidos blandos.",
+      "images": [{ "imgId": "", "alt": "Ácido Poliglicólico" }]
+    },
+    {
+      "id": "acero",
+      "navProductId": "acero",
+      "categoryId": "hilos-de-suturas",
+      "subcategoryId": "no-absorbible",
+      "title": "Acero",
+      "description": "Hilo de sutura de acero inoxidable 316L, no absorbible. Mayor resistencia a la tensión de todos los materiales de sutura, con alta biocompatibilidad y resistencia a la infección. Indicado para esternotomía, cierre de fascia de alta tensión y cirugía ortopédica.",
+      "images": [{ "imgId": "", "alt": "Sutura de Acero" }]
+    },
+    {
+      "id": "nylon",
+      "navProductId": "nylon",
+      "categoryId": "hilos-de-suturas",
+      "subcategoryId": "no-absorbible",
+      "title": "Nylon",
+      "description": "Hilo de sutura monofilamento no absorbible de poliamida (nylon). Excelente resistencia a la tensión, baja reacción tisular y buena elasticidad. Ampliamente utilizado para sutura de piel, cirugía plástica, oftalmología y microcirugía.",
+      "images": [{ "imgId": "", "alt": "Sutura de Nylon" }]
+    },
+    {
+      "id": "seda",
+      "navProductId": "seda",
+      "categoryId": "hilos-de-suturas",
+      "subcategoryId": "no-absorbible",
+      "title": "Seda",
+      "description": "Hilo de sutura multifilamento trenzado no absorbible de seda natural. Excelente manejo, seguridad del nudo y flexibilidad. Utilizado en ligaduras vasculares, suturas gastrointestinales y procedimientos donde se requiere facilidad de manipulación.",
+      "images": [{ "imgId": "", "alt": "Sutura de Seda" }]
+    },
+    {
+      "id": "polipropileno",
+      "navProductId": "polipropileno",
+      "categoryId": "hilos-de-suturas",
+      "subcategoryId": "no-absorbible",
+      "title": "Polipropileno",
+      "description": "Hilo de sutura monofilamento no absorbible de polipropileno isotáctico. Material completamente inerte, alta resistencia a la tensión permanente y mínima reacción tisular. Indicado para suturas cardiovasculares, reparación de hernias, cirugía plástica y procedimientos que requieren material permanente.",
+      "images": [{ "imgId": "", "alt": "Sutura de Polipropileno" }]
+    },
+    {
+      "id": "lino",
+      "navProductId": "lino",
+      "categoryId": "hilos-de-suturas",
+      "subcategoryId": "no-absorbible",
+      "title": "Lino",
+      "description": "Hilo de sutura multifilamento no absorbible de lino natural. Buena resistencia tensional y fácil manejo. Utilizado históricamente en cirugía general, intestinal y suturas de tejidos blandos donde se requiere un material de origen natural.",
+      "images": [{ "imgId": "", "alt": "Sutura de Lino" }]
+    },
+    {
+      "id": "poliester",
+      "navProductId": "poliester",
+      "categoryId": "hilos-de-suturas",
+      "subcategoryId": "no-absorbible",
+      "title": "Poliéster",
+      "description": "Hilo de sutura multifilamento trenzado no absorbible de poliéster. Alta resistencia a la tensión permanente, excelente biocompatibilidad y estabilidad dimensional. Indicado para cirugía cardiovascular, reparación de tendones, suturas protésicas y procedimientos donde se requiere sutura permanente de alta resistencia.",
+      "images": [{ "imgId": "", "alt": "Sutura de Poliéster" }]
+    }
+  ]
+}
