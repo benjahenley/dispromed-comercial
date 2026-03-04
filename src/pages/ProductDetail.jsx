@@ -171,6 +171,12 @@ export function ProductDetail() {
                     {product.title}
                   </h1>
 
+                  {product.subtitle && (
+                    <p className="mt-1 text-base text-ink/50 font-normal">
+                      {product.subtitle}
+                    </p>
+                  )}
+
                   {product.description && (
                     <p className="mt-4 text-sm leading-relaxed text-ink/70 sm:text-base">
                       {product.description}
@@ -194,6 +200,34 @@ export function ProductDetail() {
                         ))}
                       </ul>
                     </div>
+                  )}
+
+                  {/* Specs (key-value) */}
+                  {product.specs?.items?.length > 0 && (
+                    <div className="mt-6">
+                      <h2 className="text-lg font-semibold tracking-tight">
+                        {product.specs.title || "Descripción del producto"}
+                      </h2>
+                      <dl className="mt-3 overflow-hidden rounded-2xl border border-ink/10 divide-y divide-ink/10">
+                        {product.specs.items.map((spec, idx) => (
+                          <div
+                            key={idx}
+                            className="flex gap-3 px-4 py-2.5 text-sm">
+                            <dt className="w-36 shrink-0 font-medium text-ink/80">
+                              {spec.label}
+                            </dt>
+                            <dd className="text-ink/60">{spec.value}</dd>
+                          </div>
+                        ))}
+                      </dl>
+                    </div>
+                  )}
+
+                  {/* Note */}
+                  {product.note && (
+                    <p className="mt-4 rounded-2xl border border-ink/10 bg-ink/3 px-4 py-3 text-sm text-ink/60 italic">
+                      {product.note}
+                    </p>
                   )}
 
                   {/* Benefits */}

@@ -63,8 +63,8 @@ export function MegaMenu({
         <div
           className={
             isFloating
-              ? "relative mx-auto w-[min(96vw,1180px)] rounded-[28px] border border-white/30 bg-white/55 shadow-xl backdrop-blur px-6 pb-8 pt-7 lg:px-8"
-              : "relative rounded-[28px] border border-white/30 bg-white/55 shadow-xl backdrop-blur px-6 pb-8 pt-7 lg:px-8"
+              ? "relative mx-auto w-[min(96vw,1180px)] rounded-[28px] border border-white/70 bg-white/92 shadow-2xl backdrop-blur-sm px-6 pb-8 pt-7 lg:px-8"
+              : "relative rounded-[28px] border border-white/70 bg-white/92 shadow-2xl backdrop-blur-sm px-6 pb-8 pt-7 lg:px-8"
           }>
           <div
             className={`relative z-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-x-4 gap-y-6`}>

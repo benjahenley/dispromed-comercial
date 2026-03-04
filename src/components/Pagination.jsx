@@ -29,14 +29,15 @@ export function Pagination({ total, limit, offset }) {
   }
 
   return (
-    <div className="flex items-center justify-center gap-2 mt-8">
+    <div className="mt-8 overflow-x-auto pb-1">
+      <div className="mx-auto flex w-max min-w-full flex-wrap items-center justify-center gap-1.5 sm:gap-2">
       <button
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="px-3 py-2 border border-ink/10 hover:bg-ink/5 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        className="inline-flex h-9 min-w-9 items-center justify-center rounded-xl border border-ink/10 px-2 text-sm hover:bg-ink/5 disabled:cursor-not-allowed disabled:opacity-50 transition-colors sm:h-10 sm:min-w-10 sm:px-3"
         aria-label="Página anterior">
         <svg
-          className="w-5 h-5"
+          className="h-4 w-4 sm:h-5 sm:w-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24">
@@ -53,10 +54,10 @@ export function Pagination({ total, limit, offset }) {
         <>
           <button
             onClick={() => handlePageChange(1)}
-            className="px-4 py-2 border border-ink/10 hover:bg-ink/5 transition-colors">
+            className="inline-flex h-9 min-w-9 items-center justify-center rounded-xl border border-ink/10 px-3 text-sm hover:bg-ink/5 transition-colors sm:h-10 sm:min-w-10 sm:px-4">
             1
           </button>
-          {startPage > 2 && <span className="px-2 text-ink/40">...</span>}
+          {startPage > 2 && <span className="px-1.5 text-ink/40 sm:px-2">...</span>}
         </>
       )}
 
@@ -64,7 +65,7 @@ export function Pagination({ total, limit, offset }) {
         <button
           key={page}
           onClick={() => handlePageChange(page)}
-          className={`px-4 py-2 border transition-colors ${
+          className={`inline-flex h-9 min-w-9 items-center justify-center rounded-xl border px-3 text-sm transition-colors sm:h-10 sm:min-w-10 sm:px-4 ${
             page === currentPage
               ? "bg-brand-300 text-white border-brand-300"
               : "border-ink/10 hover:bg-ink/5"
@@ -75,12 +76,10 @@ export function Pagination({ total, limit, offset }) {
 
       {endPage < totalPages && (
         <>
-          {endPage < totalPages - 1 && (
-            <span className="px-2 text-ink/40">...</span>
-          )}
+          {endPage < totalPages - 1 && <span className="px-1.5 text-ink/40 sm:px-2">...</span>}
           <button
             onClick={() => handlePageChange(totalPages)}
-            className="px-4 py-2 border border-ink/10 hover:bg-ink/5 transition-colors">
+            className="inline-flex h-9 min-w-9 items-center justify-center rounded-xl border border-ink/10 px-3 text-sm hover:bg-ink/5 transition-colors sm:h-10 sm:min-w-10 sm:px-4">
             {totalPages}
           </button>
         </>
@@ -89,10 +88,10 @@ export function Pagination({ total, limit, offset }) {
       <button
         onClick={() => handlePageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="px-3 py-2 border border-ink/10 hover:bg-ink/5 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        className="inline-flex h-9 min-w-9 items-center justify-center rounded-xl border border-ink/10 px-2 text-sm hover:bg-ink/5 disabled:cursor-not-allowed disabled:opacity-50 transition-colors sm:h-10 sm:min-w-10 sm:px-3"
         aria-label="Página siguiente">
         <svg
-          className="w-5 h-5"
+          className="h-4 w-4 sm:h-5 sm:w-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24">
@@ -104,6 +103,7 @@ export function Pagination({ total, limit, offset }) {
           />
         </svg>
       </button>
+      </div>
     </div>
   );
 }

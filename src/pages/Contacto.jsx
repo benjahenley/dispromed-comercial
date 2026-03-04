@@ -207,7 +207,7 @@ export function Contacto() {
     message: "",
   });
 
-  const [status, setStatus] = useState("idle"); // idle | sending | sent
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
 
   const canSubmit = useMemo(() => {
     return (
@@ -227,12 +227,19 @@ export function Contacto() {
     if (!canSubmit) return;
 
     setStatus("sending");
-    // Simulación
-    await new Promise((r) => setTimeout(r, 700));
-    setStatus("sent");
-
-    // acá iría tu POST real
-    // console.log(formData);
+    try {
+      const res = await fetch("/send-mail.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) throw new Error();
+      setStatus("sent");
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -395,6 +402,13 @@ export function Contacto() {
                     <div className="rounded-2xl border border-brand-300/25 bg-brand-100/15 p-4 text-sm text-ink/70">
                       <span className="font-medium text-ink">¡Listo!</span>{" "}
                       Recibimos tu consulta. Te vamos a responder a la brevedad.
+                    </div>
+                  )}
+
+                  {status === "error" && (
+                    <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+                      <span className="font-medium">Hubo un error al enviar.</span>{" "}
+                      Por favor intentá de nuevo o contactanos por WhatsApp.
                     </div>
                   )}
                 </div>

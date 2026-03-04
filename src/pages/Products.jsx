@@ -70,7 +70,7 @@ export function Products() {
   const breadcrumbs = [{ label: "Inicio", href: "/" }];
 
   if (category) {
-    const cat = categories.find((c) => normalizeString(c.name) === category);
+    const cat = categories.find((c) => c.id === category);
     if (cat) {
       breadcrumbs.push({ label: "Productos", href: "/productos" });
       breadcrumbs.push({
@@ -91,7 +91,7 @@ export function Products() {
   }
 
   const currentCategory = categories.find(
-    (c) => normalizeString(c.name) === category
+    (c) => c.id === category
   );
   const currentSubcategory = currentCategory?.subcategories?.find(
     (s) => normalizeString(s.name) === sub
@@ -144,10 +144,10 @@ export function Products() {
                 id="mobile-category"
                 value={category}
                 onChange={handleCategoryChange}
-                className="w-full px-4 py-2 border border-ink/10 focus:outline-none focus:ring-2 focus:ring-brand-300">
+                className="w-full rounded-xl px-4 py-2 border border-ink/10 focus:outline-none focus:ring-2 focus:ring-brand-300">
                 <option value="">Todas las categorías</option>
                 {categories.map((cat) => (
-                  <option key={cat.id} value={normalizeString(cat.name)}>
+                  <option key={cat.id} value={cat.id}>
                     {cat.name}
                   </option>
                 ))}
@@ -165,7 +165,7 @@ export function Products() {
                   id="mobile-sub"
                   value={sub}
                   onChange={handleSubChange}
-                  className="w-full px-4 py-2 border border-ink/10 focus:outline-none focus:ring-2 focus:ring-brand-300">
+                  className="w-full rounded-xl px-4 py-2 border border-ink/10 focus:outline-none focus:ring-2 focus:ring-brand-300">
                   <option value="">Todas</option>
                   {currentCategory.subcategories &&
                     currentCategory.subcategories.map((subcat) => (
@@ -193,7 +193,7 @@ export function Products() {
                 id="mobile-sort"
                 value={sort}
                 onChange={handleSortChange}
-                className="cursor-pointer appearance-none bg-white px-3 py-1.5 border border-ink/10 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-brand-300">
+                className="cursor-pointer appearance-none rounded-xl bg-white px-3 py-1.5 border border-ink/10 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-brand-300">
                 <option value="title-asc">A-Z</option>
                 <option value="title-desc">Z-A</option>
               </select>
@@ -232,7 +232,7 @@ export function Products() {
                     id="sort"
                     value={sort}
                     onChange={handleSortChange}
-                    className="cursor-pointer appearance-none bg-white px-3 py-2 border border-ink/10 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-brand-300">
+                    className="cursor-pointer appearance-none rounded-xl bg-white px-3 py-2 border border-ink/10 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-brand-300">
                     <option value="title-asc">A-Z</option>
                     <option value="title-desc">Z-A</option>
                   </select>

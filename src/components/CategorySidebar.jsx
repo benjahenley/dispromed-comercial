@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import categories from "../data/categories.json";
 import { normalizeString } from "../lib/filters";
@@ -11,14 +11,8 @@ export function CategorySidebar() {
   const currentCategory = searchParams.get("category") || "";
   const currentSub = searchParams.get("sub") || "";
 
-  // (optional) quick lookup for active category id
-  const activeCategoryId = useMemo(() => {
-    if (!currentCategory) return null;
-    const cat = categories.find(
-      (c) => normalizeString(c.name) === currentCategory
-    );
-    return cat?.id ?? null;
-  }, [currentCategory]);
+  // currentCategory is already the category id
+  const activeCategoryId = currentCategory || null;
 
   useEffect(() => {
     if (activeCategoryId) setOpenCategory(activeCategoryId);
@@ -28,32 +22,32 @@ export function CategorySidebar() {
     setOpenCategory((prev) => (prev === catId ? null : catId));
   };
 
-  const handleCategoryClick = (catName) => {
+  const handleCategoryClick = (catId) => {
     const newParams = new URLSearchParams(searchParams);
-    newParams.set("category", normalizeString(catName));
+    newParams.set("category", catId);
     newParams.delete("sub");
     newParams.delete("offset");
     setSearchParams(newParams);
   };
 
   const handleCategoryRowClick = (cat) => {
-    handleCategoryClick(cat.name);
+    handleCategoryClick(cat.id);
     if (cat.subcategories) {
       toggleCategory(cat.id);
     }
   };
 
-  const handleSubcategoryClick = (catName, subName) => {
+  const handleSubcategoryClick = (catId, subName) => {
     const newParams = new URLSearchParams(searchParams);
-    newParams.set("category", normalizeString(catName));
+    newParams.set("category", catId);
     newParams.set("sub", normalizeString(subName));
     newParams.delete("offset");
     setSearchParams(newParams);
   };
 
-  const handleSubcategoryValueClick = (catName, subValue) => {
+  const handleSubcategoryValueClick = (catId, subValue) => {
     const newParams = new URLSearchParams(searchParams);
-    newParams.set("category", normalizeString(catName));
+    newParams.set("category", catId);
     newParams.set("sub", subValue);
     newParams.delete("offset");
     setSearchParams(newParams);
@@ -104,7 +98,7 @@ export function CategorySidebar() {
             <div className="space-y-0">
               {categories.map((cat) => {
                 const isOpen = openCategory === cat.id;
-                const isActive = normalizeString(cat.name) === currentCategory;
+                const isActive = cat.id === currentCategory;
                 const sidebarSubItems =
                   cat.id === "energia"
                     ? products
@@ -175,8 +169,7 @@ export function CategorySidebar() {
                             <ul className="mt-1 space-y-1 pl-4">
                               {sidebarSubItems.map((sub) => {
                                 const isSubActive =
-                                  normalizeString(cat.name) ===
-                                    currentCategory &&
+                                  cat.id === currentCategory &&
                                   (sub.subValue
                                     ? sub.subValue === currentSub
                                     : normalizeString(sub.name) === currentSub);
@@ -187,12 +180,12 @@ export function CategorySidebar() {
                                       onClick={() => {
                                         if (sub.subValue) {
                                           handleSubcategoryValueClick(
-                                            cat.name,
+                                            cat.id,
                                             sub.subValue
                                           );
                                         } else {
                                           handleSubcategoryClick(
-                                            cat.name,
+                                            cat.id,
                                             sub.name
                                           );
                                         }

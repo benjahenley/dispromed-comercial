@@ -20,8 +20,10 @@ const slides = [
     id: 3,
     image:
       "https://images.pexels.com/photos/16450622/pexels-photo-16450622.jpeg?cs=srgb&dl=pexels-jorge-chan-515189442-16450622.jpg&fm=jpg",
+    mobile: "/banner.jpeg",
     title: "Insumos de Precisión",
-    subtitle: "Instrumental y descartables seleccionados para cada intervención",
+    subtitle:
+      "Instrumental y descartables seleccionados para cada intervención",
   },
 ];
 
@@ -33,7 +35,7 @@ export function HeroCarousel() {
     (index) => {
       if (emblaApi) emblaApi.scrollTo(index);
     },
-    [emblaApi]
+    [emblaApi],
   );
 
   const onSelect = useCallback(() => {
@@ -66,12 +68,15 @@ export function HeroCarousel() {
               // SLIDE
               <div key={slide.id} className="flex-[0_0_100%] min-w-0">
                 <div className="relative h-full min-h-screen">
-                  <img
-                    src={slide.image}
-                    alt={slide.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover min-h-screen"
-                  />
+                  <picture>
+                    <source media="(max-width: 768px)" srcSet={slide.mobile} />
+                    <img
+                      src={slide.image}
+                      alt={slide.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover min-h-screen"
+                    />
+                  </picture>
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-r from-ink/70 to-ink/40 flex items-center">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

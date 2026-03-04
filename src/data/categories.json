@@ -1,7 +1,7 @@
 [
   {
     "id": "hilos-de-suturas",
-    "name": "Hilos de Suturas",
+    "name": "Suturas Atraumáticas",
     "subcategories": [
       {
         "id": "absorbible",
@@ -9,8 +9,6 @@
         "products": [
           "acido-poliglicolico-antibacterial",
           "poliglactina-antibacterial",
-          "polidioxanona-antibacterial",
-          "poliglecaprone-antibacterial",
           "poliglactina",
           "polidioxanona",
           "poliglecaprone",
@@ -26,7 +24,8 @@
           "seda",
           "polipropileno",
           "lino",
-          "poliester"
+          "poliester",
+          "polietileno"
         ]
       }
     ]
@@ -48,10 +47,7 @@
       {
         "id": "fijadores",
         "name": "Fijadores",
-        "products": [
-          "fijador-absorbible",
-          "fijador-permanente"
-        ]
+        "products": ["fijador-absorbible", "fijador-permanente"]
       }
     ]
   },
@@ -108,7 +104,10 @@
     "name": "Energía",
     "products": [
       { "id": "ultrasonido", "name": "Ultrasonido" },
-      { "id": "ultrasonido-radiofrecuencia", "name": "Ultrasonido + Radiofrecuencia" }
+      {
+        "id": "ultrasonido-radiofrecuencia",
+        "name": "Ultrasonido + Radiofrecuencia"
+      }
     ]
   },
   {
@@ -128,7 +127,12 @@
       {
         "id": "acceso-vascular",
         "name": "Acceso Vascular",
-        "products": ["cateteres-intravenosos", "cateteres-via-central", "equipos-transfusion", "equipos-infusion"]
+        "products": [
+          "cateteres-intravenosos",
+          "cateteres-via-central",
+          "equipos-transfusion",
+          "equipos-infusion"
+        ]
       },
       {
         "id": "vias-aereas-y-sondas",
@@ -138,7 +142,13 @@
       {
         "id": "antisepticos-y-curacion",
         "name": "Antisépticos y Curación",
-        "products": ["algodon", "alcohol", "gasas-esteriles", "vaselina", "antisepticos"]
+        "products": [
+          "algodon",
+          "alcohol",
+          "gasas-esteriles",
+          "vaselina",
+          "antisepticos"
+        ]
       }
     ]
   },
@@ -149,22 +159,45 @@
       {
         "id": "sondas",
         "name": "Sondas",
-        "products": ["sonda-aspiracion-succion", "sonda-alimentacion", "sondas-levine", "sondas-nasogastricas", "sondas-nelaton", "sondas-bequille", "sondas-rectales"]
+        "products": [
+          "sonda-aspiracion-succion",
+          "sonda-alimentacion",
+          "sondas-levine",
+          "sondas-nasogastricas",
+          "sondas-nelaton",
+          "sondas-bequille",
+          "sondas-rectales"
+        ]
       },
       {
         "id": "vias-y-tubos",
         "name": "Vías y Tubos",
-        "products": ["prolongadores", "prolongadores-con-sonda", "tubuladuras", "tubos-canalizacion-venosa-anestesica"]
+        "products": [
+          "prolongadores",
+          "prolongadores-con-sonda",
+          "tubuladuras",
+          "tubos-canalizacion-venosa-anestesica"
+        ]
       },
       {
         "id": "drenajes-y-colectores",
         "name": "Drenajes y Colectores",
-        "products": ["drenajes-toraxicos", "bolsas-colectoras-orina", "colectores-orina-pediatricos"]
+        "products": [
+          "drenajes-toraxicos",
+          "bolsas-colectoras-orina",
+          "colectores-orina-pediatricos"
+        ]
       },
       {
         "id": "equipamiento",
         "name": "Equipamiento",
-        "products": ["canulas-oxigeno", "canulas-aspiracion", "conectores", "equipos-irrigacion", "compo-quirurgico"]
+        "products": [
+          "canulas-oxigeno",
+          "canulas-aspiracion",
+          "conectores",
+          "equipos-irrigacion",
+          "compo-quirurgico"
+        ]
       }
     ]
   }

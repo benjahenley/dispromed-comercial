@@ -8,6 +8,37 @@
  *  2. Agregar una entrada aquí con el imgId correspondiente.
  */
 const imageRegistry = {
+  // ── Suturas Atraumáticas – Absorbibles ──
+  "sutucryl":
+    "/products/hilos-de-suturas/absorbibles/sutura-de-poliglactina.webp",
+  "sutucryl-antibacterial":
+    "/products/hilos-de-suturas/absorbibles/sutura-de-poliglactina-con-triclosan.webp",
+  "sutucryl-mono":
+    "/products/hilos-de-suturas/absorbibles/sutura-de-poliglecaprone.webp",
+  "pdo-ii":
+    "/products/hilos-de-suturas/absorbibles/sutura-de-polidioxanona.webp",
+  "sutusorb-antibacterial":
+    "/products/hilos-de-suturas/absorbibles/sutura-de-acido-poliglicolico-con-triclosan.webp",
+  "sutusorb":
+    "/products/hilos-de-suturas/absorbibles/sutura-de-acido-poliglicólico.webp",
+
+  // ── Suturas Atraumáticas – No absorbibles ──
+  "sutusilk":
+    "/products/hilos-de-suturas/no-absorbibles/sutura-de-seda.webp",
+  "sutulene":
+    "/products/hilos-de-suturas/no-absorbibles/sutura-de-polipropileno.webp",
+  "sutubond":
+    "/products/hilos-de-suturas/no-absorbibles/sutura-de-poliester.webp",
+  "sutusteel":
+    "/products/hilos-de-suturas/no-absorbibles/sutura-de-acero.webp",
+  "sutulon":
+    "/products/hilos-de-suturas/no-absorbibles/sutura-de-poliamida.webp",
+  "sutufiber":
+    "/products/hilos-de-suturas/no-absorbibles/sutura-de-polietileno.webp",
+  "sutuen":
+    "/products/hilos-de-suturas/no-absorbibles/sutura-de-lino-retorcido.webp",
+
+
   // ── Clips de polímero (producto) ──
   "clips-de-ligadura-polimericos-1":
     "/products/suturas-mecanicas-y-laparoscopicas/convencional/clips-de-ligadura-polimericos-1.webp",
