@@ -5,11 +5,10 @@ import { normalizeString } from "../lib/filters";
 import { products } from "../data/products/products";
 
 export function Drawer({ isOpen, onClose }) {
-  const [openItem, setOpenItem] = useState(null);
-  const [openCategory, setOpenCategory] = useState(null);
+  const [openCategoryId, setOpenCategoryId] = useState(null);
 
   const toggleCategory = (catId) => {
-    setOpenItem(openItem === catId ? null : catId);
+    setOpenCategoryId((prev) => (prev === catId ? null : catId));
   };
 
   if (!isOpen) return null;
@@ -54,49 +53,81 @@ export function Drawer({ isOpen, onClose }) {
             Inicio
           </Link>
 
-          <div className="">
-            <button
-              onClick={() => toggleCategory("productos")}
-              className="flex items-center justify-between w-full py-3 font-medium text-ink hover:text-brand-300 transition-colors">
-              <span>Productos</span>
-              <svg
-                className={`w-5 h-5 transition-transform ${
-                  openItem === "productos" ? "rotate-180" : ""
-                }`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
+          <div>
+            <Link
+              to="/productos"
+              className="block py-3 font-medium text-ink visited:text-ink hover:text-brand-300 transition-colors"
+              onClick={onClose}>
+              Productos
+            </Link>
 
-            {openItem === "productos" && (
-              <div className="pl-4 pb-2">
-                {categories.map((cat) => (
-                  <div key={cat.id} className="mb-3">
-                    <Link
-                      to={`/productos?category=${normalizeString(cat.name)}`}
-                      className="block py-2 font-medium text-sm text-ink/80 visited:text-ink/80 hover:text-brand-300 transition-colors"
-                      onClick={() => setOpenCategory(cat.name)}>
-                      {cat.name}
-                    </Link>
-                    {openCategory === cat.name && (
+            <div className="pl-4 pb-2">
+              {categories.map((cat) => {
+                const subItems =
+                  cat.id === "energia"
+                    ? products
+                        .filter((p) => p.categoryId === "energia")
+                        .map((p) => ({
+                          id: p.id,
+                          name: p.title,
+                          navProductId: p.navProductId,
+                        }))
+                    : cat.subcategories || [];
+                const isOpen = openCategoryId === cat.id;
+
+                return (
+                  <div key={cat.id} className="mb-2">
+                    <div
+                      className="group flex items-center justify-between rounded-md pr-1 hover:bg-ink/5"
+                      onClick={() => toggleCategory(cat.id)}
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                          event.preventDefault();
+                          toggleCategory(cat.id);
+                        }
+                      }}>
+                      <Link
+                        to={`/productos?category=${normalizeString(cat.name)}`}
+                        className="block py-2 pr-2 font-medium text-sm text-ink/80 visited:text-ink/80 hover:text-brand-300 transition-colors"
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          onClose();
+                        }}>
+                        {cat.name}
+                      </Link>
+                      <button
+                        type="button"
+                        aria-label={`${isOpen ? "Cerrar" : "Abrir"} ${
+                          cat.name
+                        }`}
+                        aria-expanded={isOpen}
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-ink/60 transition-colors group-hover:text-brand-300 hover:bg-ink/10"
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          toggleCategory(cat.id);
+                        }}>
+                        <svg
+                          className={`h-4 w-4 transition-transform ${
+                            isOpen ? "rotate-180" : ""
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+
+                    {isOpen && (
                       <ul className="pl-4 space-y-1">
-                        {(cat.id === "energia"
-                          ? products
-                              .filter((p) => p.categoryId === "energia")
-                              .map((p) => ({
-                                id: p.id,
-                                name: p.title,
-                                navProductId: p.navProductId,
-                              }))
-                          : cat.subcategories || []
-                        ).map((sub) => (
+                        {subItems.map((sub) => (
                           <li key={sub.id}>
                             <Link
                               to={
@@ -115,9 +146,9 @@ export function Drawer({ isOpen, onClose }) {
                       </ul>
                     )}
                   </div>
-                ))}
-              </div>
-            )}
+                );
+              })}
+            </div>
           </div>
 
           <Link

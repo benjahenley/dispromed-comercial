@@ -8,8 +8,10 @@ export function resolveModelImages(products, registry) {
   return products.map((product) => {
     const hasImages = product.images?.length > 0;
     const hasModels = product.models?.length > 0;
+    const hasDescriptionImages = product.images_D?.length > 0;
+    const hasCharacteristicsImage = !!product.characteristics?.imgId;
 
-    if (!hasImages && !hasModels) return product;
+    if (!hasImages && !hasModels && !hasDescriptionImages && !hasCharacteristicsImage) return product;
 
     const resolved = { ...product };
 
@@ -25,6 +27,20 @@ export function resolveModelImages(products, registry) {
         ...model,
         src: (model.imgId && registry[model.imgId]) || "",
       }));
+    }
+
+    if (hasDescriptionImages) {
+      resolved.images_D = product.images_D.map((img) => ({
+        ...img,
+        src: img.src || (img.imgId && registry[img.imgId]) || "",
+      }));
+    }
+
+    if (hasCharacteristicsImage) {
+      resolved.characteristics = {
+        ...product.characteristics,
+        imgSrc: registry[product.characteristics.imgId] || "",
+      };
     }
 
     return resolved;

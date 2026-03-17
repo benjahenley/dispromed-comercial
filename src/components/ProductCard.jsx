@@ -17,7 +17,7 @@ function formatSubcategoryLabel(product) {
 }
 
 export function ProductCard({ product }) {
-  const href = `/productos/${product.id}`;
+  const href = `/productos/${product.navProductId || product.id}`;
 
   const cover = product.images?.find((img) => img?.src)?.src || ""; // put a real fallback image url here if you have one
 
@@ -66,18 +66,10 @@ export function ProductCard({ product }) {
       </div>
 
       {/* Content */}
-      <div className="flex h-[8.8rem] flex-col p-4 sm:p-5">
-        <h3 className="line-clamp-1 text-base font-semibold tracking-tight text-ink transition-colors duration-200 group-hover:text-brand-300">
+      <div className="flex min-h-[8.8rem] flex-col p-4 sm:p-5">
+        <h3 className=" overflow-hidden text-base font-semibold leading-snug tracking-tight text-ink transition-colors duration-200 group-hover:text-brand-300">
           {product.title}
         </h3>
-
-        <p className="mt-1 min-h-9 text-sm leading-relaxed text-ink/55">
-          {product.subtitle ? (
-            <span className="line-clamp-2">{product.subtitle}</span>
-          ) : (
-            <span className="invisible">Sin subtitulo</span>
-          )}
-        </p>
 
         {/* CTA */}
         <div className="mt-auto flex items-center justify-between pt-1.5">

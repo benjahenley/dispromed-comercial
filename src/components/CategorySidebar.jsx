@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import categories from "../data/categories.json";
 import { normalizeString } from "../lib/filters";
-import { products } from "../data/products/products";
 
 export function CategorySidebar() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -99,16 +98,7 @@ export function CategorySidebar() {
               {categories.map((cat) => {
                 const isOpen = openCategory === cat.id;
                 const isActive = cat.id === currentCategory;
-                const sidebarSubItems =
-                  cat.id === "energia"
-                    ? products
-                        .filter((p) => p.categoryId === "energia")
-                        .map((p) => ({
-                          id: p.id,
-                          name: p.title,
-                          subValue: p.subcategoryId,
-                        }))
-                    : cat.subcategories || [];
+                const sidebarSubItems = cat.subcategories || [];
                 const hasSubItems = sidebarSubItems.length > 0;
 
                 return (
@@ -176,29 +166,43 @@ export function CategorySidebar() {
 
                                 return (
                                   <li key={sub.id}>
-                                    <button
-                                      onClick={() => {
-                                        if (sub.subValue) {
-                                          handleSubcategoryValueClick(
-                                            cat.id,
-                                            sub.subValue
-                                          );
-                                        } else {
-                                          handleSubcategoryClick(
-                                            cat.id,
-                                            sub.name
-                                          );
-                                        }
-                                      }}
-                                      className={`flex w-full cursor-pointer items-center justify-between px-3 py-2 text-left text-sm transition-colors duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-ink/10 ${
-                                        isSubActive
-                                          ? "text-ink/90 font-semibold"
-                                          : "text-ink/58 hover:text-ink/78"
-                                      }`}>
-                                      <span className="truncate">
-                                        {sub.name}
-                                      </span>
-                                    </button>
+                                    {sub.navProductId ? (
+                                      <Link
+                                        to={`/productos/${sub.navProductId}`}
+                                        className={`flex w-full items-center justify-between px-3 py-2 text-left text-sm transition-colors duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-ink/10 ${
+                                          isSubActive
+                                            ? "text-ink/90 font-semibold"
+                                            : "text-ink/58 hover:text-ink/78"
+                                        }`}>
+                                        <span className="truncate">
+                                          {sub.name}
+                                        </span>
+                                      </Link>
+                                    ) : (
+                                      <button
+                                        onClick={() => {
+                                          if (sub.subValue) {
+                                            handleSubcategoryValueClick(
+                                              cat.id,
+                                              sub.subValue
+                                            );
+                                          } else {
+                                            handleSubcategoryClick(
+                                              cat.id,
+                                              sub.name
+                                            );
+                                          }
+                                        }}
+                                        className={`flex w-full cursor-pointer items-center justify-between px-3 py-2 text-left text-sm transition-colors duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-ink/10 ${
+                                          isSubActive
+                                            ? "text-ink/90 font-semibold"
+                                            : "text-ink/58 hover:text-ink/78"
+                                        }`}>
+                                        <span className="truncate">
+                                          {sub.name}
+                                        </span>
+                                      </button>
+                                    )}
                                   </li>
                                 );
                               })}

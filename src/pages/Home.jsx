@@ -89,6 +89,14 @@ export function Home() {
               />
             </div>
           </div>
+
+          <p
+            className={`mt-12 leading-relaxed reveal reveal-d2 ${
+              sobreInView ? "in-view" : ""
+            }`}>
+            Dispromed Comercial S.R.L. – Desde 1994, distribuyendo confianza en
+            insumos médicos, en todo el país y la región.
+          </p>
         </div>
       </Section>
 

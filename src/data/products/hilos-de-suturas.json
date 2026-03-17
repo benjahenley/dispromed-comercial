@@ -6,7 +6,7 @@
       "navProductId": "acido-poliglicolico-antibacterial",
       "categoryId": "hilos-de-suturas",
       "subcategoryId": "absorbible",
-      "title": "SUTUSORB/Antibacterial",
+      "title": "Sutusorb/Antibacterial",
       "subtitle": "Sutura de ácido poliglicólico con triclosán",
       "characteristics": {
         "title": "Propiedades",
@@ -51,7 +51,7 @@
       "navProductId": "poliglactina-antibacterial",
       "categoryId": "hilos-de-suturas",
       "subcategoryId": "absorbible",
-      "title": "SUTUCRYL/Antibacterial",
+      "title": "Sutucryl/Antibacterial",
       "subtitle": "Sutura de poliglactina 910 con triclosan",
       "characteristics": {
         "title": "Propiedades",
@@ -99,7 +99,7 @@
       "navProductId": "poliglactina",
       "categoryId": "hilos-de-suturas",
       "subcategoryId": "absorbible",
-      "title": "SUTUCRYL",
+      "title": "Sutucryl",
       "subtitle": "Sutura de poliglactina 910",
       "characteristics": {
         "title": "Propiedades",
@@ -184,7 +184,7 @@
       "navProductId": "poliglecaprone",
       "categoryId": "hilos-de-suturas",
       "subcategoryId": "absorbible",
-      "title": "SUTUCRYL Mono",
+      "title": "Sutucryl Mono",
       "subtitle": "Sutura de poliglecaprone 25",
       "characteristics": {
         "title": "Propiedades",
@@ -217,7 +217,7 @@
       "navProductId": "acido-poliglicolico",
       "categoryId": "hilos-de-suturas",
       "subcategoryId": "absorbible",
-      "title": "SUTUSORB",
+      "title": "Sutusorb",
       "subtitle": "Sutura de ácido poliglicólico",
       "characteristics": {
         "title": "Propiedades",
@@ -268,9 +268,28 @@
       "navProductId": "acero",
       "categoryId": "hilos-de-suturas",
       "subcategoryId": "no-absorbible",
-      "title": "SUTUSTEEL",
+      "title": "Sutusteel",
       "subtitle": "Sutura de acero",
-      "description": "Hilo de sutura de acero inoxidable 316L, no absorbible. Mayor resistencia a la tensión de todos los materiales de sutura, con alta biocompatibilidad y resistencia a la infección. Indicado para esternotomía, cierre de fascia de alta tensión y cirugía ortopédica.",
+      "characteristics": {
+        "title": "Propiedades",
+        "items": [
+          "MERISTEEL: sutura utilizada en procedimientos ortopédicos y para cierre de esternón"
+        ]
+      },
+      "specs": {
+        "title": "Descripción del producto",
+        "items": [
+          { "label": "Estructura", "value": "Monofilamento" },
+          { "label": "Color", "value": "Plata/Acero" },
+          { "label": "Composición química", "value": "Acero inoxidable" }
+        ]
+      },
+      "table": {
+        "headers": ["Tamaños USP disponibles", "Esterilización"],
+        "rows": [
+          ["USP 5 (1 métrico) — USP 6 (8 métrico)", "Radiación gamma"]
+        ]
+      },
       "images": [{ "imgId": "sutusteel", "alt": "SUTUSTEEL" }]
     },
     {
@@ -278,9 +297,29 @@
       "navProductId": "nylon",
       "categoryId": "hilos-de-suturas",
       "subcategoryId": "no-absorbible",
-      "title": "SUTULON",
+      "title": "Sutulon",
       "subtitle": "Sutura de poliamida",
-      "description": "Hilo de sutura monofilamento no absorbible de poliamida (nylon). Excelente resistencia a la tensión, baja reacción tisular y buena elasticidad. Ampliamente utilizado para sutura de piel, cirugía plástica, oftalmología y microcirugía.",
+      "characteristics": {
+        "title": "Propiedades",
+        "items": [
+          "FILAMIDA: monofilamento sintético no absorbible de poliamida 6 y 6.6, teñida de negro",
+          "Indicada para procedimientos microquirúrgicos y oftálmicos"
+        ]
+      },
+      "specs": {
+        "title": "Descripción del producto",
+        "items": [
+          { "label": "Estructura", "value": "Monofilamento" },
+          { "label": "Color", "value": "Negro" },
+          { "label": "Composición química", "value": "Poliamida 6 - 6.6" }
+        ]
+      },
+      "table": {
+        "headers": ["Tamaños USP disponibles", "Esterilización"],
+        "rows": [
+          ["USP 10/0 (0,2 métrico) — USP 2 (5 métrico)", "Radiación gamma"]
+        ]
+      },
       "images": [{ "imgId": "sutulon", "alt": "SUTULON" }]
     },
     {
@@ -288,7 +327,7 @@
       "navProductId": "seda",
       "categoryId": "hilos-de-suturas",
       "subcategoryId": "no-absorbible",
-      "title": "SUTUSILK",
+      "title": "Sutusilk",
       "subtitle": "Sutura de seda",
       "characteristics": {
         "title": "Propiedades",
@@ -321,12 +360,12 @@
       "navProductId": "polipropileno",
       "categoryId": "hilos-de-suturas",
       "subcategoryId": "no-absorbible",
-      "title": "SUTULENE",
+      "title": "Sutulene",
       "subtitle": "Sutura de polipropileno",
       "characteristics": {
         "title": "Propiedades",
         "items": [
-          "FILAPROP: sutura monofilamento sintética no absorbible de polipropileno isotáctico, una poliolefina lineal sintética"
+          "Sutura monofilamento sintética no absorbible de polipropileno isotáctico, una poliolefina lineal sintética"
         ]
       },
       "specs": {
@@ -350,9 +389,30 @@
       "navProductId": "lino",
       "categoryId": "hilos-de-suturas",
       "subcategoryId": "no-absorbible",
-      "title": "SUTUEN",
+      "title": "Sutuen",
       "subtitle": "Hilo de lino retorcido",
-      "description": "Hilo de sutura multifilamento no absorbible de lino natural. Buena resistencia tensional y fácil manejo. Utilizado históricamente en cirugía general, intestinal y suturas de tejidos blandos donde se requiere un material de origen natural.",
+      "characteristics": {
+        "title": "Propiedades",
+        "items": [
+          "Sutura no absorbible, multifilamento, elaborada a partir de largas fibras de lino retorcidas",
+          "No se reabsorbe, pero con el tiempo el tejido tiende a encapsularla",
+          "Indicada en procedimientos que requieren soporte tisular no prolongado y donde no se demanda resistencia extrema a la tracción"
+        ]
+      },
+      "specs": {
+        "title": "Descripción del producto",
+        "items": [
+          { "label": "Estructura", "value": "Trenzada" },
+          { "label": "Color del hilo", "value": "Verde, blanco o azul" },
+          { "label": "Composición química", "value": "Fibras de lino naturales (multifilamento torcido)" }
+        ]
+      },
+      "table": {
+        "headers": ["Tamaños USP disponibles", "Esterilización"],
+        "rows": [
+          ["USP 5/0 — USP 2", "Óxido de etileno"]
+        ]
+      },
       "images": [{ "imgId": "sutuen", "alt": "SUTUEN" }]
     },
     {
@@ -360,7 +420,7 @@
       "navProductId": "polietileno",
       "categoryId": "hilos-de-suturas",
       "subcategoryId": "no-absorbible",
-      "title": "SUTUFIBER",
+      "title": "Sutufiber",
       "subtitle": "Sutura de Polietileno de ultra bajo peso molecular",
       "characteristics": {
         "title": "Propiedades",
@@ -393,9 +453,30 @@
       "navProductId": "poliester",
       "categoryId": "hilos-de-suturas",
       "subcategoryId": "no-absorbible",
-      "title": "SUTUBOND",
+      "title": "Sutubond",
       "subtitle": "Sutura de poliéster",
-      "description": "Hilo de sutura multifilamento trenzado no absorbible de poliéster. Alta resistencia a la tensión permanente, excelente biocompatibilidad y estabilidad dimensional. Indicado para cirugía cardiovascular, reparación de tendones, suturas protésicas y procedimientos donde se requiere sutura permanente de alta resistencia.",
+      "characteristics": {
+        "title": "Propiedades",
+        "items": [
+          "MERICRON XL: sutura quirúrgica estéril no absorbible de poli(tereftalato de etileno)",
+          "Material de alta calidad que casi elimina la aparición de fragmentos de sutura postoperatoria en el tejido"
+        ]
+      },
+      "specs": {
+        "title": "Descripción del producto",
+        "items": [
+          { "label": "Estructura", "value": "Trenzado" },
+          { "label": "Color", "value": "Verde, blanco" },
+          { "label": "Composición química", "value": "Tereftalato de polietileno" },
+          { "label": "Recubrimiento", "value": "Polibutilato" }
+        ]
+      },
+      "table": {
+        "headers": ["Tamaños USP disponibles", "Esterilización"],
+        "rows": [
+          ["USP 6/0 (0,7 métrico) — USP 5 (7 métrico)", "Óxido de etileno"]
+        ]
+      },
       "images": [{ "imgId": "sutubond", "alt": "SUTUBOND" }]
     }
   ]

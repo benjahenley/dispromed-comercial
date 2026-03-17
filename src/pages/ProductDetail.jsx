@@ -16,7 +16,7 @@ export function ProductDetail() {
   }, [slug]);
 
   const product = useMemo(
-    () => products.find((p) => p.navProductId === slug),
+    () => products.find((p) => p.navProductId === slug || p.id === slug),
     [slug]
   );
 
@@ -43,6 +43,11 @@ export function ProductDetail() {
   }
 
   const images = product.images ?? [];
+  const descriptionImages = (product.images_D ?? []).filter((img) => img?.src);
+  const postCharacteristicsText = (product.descriptionPages?.D ?? [])
+    .flatMap((textBlock) => textBlock.split(/\n\s*\n/))
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
   const validImages = images.filter((img) => img?.src);
   const primaryImage = validImages[0] ?? null;
   const shouldUseCarousel =
@@ -178,9 +183,37 @@ export function ProductDetail() {
                   )}
 
                   {product.description && (
-                    <p className="mt-4 text-sm leading-relaxed text-ink/70 sm:text-base">
-                      {product.description}
-                    </p>
+                    <div className="mt-4 space-y-4 text-sm leading-relaxed text-ink/70 sm:text-base">
+                      {product.description
+                        .split(/\n\s*\n/)
+                        .map((paragraph) => paragraph.trim())
+                        .filter(Boolean)
+                        .map((paragraph, idx) => (
+                          <p key={idx}>{paragraph}</p>
+                        ))}
+                    </div>
+                  )}
+
+                  {descriptionImages.length > 0 && (
+                    <div className="mt-4">
+                      <h3 className="mb-2 text-sm font-semibold tracking-tight text-ink/85 sm:text-base">
+                        Recargas laparoscópicas
+                      </h3>
+                      <div className="grid grid-cols-1 gap-3">
+                        {descriptionImages.map((img, idx) => (
+                          <figure
+                            key={`${img.imgId || "desc-img"}-${idx}`}
+                            className="overflow-hidden rounded-2xl border border-ink/10 bg-white">
+                            <img
+                              src={img.src}
+                              alt={img.alt || `${product.title} detalle ${idx + 1}`}
+                              loading="lazy"
+                              className="w-full object-cover"
+                            />
+                          </figure>
+                        ))}
+                      </div>
+                    </div>
                   )}
 
                   {/* Characteristics */}
@@ -189,6 +222,23 @@ export function ProductDetail() {
                       <h2 className="text-lg font-semibold tracking-tight">
                         {product.characteristics.title || "Características"}
                       </h2>
+                      {product.characteristics.imgSrc && (
+                        <figure className="mt-3 overflow-hidden rounded-2xl border border-ink/10 bg-white">
+                          <img
+                            src={product.characteristics.imgSrc}
+                            alt={product.characteristics.title || "Características"}
+                            loading="lazy"
+                            className="w-full object-cover"
+                          />
+                        </figure>
+                      )}
+                      {postCharacteristicsText.length > 0 && (
+                        <div className="mt-3 space-y-4 text-sm leading-relaxed text-ink/70 sm:text-base">
+                          {postCharacteristicsText.map((paragraph, idx) => (
+                            <p key={idx}>{paragraph}</p>
+                          ))}
+                        </div>
+                      )}
                       <ul className="mt-3 space-y-2">
                         {product.characteristics.items.map((item, idx) => (
                           <li

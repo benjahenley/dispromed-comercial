@@ -111,7 +111,7 @@
       "categoryId": "suturas-mecanicas-y-laparoscopia",
       "subcategoryId": "laparoscopicas",
       "title": "Grapadora lineal laparoscópica",
-      "description": "El grosor del tejido varia en todo el cuerpo, por lo que el proceso de selección de cartuchos con una compresión adecuada ha sido una necesidad crítica para los cirujanos que realizan cirugías abdominales y torácicas. Presentamos la grapadora lineal laparoscópica y las recargas con una tecnología de recarga distintiva que ofrece distintas alturas de grapas para adaptarse a diferentes espesores de tejidos con una compresión adecuada, una tensión tisular mínima y una perfusión óptima. La grapadora lineal laparoscópica sinolinks es una pistola universal con recargas de 45 mm y 60 mm. Ofrece un diseño ergonómico con precisión en la articulación de la mandíbula y formación constante de líneas de grapas para una anastomosis a prueba de fugas.",
+      "description": "El grosor del tejido varia en todo el cuerpo, por lo que el proceso de selección de cartuchos con una compresión adecuada ha sido una necesidad crítica para los cirujanos que realizan cirugías abdominales y torácicas.\n\nPresentamos la grapadora lineal laparoscópica y las recargas con una tecnología de recarga distintiva que ofrece distintas alturas de grapas para adaptarse a diferentes espesores de tejidos con una compresión adecuada, una tensión tisular mínima y una perfusión óptima.\n\nLa grapadora lineal laparoscópica sinolinks es una pistola universal con recargas de 45 mm y 60 mm. Ofrece un diseño ergonómico con precisión en la articulación de la mandíbula y formación constante de líneas de grapas para una anastomosis a prueba de fugas.",
       "characteristics": {
         "title": "Características",
         "items": [
@@ -162,12 +162,15 @@
       ],
       "descriptionPages": {
         "D": [
-          "La compresión óptima del tejido es clave para lograr una formación consistente de una línea de grapas en forma de B que garantice la seguridad de la herida y una hemoostasia adecuada. Presentamos grapadora lineal laparoscópica y recargas sinolinks que ofrece, una articulación de la mandíbula única, controlada proximalmente y sin restricciones, de 0° a 45° en ambos lados. Cada recarga tiene una nueva cuchilla para una sección transversal precisa y para evitar la contaminación cruzada."
+          "La compresión óptima del tejido es clave para lograr una formación consistente de una línea de grapas en forma de B que garantice la seguridad de la herida y una hemoostasia adecuada.\n\nPresentamos grapadora lineal laparoscópica y recargas sinolinks que ofrece, una articulación de la mandíbula única, controlada proximalmente y sin restricciones, de 0° a 45° en ambos lados."
         ]
       },
-      "imageCount_D": 6,
+      "imageCount_D": 1,
       "images_D": [
-        { "imgId": "", "alt": "" },
+        {
+          "imgId": "recargas-laparoscopicas",
+          "alt": "Recargas laparoscópicas"
+        },
         { "imgId": "", "alt": "" },
         { "imgId": "", "alt": "" },
         { "imgId": "", "alt": "" },

@@ -219,7 +219,7 @@ export function Navbar() {
     <>
       <div className="absolute top-0 left-0 right-0 z-[120]">
         {/* Top bar with search, logo, and icons */}
-        <div className="relative overflow-hidden bg-linear-to-br from-brand-400/95 via-brand-300/95 to-brand-200/95">
+        <div className="relative overflow-hidden bg-linear-to-br from-brand-400 via-brand-300 to-brand-200">
           {/* Subtle Texture */}
           <div
             className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.3)_1px,transparent_1px)] bg-size-[20px_20px] opacity-60"

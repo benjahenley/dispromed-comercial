@@ -68,7 +68,7 @@ export function SecondaryNavbar() {
     <>
       <div className="relative top-0 z-100 left-0 right-0">
         {/* Top bar with search, logo, and icons */}
-        <div className="relative bg-linear-to-br from-brand-400/95 via-brand-300/95 to-brand-200/95">
+        <div className="relative bg-linear-to-br from-brand-400 via-brand-300 to-brand-200">
           {/* Subtle Texture */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div

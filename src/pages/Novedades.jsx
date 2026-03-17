@@ -27,7 +27,7 @@ export function Novedades() {
             ))}
           </div>
         </Section>
-
+        {/* 
         <Section>
           <div className="mx-auto max-w-3xl  sm:px-6 lg:px-8">
             <div className="rounded-3xl border border-ink/10 bg-white/70 p-8 shadow-sm backdrop-blur sm:p-10 anim-bubble anim-bubble-d2">
@@ -76,7 +76,7 @@ export function Novedades() {
               </p>
             </div>
           </div>
-        </Section>
+        </Section> */}
       </div>
     </div>
   );

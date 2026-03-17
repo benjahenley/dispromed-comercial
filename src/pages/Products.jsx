@@ -67,7 +67,7 @@ export function Products() {
     setSearchParams(newParams);
   };
 
-  const breadcrumbs = [{ label: "Inicio", href: "/" }];
+  const breadcrumbs = [];
 
   if (category) {
     const cat = categories.find((c) => c.id === category);
@@ -154,7 +154,7 @@ export function Products() {
               </select>
             </div>
 
-            {category && currentCategory && (
+            {category && currentCategory?.subcategories?.length > 0 && (
               <div>
                 <label
                   htmlFor="mobile-sub"

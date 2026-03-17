@@ -5,7 +5,6 @@
       "id": "energia-ultrasonido",
       "navProductId": "ultrasonido",
       "categoryId": "energia",
-      "subcategoryId": "ultrasonido",
       "title": "Sellador de Vasos por Ultrasonido",
       "description": "Sistema quirúrgico de energía ultrasónica orientado a disección fina, corte y sellado consistente. En el folleto se observa una plataforma con zócalo ultrasónico y componentes de mano para trabajo laparoscópico, junto con bisturíes ultrasónicos tipo pistola.",
       "characteristics": {
@@ -40,47 +39,65 @@
       "id": "energia-ultrasonido-radiofrecuencia",
       "navProductId": "ultrasonido-radiofrecuencia",
       "categoryId": "energia",
-      "subcategoryId": "ultrasonido-radiofrecuencia",
-      "title": "Sellador de Vasos Ultrasonido + Radiofrecuencia",
-      "description": "Plataforma combinada de radiofrecuencia (HF) y ultrasonido para disección, coagulación y sellado vascular. En el folleto se presentan el generador con zócalo HF y zócalo ultrasónico, transductor (pieza de mano), pieza de mano de alta frecuencia y pieza de mano ultrasónica.",
+      "title": "Sistema quirúrgico de radio frecuencia y ultrasónico",
+      "description": "El sistema quirúrgico HF y ultrasónico está diseñado en base a una plataforma de energía ultrasónica para lograr el objetivo de ser utilizado como un instrumento multifuncional en cirugía laparoscópica.\n\nEn comparación con las plataformas de energía ultrasónica tradicionales, el sistema quirúrgico HF y ultrasónico funciona en una combinación de energía de alta frecuencia y ultrasónica.",
       "characteristics": {
-        "title": "Tecnología",
+        "title": "Generador",
+        "imgId": "energia-generador",
         "items": [
-          "Combinación de energía por ultrasonido y radiofrecuencia",
-          "Generador con salida conjunta de energía ultrasónica y de radiofrecuencia",
-          "Energía bipolar para coagulación confiable de vasos de mayor calibre",
-          "Pieza de mano BBT multifuncional para eficiencia quirúrgica",
-          "Un único mango acoplable a distintas longitudes de bisturíes"
+          "El sistema quirúrgico ultrasónico se centra en proporcionar la disección más fina de vasos de 5,0 mm con corte simultáneo y sellado consistente con el nivel más bajo de propagación térmica lateral",
+          "El sistema quirúrgico HF y ultrasónico utiliza energía bipolar, que puede coagular de manera confiable, segura y eficaz vasos sanguíneos más grandes"
+        ]
+      },
+      "specs": {
+        "title": "Transductor (Pieza de Mano)",
+        "items": [
+          {
+            "label": "Conexión",
+            "value": "Directa a la plataforma de energía ultrasónica y de alta frecuencia"
+          },
+          {
+            "label": "Pieza de mano de alta frecuencia",
+            "value": "Conéctese al zócalo HF del generador"
+          },
+          {
+            "label": "Pieza de mano ultrasónica",
+            "value": "Conéctese al zócalo ultrasónico del generador"
+          },
+          {
+            "label": "Pieza de mano BBT",
+            "value": "Instrumento multifuncional con acceso a energía quirúrgica bipolar y ultrasónica"
+          },
+          {
+            "label": "Mangos intercambiables",
+            "value": "Un único mango acoplable a distintas longitudes de bisturíes"
+          }
         ]
       },
       "benefits": {
-        "title": "Rendimiento reportado en folleto",
+        "title": "Bisturí",
         "items": [
-          "Velocidad de corte entre 1 y 2 segundos más rápida",
-          "Efecto de coagulación vascular reportado 15% mayor",
-          "Tasa de éxito de cierre vascular en vasos de 5-7 mm",
-          "Comparativas de daño térmico lateral y tiempo de corte"
+          "Bisturíes ultrasónicos tipo pistola para disección superior y rápida capacidad de corte de tejido",
+          "Diámetro máximo de cierre del vaso: 7 mm",
+          "Disponible en longitudes: 14 cm, 23 cm, 36 cm y 45 cm",
+          "Un generador realiza la salida de energía ultrasónica y de radiofrecuencia de forma simultánea",
+          "La velocidad de corte es 1–2 segundos más rápida",
+          "El efecto de coagulación de los vasos sanguíneos es un 15% mayor"
         ]
       },
       "table": {
         "headers": ["Indicador", "BBT", "Otra marca"],
         "rows": [
-          [
-            "Éxito de cierre vascular (conducto torácico)",
-            "100%",
-            "100%"
-          ],
-          [
-            "Tiempo de corte (conducto torácico de 3 niveles)",
-            "3.28 s",
-            "3.62 s"
-          ]
+          ["Daño térmico lateral (tejido hepático)", "4547.94 μm", "5262.62 μm"],
+          ["Tasa de éxito de cierre vascular (vasos de 5–7 mm)", "95%", "95%"],
+          ["Éxito de cierre vascular (conducto torácico)", "100%", "100%"],
+          ["Tiempo de corte (conducto torácico de 3 niveles)", "3.28 s", "3.62 s"]
         ]
       },
       "imageCount": 1,
       "images": [
         {
-          "imgId": "",
+          "imgId": "sist-quir-radio-ultra",
           "alt": "Sistema quirúrgico de radiofrecuencia y ultrasonido con generador, transductor y piezas de mano"
         }
       ]

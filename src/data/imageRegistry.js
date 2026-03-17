@@ -68,6 +68,8 @@ const imageRegistry = {
     "/products/suturas-mecanicas-y-laparoscopicas/laparoscopicas/cortadora-lineal-endoscopica-B-2.webp",
   "cortadora-lineal-endoscopica-B-3":
     "/products/suturas-mecanicas-y-laparoscopicas/laparoscopicas/cortadora-lineal-endoscopica-B-3.webp",
+  "recargas-laparoscopicas":
+    "/products/suturas-mecanicas-y-laparoscopicas/laparoscopicas/recargas-laparoscopicas.webp",
 
   // ── Grapadora cortadora curva ──
   "grapadora-cortadora-curva-desechable":
@@ -102,6 +104,12 @@ const imageRegistry = {
   // ── Túnel de asistencia manual ──
   "tunel-desechable-de-asistencia-manual":
     "/products/suturas-mecanicas-y-laparoscopicas/accesorios/tunel-desechable-de-asistencia-manual.webp",
+
+  // ── Energía ──
+  "sist-quir-radio-ultra":
+    "/products/energia/sist-quir-radio-ultra.webp",
+  "energia-generador":
+    "/products/energia/generador.webp",
 };
 
 export default imageRegistry;

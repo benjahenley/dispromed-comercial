@@ -84,29 +84,14 @@
     ]
   },
   {
-    "id": "selladores-de-vasos",
-    "name": "Selladores de Vasos",
-    "subcategories": [
-      {
-        "id": "ultrasonido",
-        "name": "Ultrasonido",
-        "products": ["ultrasonido"]
-      },
-      {
-        "id": "ultrasonido-y-radiofrecuencia",
-        "name": "Ultrasonido y Radiofrecuencia",
-        "products": ["ultrasonido-radiofrecuencia"]
-      }
-    ]
-  },
-  {
     "id": "energia",
     "name": "Energía",
     "products": [
-      { "id": "ultrasonido", "name": "Ultrasonido" },
+      { "id": "ultrasonido", "name": "Ultrasonido", "navProductId": "ultrasonido" },
       {
         "id": "ultrasonido-radiofrecuencia",
-        "name": "Ultrasonido + Radiofrecuencia"
+        "name": "Ultrasonido + Radiofrecuencia",
+        "navProductId": "ultrasonido-radiofrecuencia"
       }
     ]
   },

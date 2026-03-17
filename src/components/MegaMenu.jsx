@@ -67,7 +67,7 @@ export function MegaMenu({
               : "relative rounded-[28px] border border-white/70 bg-white/92 shadow-2xl backdrop-blur-sm px-6 pb-8 pt-7 lg:px-8"
           }>
           <div
-            className={`relative z-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-x-4 gap-y-6`}>
+            className={`relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-6`}>
             {categories.map((cat) => {
               const isEnergyCategory = cat.id === "energia";
               const energyItems = isEnergyCategory
@@ -99,9 +99,7 @@ export function MegaMenu({
                   <ul className="space-y-2.5">
                     {categoryProduct.map((sub) => {
                       const hasSubProducts =
-                        !sub.navProductId &&
-                        cat.id !== "selladores-de-vasos" &&
-                        sub.products?.length > 0;
+                        !sub.navProductId && sub.products?.length > 0;
                       const isExpanded = subItems === sub.id;
 
                       return (
