@@ -81,7 +81,7 @@ export function ProductDetail() {
               <div className="grid grid-cols-1 gap-6 p-5 sm:p-6 lg:grid-cols-2 lg:gap-10 lg:p-10">
                 {/* LEFT */}
                 <div className="flex flex-col order-2 lg:order-1">
-                  <div className="relative overflow-hidden rounded-3xl bg-ink/5 ">
+                  <div className="relative overflow-hidden rounded-3xl bg-white ">
                     {shouldUseCarousel ? (
                       <ProductImageCarousel
                         images={images}
@@ -93,7 +93,7 @@ export function ProductDetail() {
                           src={primaryImage.src}
                           alt={primaryImage.alt || product.title}
                           loading="lazy"
-                          className="h-full w-full object-cover"
+                          className="h-full w-full object-contain"
                         />
                       </div>
                     ) : (

@@ -11,7 +11,7 @@
       "characteristics": {
         "title": "Propiedades",
         "items": [
-          "Retención del 70% de la resistencia a la tracción del nudo después de 14 días",
+          "Retención del 70% de la resistencia a la tracción después de 14 días",
           "Absorción completa de la masa dentro de 60 a 90 días"
         ]
       },
@@ -56,8 +56,8 @@
       "characteristics": {
         "title": "Propiedades",
         "items": [
-          "Retención del 75% de la resistencia a la tracción del nudo después de 14 días",
-          "Retención del 50% de la resistencia a la tracción del nudo después de 21 días",
+          "Retención del 75% de la resistencia a la tracción después de 14 días",
+          "Retención del 50% de la resistencia a la tracción después de 21 días",
           "Absorción completa de la masa dentro de 56 a 70 días"
         ]
       },
@@ -104,8 +104,8 @@
       "characteristics": {
         "title": "Propiedades",
         "items": [
-          "Retención del 75% de la resistencia a la tracción del nudo después de 14 días",
-          "Retención del 50% de la resistencia a la tracción del nudo después de 21 días",
+          "Retención del 75% de la resistencia a la tracción después de 14 días",
+          "Retención del 50% de la resistencia a la tracción después de 21 días",
           "Absorción completa de la masa dentro de 56 a 70 días"
         ]
       },
@@ -151,7 +151,7 @@
       "characteristics": {
         "title": "Propiedades",
         "items": [
-          "Retención del 60% de resistencia a la tracción del nudo después de 28 días",
+          "Retención del 60% de resistencia a la tracción después de 28 días",
           "Absorción completa de la masa dentro de 180 a 210 días"
         ]
       },
@@ -189,7 +189,7 @@
       "characteristics": {
         "title": "Propiedades",
         "items": [
-          "Retención del 60-90% de resistencia a la tracción del nudo después de 7 días",
+          "Retención del 60-90% de resistencia a la tracción después de 7 días",
           "Absorción completa de la masa dentro de 90 a 110 días"
         ]
       },
@@ -222,8 +222,8 @@
       "characteristics": {
         "title": "Propiedades",
         "items": [
-          "Retención del 70% de la resistencia a la tracción del nudo después de 14 días",
-          "Retención del 50% de la resistencia a la tracción del nudo después de 21 días",
+          "Retención del 70% de la resistencia a la tracción después de 14 días",
+          "Retención del 50% de la resistencia a la tracción después de 21 días",
           "Absorción completa de la masa dentro de 60 a 90 días"
         ]
       },
@@ -286,9 +286,7 @@
       },
       "table": {
         "headers": ["Tamaños USP disponibles", "Esterilización"],
-        "rows": [
-          ["USP 5 (1 métrico) — USP 6 (8 métrico)", "Radiación gamma"]
-        ]
+        "rows": [["USP 5 (1 métrico) — USP 6 (8 métrico)", "Radiación gamma"]]
       },
       "images": [{ "imgId": "sutusteel", "alt": "SUTUSTEEL" }]
     },
@@ -332,7 +330,7 @@
       "characteristics": {
         "title": "Propiedades",
         "items": [
-          "FILASILK: sutura trenzada y recubierta no absorbible, fabricada con filamentos de seda natural"
+          "Sutura trenzada y recubierta no absorbible, fabricada con filamentos de seda natural"
         ]
       },
       "specs": {
@@ -404,14 +402,15 @@
         "items": [
           { "label": "Estructura", "value": "Trenzada" },
           { "label": "Color del hilo", "value": "Verde, blanco o azul" },
-          { "label": "Composición química", "value": "Fibras de lino naturales (multifilamento torcido)" }
+          {
+            "label": "Composición química",
+            "value": "Fibras de lino naturales (multifilamento torcido)"
+          }
         ]
       },
       "table": {
         "headers": ["Tamaños USP disponibles", "Esterilización"],
-        "rows": [
-          ["USP 5/0 — USP 2", "Óxido de etileno"]
-        ]
+        "rows": [["USP 5/0 — USP 2", "Óxido de etileno"]]
       },
       "images": [{ "imgId": "sutuen", "alt": "SUTUEN" }]
     },
@@ -458,7 +457,7 @@
       "characteristics": {
         "title": "Propiedades",
         "items": [
-          "MERICRON XL: sutura quirúrgica estéril no absorbible de poli(tereftalato de etileno)",
+          "Sutura quirúrgica estéril no absorbible de poli(tereftalato de etileno)",
           "Material de alta calidad que casi elimina la aparición de fragmentos de sutura postoperatoria en el tejido"
         ]
       },
@@ -467,7 +466,10 @@
         "items": [
           { "label": "Estructura", "value": "Trenzado" },
           { "label": "Color", "value": "Verde, blanco" },
-          { "label": "Composición química", "value": "Tereftalato de polietileno" },
+          {
+            "label": "Composición química",
+            "value": "Tereftalato de polietileno"
+          },
           { "label": "Recubrimiento", "value": "Polibutilato" }
         ]
       },

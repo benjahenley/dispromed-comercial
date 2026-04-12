@@ -108,6 +108,8 @@ const imageRegistry = {
   // ── Energía ──
   "sist-quir-radio-ultra":
     "/products/energia/sist-quir-radio-ultra.webp",
+  "energia-ultrasonido":
+    "/products/energia/Generador.png",
   "energia-generador":
     "/products/energia/generador.webp",
 };

@@ -159,23 +159,21 @@
           "imgId": "cortadora-lineal-endoscopica-B-3",
           "alt": "Grapadora lineal laparoscópica 3"
         }
-      ],
-      "descriptionPages": {
-        "D": [
-          "La compresión óptima del tejido es clave para lograr una formación consistente de una línea de grapas en forma de B que garantice la seguridad de la herida y una hemoostasia adecuada.\n\nPresentamos grapadora lineal laparoscópica y recargas sinolinks que ofrece, una articulación de la mandíbula única, controlada proximalmente y sin restricciones, de 0° a 45° en ambos lados."
-        ]
-      },
-      "imageCount_D": 1,
-      "images_D": [
+      ]
+    },
+    {
+      "id": "cortadora-lineal-endoscopica",
+      "navProductId": "cortadora-lineal-endoscopica",
+      "categoryId": "suturas-mecanicas-y-laparoscopia",
+      "subcategoryId": "laparoscopicas",
+      "title": "Cortadora Lineal Endoscópica",
+      "description": "La compresión óptima del tejido es clave para lograr una formación consistente de una línea de grapas en forma de B que garantice la seguridad de la herida y una hemoostasia adecuada.\n\nPresentamos grapadora lineal laparoscópica y recargas sinolinks que ofrece, una articulación de la mandíbula única, controlada proximalmente y sin restricciones, de 0° a 45° en ambos lados.",
+      "imageCount": 1,
+      "images": [
         {
           "imgId": "recargas-laparoscopicas",
-          "alt": "Recargas laparoscópicas"
-        },
-        { "imgId": "", "alt": "" },
-        { "imgId": "", "alt": "" },
-        { "imgId": "", "alt": "" },
-        { "imgId": "", "alt": "" },
-        { "imgId": "", "alt": "" }
+          "alt": "Cortadora Lineal Endoscópica"
+        }
       ]
     },
     {
@@ -266,60 +264,48 @@
           "Longitud Abierta",
           "Longitud cerrada",
           "Diámetro de corte",
-          "Diámetro del cabezal",
-          "Fila de grapas",
-          "Cantidad de grapas"
+          "Diámetro del cabezal"
         ],
         "rows": [
           [
             "DSC-21R3",
-            "DISP GRAPADORA CIRCULAR 3 FILA 21",
+            "GRAPADORA CIRCULAR 21",
             "4.5MM",
             "1.0 - 2.5 MM",
             "12",
-            "21",
-            "3",
             "21"
           ],
           [
             "DSC-25R3",
-            "DISP GRAPADORA CIRCULAR 3 FILA 25",
+            "GRAPADORA CIRCULAR 25",
             "4.5MM",
             "1.0 - 2.5 MM",
             "16",
-            "25",
-            "3",
-            "33"
+            "25"
           ],
           [
             "DSC-29R3",
-            "DISP GRAPADORA CIRCULAR 3 FILA 29",
+            "GRAPADORA CIRCULAR 29",
             "4.5MM",
             "1.0 - 2.5 MM",
             "20",
-            "29",
-            "3",
-            "36"
+            "29"
           ],
           [
             "DSC-31R3",
-            "DISP GRAPADORA CIRCULAR 3 FILA 31",
+            "GRAPADORA CIRCULAR 31",
             "4.5MM",
             "1.0 - 2.5 MM",
             "21",
-            "31",
-            "3",
-            "36"
+            "31"
           ],
           [
             "DSC-33R3",
-            "DISP GRAPADORA CIRCULAR 3 FILA 33",
+            "GRAPADORA CIRCULAR 33",
             "4.5MM",
             "1.0 - 2.5 MM",
             "23",
-            "33",
-            "3",
-            "39"
+            "33"
           ]
         ]
       },
@@ -352,12 +338,11 @@
           "Código",
           "D.E. (mm)",
           "D.I. ±0.5 (mm)",
-          "Altura de Grapa (mm)",
-          "Grapas (CANT.)"
+          "Altura de Grapa (mm)"
         ],
         "rows": [
-          ["DHS B-32", "32", "23", "4,8", "32"],
-          ["DHS B-34", "34", "25", "4,8", "34"]
+          ["DHS B-32", "32", "23", "4,8"],
+          ["DHS B-34", "34", "25", "4,8"]
         ]
       },
       "imageCount": 6,

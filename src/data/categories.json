@@ -68,7 +68,7 @@
       {
         "id": "laparoscopicas",
         "name": "Laparoscópicas",
-        "products": ["lineal-cortante-endoscopica"]
+        "products": ["lineal-cortante-endoscopica", "cortadora-lineal-endoscopica"]
       },
       {
         "id": "accesorios",
