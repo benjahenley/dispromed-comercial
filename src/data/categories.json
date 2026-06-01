@@ -142,9 +142,53 @@
     "name": "Barcat",
     "subcategories": [
       {
+        "id": "bolsas-de-orina",
+        "name": "Bolsas de Orina",
+        "products": [
+          "colectores-orina-pediatricos",
+          "bolsas-colectoras-orina"
+        ]
+      },
+      {
+        "id": "campo-quirurgico",
+        "name": "Campo Quirúrgico",
+        "products": ["compo-quirurgico"]
+      },
+      {
+        "id": "canalizacion-venosa",
+        "name": "Canalización Venosa",
+        "products": ["tubos-canalizacion-venosa-anestesica"]
+      },
+      {
+        "id": "canulas-de-aspiracion",
+        "name": "Cánulas de Aspiración",
+        "products": ["canulas-aspiracion"]
+      },
+      {
+        "id": "conectores",
+        "name": "Conectores",
+        "products": ["conectores"]
+      },
+      {
+        "id": "equipo-de-irrigacion",
+        "name": "Equipo de Irrigación",
+        "products": ["equipos-irrigacion"]
+      },
+      {
+        "id": "inhaladores-de-oxigeno",
+        "name": "Inhaladores de Oxígeno",
+        "products": ["canulas-oxigeno"]
+      },
+      {
+        "id": "prolongadores",
+        "name": "Prolongadores",
+        "products": ["prolongadores", "prolongadores-con-sonda"]
+      },
+      {
         "id": "sondas",
         "name": "Sondas",
         "products": [
+          "drenajes-toraxicos",
           "sonda-aspiracion-succion",
           "sonda-alimentacion",
           "sondas-levine",
@@ -155,34 +199,9 @@
         ]
       },
       {
-        "id": "vias-y-tubos",
-        "name": "Vías y Tubos",
-        "products": [
-          "prolongadores",
-          "prolongadores-con-sonda",
-          "tubuladuras",
-          "tubos-canalizacion-venosa-anestesica"
-        ]
-      },
-      {
-        "id": "drenajes-y-colectores",
-        "name": "Drenajes y Colectores",
-        "products": [
-          "drenajes-toraxicos",
-          "bolsas-colectoras-orina",
-          "colectores-orina-pediatricos"
-        ]
-      },
-      {
-        "id": "equipamiento",
-        "name": "Equipamiento",
-        "products": [
-          "canulas-oxigeno",
-          "canulas-aspiracion",
-          "conectores",
-          "equipos-irrigacion",
-          "compo-quirurgico"
-        ]
+        "id": "tubuladuras",
+        "name": "Tubuladuras",
+        "products": ["tubuladuras"]
       }
     ]
   }
