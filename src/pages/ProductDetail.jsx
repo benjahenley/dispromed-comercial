@@ -88,7 +88,7 @@ export function ProductDetail() {
                         title={product.title}
                       />
                     ) : primaryImage ? (
-                      <div className="aspect-square">
+                      <div className="aspect-square p-10 sm:p-12">
                         <img
                           src={primaryImage.src}
                           alt={primaryImage.alt || product.title}
@@ -172,7 +172,7 @@ export function ProductDetail() {
 
                   <h1
                     title={product.title}
-                    className="mt-4 truncate text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
+                    className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
                     {product.title}
                   </h1>
 

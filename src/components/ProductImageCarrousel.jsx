@@ -48,12 +48,12 @@ export function ProductImageCarousel({ images = [], title = "" }) {
 
   if (validImages.length === 1) {
     return (
-      <div className="aspect-square">
+      <div className="aspect-square p-10 sm:p-12">
         <img
           src={current.src}
           alt={current.alt || title}
           loading="lazy"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
         />
       </div>
     );
@@ -61,12 +61,12 @@ export function ProductImageCarousel({ images = [], title = "" }) {
 
   return (
     <div className="relative">
-      <div className="aspect-square">
+      <div className="aspect-square p-10 sm:p-12">
         <img
           src={current.src}
           alt={current.alt || title}
           loading="lazy"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
         />
       </div>
 

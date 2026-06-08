@@ -13,7 +13,10 @@
         "rows": [["BCO 50"], ["BCO 51"], ["BCO 24HS"]]
       },
       "images": [
-        { "imgId": "bco50bco51", "alt": "Colectores de Orina Pediátricos BCO 50 y BCO 51" },
+        {
+          "imgId": "bco50bco51",
+          "alt": "Colectores de Orina Pediátricos BCO 50 y BCO 51"
+        },
         { "imgId": "bco24hs", "alt": "Colector de Orina Pediátrico BCO 24HS" }
       ]
     },
@@ -41,7 +44,7 @@
       "categoryId": "barcat",
       "subcategoryId": "campo-quirurgico",
       "title": "Campo Quirúrgico",
-      "description": "Campo quirúrgico Barcat descartable estéril para delimitación del área estéril durante procedimientos médicos y quirúrgicos. Fabricado en material no tejido hidrófugo resistente a líquidos biológicos.",
+      "description": "Fabricado en material no tejido hidrófugo resistente a líquidos biológicos.",
       "table": {
         "headers": ["Modelo"],
         "rows": [["BCO 58"]]
@@ -57,18 +60,25 @@
       "categoryId": "barcat",
       "subcategoryId": "canalizacion-venosa",
       "title": "Canalización Venosa o Anestésica",
-      "description": "Tubos Barcat para canalización venosa periférica y central, o para circuitos de anestesia. Series BTC y BTR fabricadas en PVC de alta pureza. Disponibles en longitudes de 40 a 150 cm.",
+      "description": "Tubos Barcat para canalización venosa periférica y central, o para circuitos de anestesia. Series BTC y BTR fabricadas en PVC de alta pureza. Disponibles en diámetros interiores de 40 a 150, todos en longitud de 100 cm.",
       "table": {
-        "headers": ["Modelo", "Longitud (cm)"],
+        "headers": ["Modelo"],
         "rows": [
-          ["BTC 40", "40"], ["BTC 50", "50"], ["BTC 75", "75"],
-          ["BTC 100", "100"], ["BTC 150", "150"],
-          ["BTR 40", "40"], ["BTR 50", "50"], ["BTR 75", "75"],
-          ["BTR 100", "100"], ["BTR 150", "150"]
+          ["BTC 40"],
+          ["BTC 50"],
+          ["BTC 75"],
+          ["BTC 100"],
+          ["BTC 150"],
+          ["BTR 40"],
+          ["BTR 50"],
+          ["BTR 75"],
+          ["BTR 100"],
+          ["BTR 150"]
         ]
       },
       "images": [
-        { "imgId": "btcbtr", "alt": "Tubos para Canalización Venosa o Anestésica" }
+        { "imgId": "btc75-1", "alt": "Tubo Barcat BTC 75" },
+        { "imgId": "btc75-2", "alt": "Tubo Barcat BTC 75" }
       ]
     },
     {
@@ -83,6 +93,7 @@
         "rows": [["BC 65"], ["BC 66"], ["BC 67"]]
       },
       "images": [
+        { "imgId": "btcbtr", "alt": "Cánula de Aspiración" },
         { "imgId": "bc66bc67", "alt": "Cánulas de Aspiración BC 66 y BC 67" }
       ]
     },
@@ -129,13 +140,13 @@
       "categoryId": "barcat",
       "subcategoryId": "inhaladores-de-oxigeno",
       "title": "Inhaladores de Oxígeno",
-      "description": "Inhaladores de oxígeno Barcat para oxigenoterapia de bajo flujo en pacientes ambulatorios y hospitalizados. Fabricados en PVC suave y flexible para mayor comodidad en el uso prolongado. Disponibles en modelos para adultos y pediátrico.",
+      "description": "Inhaladores de oxígeno Barcat para oxigenoterapia de bajo flujo en pacientes ambulatorios y hospitalizados. Fabricados en PVC suave y flexible para mayor comodidad en el uso prolongado. Disponibles en modelos para adulto, pediátrico y neonatal.",
       "table": {
         "headers": ["Modelo", "Uso"],
         "rows": [
-          ["BINH 27T/S", "—"],
-          ["BINH 27 N", "Adulto"],
-          ["BINH 27 P", "Pediátrico"]
+          ["BINH 27 T/S", "Adulto"],
+          ["BINH 27 P", "Pediátrico"],
+          ["BINH 27 N", "Neonatal"]
         ]
       },
       "images": [
@@ -154,16 +165,23 @@
         "headers": ["Modelo", "Medidas"],
         "rows": [
           ["BPRO 16", "X 0.10, X 0.15, X 0.20, X 0.50, X 0.70, X 1, X 1.5"],
-          ["BPRO 20", "X 0.10, X 0.15, X 0.20, X 0.25, X 0.35, X 0.50, X 1, X 1.20, X 1.50, X 2"],
-          ["BPRO 26", "X 0.10, X 0.15, X 0.30, X 0.50, X 1, X 1.20, X 1.5, X 2, X 2.20, X 2.5"],
-          ["BPRO 35", "X 0.15, X 0.30, X 0.50, X 0.70, X 1, X 1.20, X 1.50, X 2, X 2.20"]
+          [
+            "BPRO 20",
+            "X 0.10, X 0.15, X 0.20, X 0.25, X 0.35, X 0.50, X 1, X 1.20, X 1.50, X 2"
+          ],
+          [
+            "BPRO 26",
+            "X 0.10, X 0.15, X 0.30, X 0.50, X 1, X 1.20, X 1.5, X 2, X 2.20, X 2.5"
+          ],
+          [
+            "BPRO 35",
+            "X 0.15, X 0.30, X 0.50, X 0.70, X 1, X 1.20, X 1.50, X 2, X 2.20"
+          ]
         ]
       },
       "images": [
-        { "imgId": "bpro26-1", "alt": "Prolongador BPRO 26" },
-        { "imgId": "bpro26-2", "alt": "Prolongador BPRO 26" },
-        { "imgId": "bpro35-1", "alt": "Prolongador BPRO 35" },
-        { "imgId": "bpro35-2", "alt": "Prolongador BPRO 35" }
+        { "imgId": "bpro35-2", "alt": "Prolongador BPRO 35" },
+        { "imgId": "bpro26-1", "alt": "Prolongador BPRO 26" }
       ]
     },
     {
@@ -176,8 +194,12 @@
       "table": {
         "headers": ["Modelo"],
         "rows": [
-          ["BSS 3529P"], ["BSS 3530P"], ["BSS 3531P"],
-          ["BSS 3532P"], ["BSS 3533P"], ["BSS 3535P"]
+          ["BSS 3529P"],
+          ["BSS 3530P"],
+          ["BSS 3531P"],
+          ["BSS 3532P"],
+          ["BSS 3533P"],
+          ["BSS 3535P"]
         ]
       },
       "images": [
@@ -197,8 +219,8 @@
         "rows": [["BSDT 224"], ["BSDT 225"], ["BSDT 227"]]
       },
       "images": [
-        { "imgId": "bsdt227-1", "alt": "Sonda de Drenaje Torácico BSDT 227" },
-        { "imgId": "bsdt227-2", "alt": "Sonda de Drenaje Torácico BSDT 227" }
+        { "imgId": "bsdt227-2", "alt": "Sonda de Drenaje Torácico BSDT 227" },
+        { "imgId": "bsdt227-1", "alt": "Sonda de Drenaje Torácico BSDT 227" }
       ]
     },
     {
@@ -211,17 +233,22 @@
       "table": {
         "headers": ["Modelo"],
         "rows": [
-          ["BSS 29"], ["BSS 29P"], ["BSS 30P"], ["BSS 31P"],
-          ["BSS 33P"], ["BSS 35P"], ["BSS 132P"]
+          ["BSS 29"],
+          ["BSS 29P"],
+          ["BSS 30P"],
+          ["BSS 31P"],
+          ["BSS 33P"],
+          ["BSS 35P"],
+          ["BSS 132P"]
         ]
       },
       "images": [
-        { "imgId": "bss29p-1", "alt": "Sonda de Aspiración y Succión BSS 29P" },
         { "imgId": "bss29p-2", "alt": "Sonda de Aspiración y Succión BSS 29P" },
-        { "imgId": "bss30p-1", "alt": "Sonda de Aspiración y Succión BSS 30P" },
         { "imgId": "bss30p-2", "alt": "Sonda de Aspiración y Succión BSS 30P" },
-        { "imgId": "bss32p-1", "alt": "Sonda de Aspiración y Succión BSS 32P" },
-        { "imgId": "bss32p-2", "alt": "Sonda de Aspiración y Succión BSS 32P" }
+        { "imgId": "bss32p-2", "alt": "Sonda de Aspiración y Succión BSS 32P" },
+        { "imgId": "bss30p-1", "alt": "Sonda de Aspiración y Succión BSS 30P" },
+        { "imgId": "bss29p-1", "alt": "Sonda de Aspiración y Succión BSS 29P" },
+        { "imgId": "bss32p-1", "alt": "Sonda de Aspiración y Succión BSS 32P" }
       ]
     },
     {
@@ -268,10 +295,10 @@
         "rows": [["BSN 30"], ["BSN 31"], ["BSN 33"], ["BSN 35"]]
       },
       "images": [
-        { "imgId": "bsn30-1", "alt": "Sonda Nasogástrica BSN 30" },
         { "imgId": "bsn30-2", "alt": "Sonda Nasogástrica BSN 30" },
-        { "imgId": "bsn33-1", "alt": "Sonda Nasogástrica BSN 33" },
-        { "imgId": "bsn33-2", "alt": "Sonda Nasogástrica BSN 33" }
+        { "imgId": "bsn33-2", "alt": "Sonda Nasogástrica BSN 33" },
+        { "imgId": "bsn30-1", "alt": "Sonda Nasogástrica BSN 30" },
+        { "imgId": "bsn33-1", "alt": "Sonda Nasogástrica BSN 33" }
       ]
     },
     {
@@ -284,8 +311,16 @@
       "table": {
         "headers": ["Modelo"],
         "rows": [
-          ["BSNT 24"], ["BSNT 26"], ["BSNT 92"], ["BSNT 93"], ["BSNT 94"],
-          ["BSNT 95"], ["BSNT 96"], ["BSNT 97"], ["BSNT 98"], ["BSNT 99"]
+          ["BSNT 24"],
+          ["BSNT 26"],
+          ["BSNT 92"],
+          ["BSNT 93"],
+          ["BSNT 94"],
+          ["BSNT 95"],
+          ["BSNT 96"],
+          ["BSNT 97"],
+          ["BSNT 98"],
+          ["BSNT 99"]
         ]
       },
       "images": [
@@ -303,8 +338,16 @@
       "table": {
         "headers": ["Modelo"],
         "rows": [
-          ["BSB 8"], ["BSB 10"], ["BSB 12"], ["BSB 14"], ["BSB 16"],
-          ["BSB 18"], ["BSB 20"], ["BSB 22"], ["BSB 24"], ["BSB 26"]
+          ["BSB 8"],
+          ["BSB 10"],
+          ["BSB 12"],
+          ["BSB 14"],
+          ["BSB 16"],
+          ["BSB 18"],
+          ["BSB 20"],
+          ["BSB 22"],
+          ["BSB 24"],
+          ["BSB 26"]
         ]
       },
       "images": [
@@ -322,13 +365,22 @@
       "table": {
         "headers": ["Modelo"],
         "rows": [
-          ["BSR 10"], ["BSR 12"], ["BSR 14"], ["BSR 16"], ["BSR 18"],
-          ["BSR 20"], ["BSR 22"], ["BSR 24"], ["BSR 26"], ["BSR 28"], ["BSR 40"]
+          ["BSR 10"],
+          ["BSR 12"],
+          ["BSR 14"],
+          ["BSR 16"],
+          ["BSR 18"],
+          ["BSR 20"],
+          ["BSR 22"],
+          ["BSR 24"],
+          ["BSR 26"],
+          ["BSR 28"],
+          ["BSR 40"]
         ]
       },
       "images": [
-        { "imgId": "bsr-1", "alt": "Sondas Rectales" },
-        { "imgId": "bsr-2", "alt": "Sondas Rectales" }
+        { "imgId": "bsr-2", "alt": "Sondas Rectales" },
+        { "imgId": "bsr-1", "alt": "Sondas Rectales" }
       ]
     },
     {

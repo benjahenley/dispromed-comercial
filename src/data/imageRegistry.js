@@ -115,6 +115,8 @@ const imageRegistry = {
 
   // ── Barcat ──
   "btcbtr": "/products/barcat/btcbtr.webp",
+  "btc75-1": "/products/barcat/btc75-1.png",
+  "btc75-2": "/products/barcat/btc75-2.png",
   "bc66bc67": "/products/barcat/bc66bc67.webp",
   "bco24hs": "/products/barcat/bco24hs.webp",
   "bco50bco51": "/products/barcat/bco50bco51.webp",
