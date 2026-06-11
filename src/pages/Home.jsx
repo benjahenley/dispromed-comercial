@@ -168,7 +168,7 @@ export function Home() {
               <div className="absolute bottom-0 right-4 lg:right-6">
                 <div className="absolute bottom-6 right-6 h-28 w-28 rounded-full bg-white/30 blur-2xl" />
                 <img
-                  src="/dentista_corazon_transparente2.png"
+                  src="/images/dentista_corazon_transparente2.png"
                   alt="Profesional de la salud"
                   loading="lazy"
                   className="relative block w-[210px] lg:w-[300px] object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.28)]"

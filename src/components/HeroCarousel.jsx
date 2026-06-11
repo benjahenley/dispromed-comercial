@@ -4,15 +4,15 @@ import useEmblaCarousel from "embla-carousel-react";
 const slides = [
   {
     id: 1,
-    image: "/banner.webp",
-    mobile: "/banner-mobile.png",
+    image: "/images/banner.webp",
+    mobile: "/images/banner-mobile.png",
     title: "Soluciones Quirúrgicas Especializadas",
     subtitle: "Equipamiento e insumos para entornos de alta exigencia clínica",
   },
   {
     id: 2,
-    image: "/banner-2.png",
-    mobile: "/banner-mobile-2.png",
+    image: "/images/banner-2.png",
+    mobile: "/images/banner-mobile-2.png",
     title: "Tecnología Médica Confiable",
     subtitle: "Monitoreo y soporte para procedimientos seguros y precisos",
   },

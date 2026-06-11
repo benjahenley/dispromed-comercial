@@ -77,8 +77,8 @@
         ]
       },
       "images": [
-        { "imgId": "btc75-1", "alt": "Tubo Barcat BTC 75" },
-        { "imgId": "btc75-2", "alt": "Tubo Barcat BTC 75" }
+        { "imgId": "btc75-2", "alt": "Tubo Barcat BTC 75" },
+        { "imgId": "btc75-1", "alt": "Tubo Barcat BTC 75" }
       ]
     },
     {
@@ -180,8 +180,10 @@
         ]
       },
       "images": [
+        { "imgId": "bpro26-2", "alt": "Prolongador BPRO 26" },
+        { "imgId": "bpro26-1", "alt": "Prolongador BPRO 26" },
         { "imgId": "bpro35-2", "alt": "Prolongador BPRO 35" },
-        { "imgId": "bpro26-1", "alt": "Prolongador BPRO 26" }
+        { "imgId": "bpro35-1", "alt": "Prolongador BPRO 35" }
       ]
     },
     {

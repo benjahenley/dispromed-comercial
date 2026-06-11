@@ -9,13 +9,13 @@ export function BrandHeader({ onOpenMenu }) {
         className="flex min-w-0 items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 rounded-md sm:gap-3"
         aria-label="Ir al inicio">
         <img
-          src="/logo.png"
+          src="/images/logo.png"
           alt="Dispromed"
           className="h-10 w-10 object-contain drop-shadow-sm sm:h-14 sm:w-14 md:h-14 md:w-14 lg:h-16 lg:w-16"
         />
 
         <img
-          src="/dispromed_wordmark.svg"
+          src="/images/dispromed_wordmark.svg"
           alt="Dispromed"
           className="block h-5 w-auto max-w-[9.5rem] drop-shadow-sm sm:h-8 sm:max-w-none lg:h-9"
         />
